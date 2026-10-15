@@ -1,0 +1,47 @@
+.learning-page { padding-block: 24px 40px; }
+.lesson-breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; line-height: 1.7; }
+.lesson-breadcrumb a { color: #e2ccff; }
+.lesson-surface { max-width: 850px; padding: clamp(18px, 4vw, 40px); border-radius: 24px; background: #fffaf2; color: #35263f; overflow-wrap: anywhere; }
+.lesson-surface h1 { font-size: clamp(30px, 5vw, 46px); }
+.lesson-surface h2 { font-size: clamp(24px, 4vw, 32px); }
+.lesson-surface p, .lesson-surface li { line-height: 1.75; }
+.lesson-surface a { color: #62407b; text-underline-offset: 4px; }
+.lesson-surface button, .lesson-surface .lesson-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; max-width: 100%; padding: 12px 18px; border: 1px solid #76548e; border-radius: 12px; background: #e8ddf1; color: #35263f; white-space: normal; }
+.lesson-surface button:disabled { cursor: default; background: #ede8ef; color: #6f6274; border-color: #bdb2c5; }
+.lesson-surface :is(button, a, input, summary):focus-visible { outline: 3px solid #62407b; outline-offset: 3px; }
+.lesson-surface h2:focus { outline: none; }
+.lesson-badge { display: inline-block; border: 1px solid #9d8043; padding: 6px 12px; border-radius: 20px; color: #685026; }
+.lesson-progress { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin-block: 24px; }
+.lesson-progress li { padding: 12px; border: 1px solid #bdb2c5; border-radius: 12px; font-size: 14px; }
+.lesson-progress li[aria-current='step'] { border: 2px solid #76548e; background: #eee5f5; font-weight: 600; }
+.lesson-progress span { color: #685026; font-weight: 600; }
+.lesson-guide { display: flex; gap: 16px; align-items: center; background: #f2ebf7; padding: 16px; border-radius: 16px; margin-bottom: 24px; }
+.lesson-guide img { width: 80px; height: 100px; object-fit: contain; flex-shrink: 0; }
+.lesson-guide p { margin: 0; }
+.guide-name { color: #62407b; font-weight: 600; }
+.answer-options { padding: 0; border: 0; margin-block: 24px; min-width: 0; }
+.answer-options legend { margin-bottom: 16px; line-height: 1.7; font-weight: 600; }
+.answer-options label { display: flex; align-items: center; gap: 12px; padding: 14px; margin-bottom: 10px; border: 1px solid #bdb2c5; border-radius: 12px; line-height: 1.6; cursor: pointer; }
+.answer-options input { width: 22px; height: 22px; flex-shrink: 0; accent-color: #76548e; }
+.answer-options label:has(input:checked) { border-color: #76548e; background: #eee5f5; }
+.lesson-feedback, .asset-fallback { padding: 16px; background: #f2ebf7; border-left: 4px solid #76548e; border-radius: 8px; margin-block: 20px; }
+.lesson-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 24px; }
+.lesson-editorial { border-top: 1px solid #bdb2c5; margin-top: 32px; padding-top: 16px; font-size: 14px; }
+.card-viewer { margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.card-viewer > img { display: block; width: min(280px, 100%); height: auto; }
+.card-viewer figcaption { font-size: 14px; line-height: 1.6; }
+.card-viewer dialog { width: min(640px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; background: #fffaf2; color: #35263f; border: 2px solid #76548e; border-radius: 16px; padding: 20px; }
+.card-viewer dialog::backdrop { background: #120e22cc; }
+.card-viewer dialog img { display: block; max-width: 100%; max-height: 70dvh; height: auto; margin: 20px auto 0; }
+.navigation-list { padding-left: 24px; }
+.navigation-list a { display: inline-block; padding-block: 12px; min-height: 44px; }
+.navigation-list p { margin-top: 0; }
+@media (max-width: 420px) {
+  .lesson-progress { grid-template-columns: 1fr; }
+  .lesson-guide { flex-direction: column; align-items: flex-start; }
+  .lesson-guide img { width: 64px; height: 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .learning-page *, .learning-page *::before, .learning-page *::after { animation: none; transition: none; scroll-behavior: auto; }
+}
+.quiet .learning-page * { animation: none; transition: none; scroll-behavior: auto; }

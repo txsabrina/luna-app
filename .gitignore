@@ -1,0 +1,11 @@
+/docs/
+/.local-context/
+**/target/
+**/node_modules/
+**/dist/
+.env
+.env.*
+!.env.example
+*.log
+/personal-data/
+/backups/

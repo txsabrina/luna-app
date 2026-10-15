@@ -1,0 +1,57 @@
+{
+  "lesson": {
+    "id": "fool-first-step", "contentVersion": 1,
+    "title": "O Louco — o primeiro passo", "status": "PREVIEW",
+    "objectives": ["Explorar abertura, começo e espontaneidade como núcleo introdutório.", "Observar a imagem antes de construir interpretações.", "Aplicar o núcleo a uma situação, sem tratar a carta como ordem."],
+    "steps": [
+      {
+        "id": "01-opening", "type": "explanation", "title": "Começar sem ter o mapa inteiro.",
+        "lume": {"mood": "welcoming", "message": "Você precisa conhecer o caminho inteiro para dar o primeiro passo? O Louco mora nessa pergunta. Mas calma: ele não veio mandar você se jogar de um penhasco."},
+        "paragraphs": ["Vamos observar a imagem, experimentar interpretações e descobrir o que sustenta cada leitura."],
+        "cta": "Vamos investigar"
+      },
+      {
+        "id": "02-observation", "type": "observation", "title": "O que chamou sua atenção?",
+        "lume": {"mood": "curious", "message": "Observe sem precisar acertar. Sua escolha é um ponto de partida, não uma avaliação."},
+        "imagePath": "/assets/tarot/waite-smith/fool.jpg",
+        "imageAlt": "O Louco no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
+        "options": [
+          {"id": "dog", "label": "Cachorro", "feedback": "Ele acompanha a figura perto dos pés. Guarde essa pista."},
+          {"id": "cliff", "label": "Penhasco", "feedback": "Existe uma borda no caminho. Vamos observar essa tensão."},
+          {"id": "flower", "label": "Flor", "feedback": "A figura carrega uma flor branca. Voltaremos a esse detalhe."},
+          {"id": "baggage", "label": "Bagagem", "feedback": "A trouxa é pequena. O que a figura parece levar consigo?"},
+          {"id": "other", "label": "Outro detalhe", "feedback": "Sua observação também importa. Continue olhando a imagem."}
+        ]
+      },
+      {
+        "id": "03-core", "type": "explanation", "title": "Três palavras, muitas possibilidades.",
+        "lume": {"mood": "explaining", "message": "Nosso ponto de partida é abertura, começo e espontaneidade."},
+        "paragraphs": ["Pense em experimentar algo sem exigir que o resultado esteja pronto antes da primeira tentativa.", "Isso não significa abandonar todo planejamento. A carta permite explorar disponibilidade para começar e atenção ao terreno."],
+        "cta": "Experimentar uma situação"
+      },
+      {
+        "id": "04-context", "type": "single-choice", "title": "Aplicação contextual",
+        "lume": {"mood": "curious", "message": "Compare as possibilidades dentro deste cenário. A carta não determina o que alguém deve fazer."},
+        "question": "Uma pessoa quer aprender desenho, mas espera ter habilidade antes de experimentar. Qual reflexão se conecta melhor ao núcleo estudado?",
+        "options": [
+          {"id": "reference-first", "label": "Reunir mais referências antes de qualquer tentativa."},
+          {"id": "small-experiment", "label": "Experimentar um desenho simples e observar o que aprende."},
+          {"id": "strict-routine", "label": "Definir uma rotina rigorosa antes de permitir improvisação."},
+          {"id": "complete-confidence", "label": "Esperar sentir confiança completa para começar."}
+        ]
+      }
+    ]
+  },
+  "assessments": {
+    "04-context": {
+      "expectedOptionId": "small-experiment",
+      "explanation": "Neste cenário, um pequeno experimento aproxima abertura e começo sem exigir domínio antecipado. Esta é uma interpretação contextual, não uma ordem ou previsão.",
+      "feedback": {
+        "reference-first": "Preparação pode ajudar. Neste cenário, continuar apenas reunindo referências pode prolongar a espera que estamos explorando.",
+        "small-experiment": "A abertura ganha uma forma concreta: experimentar sem exigir domínio antecipado. Isso não significa abandonar todo cuidado.",
+        "strict-routine": "Estrutura pode apoiar o aprendizado. Aqui, a alternativa prioriza controle e organização, não a disponibilidade para experimentar.",
+        "complete-confidence": "A espera por confiança absoluta pode manter o primeiro passo suspenso. Podemos começar com alguma incerteza."
+      }
+    }
+  }
+}
