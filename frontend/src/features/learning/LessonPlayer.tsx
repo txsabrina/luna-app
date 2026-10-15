@@ -46,10 +46,15 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     </nav>
     <h2 ref={heading} tabIndex={-1}>{complete ? 'Prévia concluída' : step.title}</h2>
     {complete ? <section>
-      <p>Você concluiu esta prévia. Os próximos caminhos estão em produção.</p>
+      <p>Você percorreu o primeiro caminho. Os próximos caminhos estão em produção.</p>
       <p>Este registro é apenas desta sessão. A aula completa não foi concluída; não há XP ou progresso salvo.</p>
       <div className="lesson-actions">
         <button type="button" onClick={() => { setComplete(false); heading.current?.focus(); }}>Rever etapa 04</button>
+        <button type="button" onClick={() => {
+          setStepId(lesson.steps[0].id);
+          setComplete(false);
+          heading.current?.focus();
+        }}>Revisitar a prévia</button>
         <a href="/modules/major-arcana">Voltar ao módulo</a>
       </div>
     </section> : <>
