@@ -1,52 +1,52 @@
-# EspecificaÃ§Ã£o 002 â€” Testes frontend
+# Especificação 002 — Testes frontend
 
-## EvidÃªncia histÃ³rica
+## Evidência histórica
 
 Build falhou com TS2307 em learning.test.tsx:
 vitest, @testing-library/react e @testing-library/user-event.
 
-NÃ£o foi confirmado se dependÃªncias faltavam no manifest
-ou apenas na instalaÃ§Ã£o local.
+Não foi confirmado se dependências faltavam no manifest
+ou apenas na instalação local.
 
 ## Objetivo
 
-Completar configuraÃ§Ã£o sem apagar ou excluir testes para esconder erros.
+Completar configuração sem apagar ou excluir testes para esconder erros.
 
-## InspeÃ§Ã£o
+## Inspeção
 
 package.json, lockfile, Vite, TypeScript,
 arquivos de testes e setup existentes.
 
 ## Escopo
 
-DependÃªncias de desenvolvimento compatÃ­veis.
-Vitest e ambiente jsdom quando necessÃ¡rio.
+Dependências de desenvolvimento compatíveis.
+Vitest e ambiente jsdom quando necessário.
 Scripts test e test:run.
 Limpeza/setup adequado.
-Workflow com execuÃ§Ã£o Ãºnica de testes apÃ³s validaÃ§Ã£o.
+Workflow com execução única de testes após validação.
 
-## RestriÃ§Ãµes
+## Restrições
 
-NÃ£o usar --force ou --legacy-peer-deps.
-NÃ£o introduzir any ou ignorar TypeScript como atalho.
-NÃ£o editar lockfile manualmente.
-NÃ£o alterar backend ou proxy para esse erro.
+Não usar --force ou --legacy-peer-deps.
+Não introduzir any ou ignorar TypeScript como atalho.
+Não editar lockfile manualmente.
+Não alterar backend ou proxy para esse erro.
 
-## ValidaÃ§Ã£o
+## Validação
 
 npm run lint
 npm run build
 npm run test:run
 
-Se dependÃªncias jÃ¡ estÃ£o declaradas e lockfile consistente,
-verificar instalaÃ§Ã£o antes de alterar versÃµes.
+Se dependências já estão declaradas e lockfile consistente,
+verificar instalação antes de alterar versões.
 
-NÃ£o presumir correÃ§Ã£o no clone local.
-Build nÃ£o substitui execuÃ§Ã£o de testes.
+Não presumir correção no clone local.
+Build não substitui execução de testes.
 
-## AceitaÃ§Ã£o
+## Aceitação
 
-DependÃªncias resolvidas sem conflitos ignorados.
-Testes executados, nÃ£o desabilitados.
+Dependências resolvidas sem conflitos ignorados.
+Testes executados, não desabilitados.
 Scripts e CI consistentes.
 Resultados observados registrados.

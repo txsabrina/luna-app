@@ -1,8 +1,8 @@
-# Luna â€” Rodar e verificar localmente
+# Luna — Rodar e verificar localmente
 
-Execute a partir da pasta local do repositÃ³rio.
+Execute a partir da pasta local do repositório.
 
-## PrÃ©-requisitos
+## Pré-requisitos
 
 Confirmar:
 java -version
@@ -16,26 +16,26 @@ Instalar frontend conforme o estado do lockfile.
 Em clone com package-lock.json consistente:
 npm ci
 
-NÃ£o usar --force ou --legacy-peer-deps para esconder conflitos.
+Não usar --force ou --legacy-peer-deps para esconder conflitos.
 
-## PowerShell â€” backend
+## PowerShell — backend
 
 Terminal separado:
 cd backend
 .\mvnw.cmd quarkus:dev
 
-Docker precisa estar disponÃ­vel quando Dev Services criar PostgreSQL.
+Docker precisa estar disponível quando Dev Services criar PostgreSQL.
 
-## PowerShell â€” frontend
+## PowerShell — frontend
 
 Outro terminal:
 cd frontend
 npm run dev
 
-Abrir o endereÃ§o informado pelo Vite.
+Abrir o endereço informado pelo Vite.
 Em ambiente local normal, costuma ser http://localhost:5173.
 
-## ValidaÃ§Ã£o
+## Validação
 
 Backend:
 .\mvnw.cmd verify
@@ -44,13 +44,13 @@ Frontend:
 npm run lint
 npm run build
 
-Consultar scripts disponÃ­veis:
+Consultar scripts disponíveis:
 npm pkg get scripts
 
 Se test:run existir:
 npm run test:run
 
-NÃ£o afirmar que testes foram executados apenas porque build passou.
+Não afirmar que testes foram executados apenas porque build passou.
 
 ## Bash / WSL
 
@@ -59,10 +59,10 @@ Wrapper:
 ./mvnw verify
 
 Executar no ambiente real do projeto.
-NÃ£o misturar caminhos ou executÃ¡veis de Windows e Linux.
+Não misturar caminhos ou executáveis de Windows e Linux.
 
 ## Erros
 
-NÃ£o regenerar o projeto para corrigir dependÃªncia ausente.
-NÃ£o apagar testes para fazer TypeScript passar.
-Guardar saÃ­da e cÃ³digo de retorno.
+Não regenerar o projeto para corrigir dependência ausente.
+Não apagar testes para fazer TypeScript passar.
+Guardar saída e código de retorno.

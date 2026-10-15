@@ -1,6 +1,6 @@
-# ReferÃªncias e assets
+# Referências e assets
 
-## ReferÃªncias locais
+## Referências locais
 
 Guardar fora dos arquivos servidos publicamente:
 .local-context/conversation.md
@@ -8,20 +8,20 @@ Guardar fora dos arquivos servidos publicamente:
 .local-context/lume-concepts/
 
 Manter backup.
-O script nÃ£o possui acesso aos anexos da conversa.
+O script não possui acesso aos anexos da conversa.
 
 ## Prints Astra
 
-ReferÃªncia de:
-ritmo, participaÃ§Ã£o, desafios, feedback, progresso e recompensa.
+Referência de:
+ritmo, participação, desafios, feedback, progresso e recompensa.
 
-NÃ£o copiar:
-textos, personagem, identidade, ilustraÃ§Ãµes ou colecionÃ¡veis.
+Não copiar:
+textos, personagem, identidade, ilustrações ou colecionáveis.
 
 Separar:
-observado na referÃªncia,
+observado na referência,
 requisito aprovado para Luna,
-sugestÃ£o nova.
+sugestão nova.
 
 ## Assets do Luna
 
@@ -34,16 +34,16 @@ frontend/public/assets/lume/curious.webp
 frontend/public/assets/lume/celebrating.webp
 frontend/public/assets/lume/reassuring.webp
 
-Esses caminhos nÃ£o comprovam arquivos existentes.
-NÃ£o renomear extensÃ£o para simular conversÃ£o.
+Esses caminhos não comprovam arquivos existentes.
+Não renomear extensão para simular conversão.
 
 Imagem da carta:
 frontend/public/assets/tarot/waite-smith/fool.jpg
 
-Registrar origem, autor, ediÃ§Ã£o e condiÃ§Ãµes de uso da reproduÃ§Ã£o.
-NÃ£o recortar carta dos prints Astra.
-NÃ£o substituir sÃ­mbolos de estudo por imagem gerada por IA.
+Registrar origem, autor, edição e condições de uso da reprodução.
+Não recortar carta dos prints Astra.
+Não substituir símbolos de estudo por imagem gerada por IA.
 
-Links sandbox nÃ£o sÃ£o URLs pÃºblicas permanentes.
-Imagem PNG nÃ£o Ã© necessariamente transparente.
-Estudo visual nÃ£o equivale a sprite, rig ou asset final.
+Links sandbox não são URLs públicas permanentes.
+Imagem PNG não é necessariamente transparente.
+Estudo visual não equivale a sprite, rig ou asset final.

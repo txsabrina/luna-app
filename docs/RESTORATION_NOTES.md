@@ -1,24 +1,24 @@
-# Registro de reconstruÃ§Ã£o
+# Registro de reconstrução
 
-Origem: decisÃµes e especificaÃ§Ãµes presentes na conversa do Luna.
+Origem: decisões e especificações presentes na conversa do Luna.
 
-Esta reconstruÃ§Ã£o:
-- NÃ£o recupera ediÃ§Ãµes desconhecidas do outro agente.
-- NÃ£o comprova conteÃºdo do clone local.
-- NÃ£o reinstala ferramentas.
-- NÃ£o altera a aplicaÃ§Ã£o.
-- NÃ£o importa anexos.
-- NÃ£o executa testes.
+Esta reconstrução:
+- Não recupera edições desconhecidas do outro agente.
+- Não comprova conteúdo do clone local.
+- Não reinstala ferramentas.
+- Não altera a aplicação.
+- Não importa anexos.
+- Não executa testes.
 - Preserva documentos existentes.
 
-MudanÃ§a atual:
-VS Code local; Codespace anterior indisponÃ­vel.
+Mudança atual:
+VS Code local; Codespace anterior indisponível.
 docs passa a ser versionada.
 
-A especificaÃ§Ã£o de O Louco recupera os objetivos e o roteiro.
-O exercÃ­cio 12 usa distratores plausÃ­veis da imagem, substituindo
-a proposta antiga com alternativas excessivamente Ã³bvias.
-Essa Ã© uma melhoria editorial explÃ­cita, nÃ£o recuperaÃ§Ã£o literal.
+A especificação de O Louco recupera os objetivos e o roteiro.
+O exercício 12 usa distratores plausíveis da imagem, substituindo
+a proposta antiga com alternativas excessivamente óbvias.
+Essa é uma melhoria editorial explícita, não recuperação literal.
 
-PrÃ³xima tarefa:
-inspeÃ§Ã£o do clone local e reconciliaÃ§Ã£o entre cÃ³digo e documentaÃ§Ã£o.
+Próxima tarefa:
+inspeção do clone local e reconciliação entre código e documentação.

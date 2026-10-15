@@ -1,32 +1,32 @@
-# Luna â€” DocumentaÃ§Ã£o
+# Luna — Documentação
 
-DocumentaÃ§Ã£o reconstruÃ­da a partir da conversa de planejamento.
-NÃ£o Ã© recuperaÃ§Ã£o exata dos arquivos do Codespace perdido.
+Documentação reconstruída a partir da conversa de planejamento.
+Não é recuperação exata dos arquivos do Codespace perdido.
 
 ## Leitura recomendada
 
-1. PROJECT_CONTEXT.md â€” identidade, objetivos e decisÃµes.
-2. EXPERIENCE_REQUIREMENTS.md â€” experiÃªncia de aprendizagem.
-3. PROJECT_STATUS.md â€” fatos confirmados e pendÃªncias.
-4. ENVIRONMENT.md â€” ambiente atual e limitaÃ§Ãµes anteriores.
-5. BOOTSTRAP.md â€” execuÃ§Ã£o e validaÃ§Ã£o local.
-6. AGENT_WORKFLOW.md â€” trabalho com agentes.
-7. adr/0001-architecture.md â€” arquitetura.
-8. specs/001-fool-lesson.md â€” primeira aula.
-9. specs/002-fix-frontend-test-setup.md â€” configuraÃ§Ã£o de testes.
-10. skills/ai-product-engineering.md â€” princÃ­pios reutilizÃ¡veis.
+1. PROJECT_CONTEXT.md — identidade, objetivos e decisões.
+2. EXPERIENCE_REQUIREMENTS.md — experiência de aprendizagem.
+3. PROJECT_STATUS.md — fatos confirmados e pendências.
+4. ENVIRONMENT.md — ambiente atual e limitações anteriores.
+5. BOOTSTRAP.md — execução e validação local.
+6. AGENT_WORKFLOW.md — trabalho com agentes.
+7. adr/0001-architecture.md — arquitetura.
+8. specs/001-fool-lesson.md — primeira aula.
+9. specs/002-fix-frontend-test-setup.md — configuração de testes.
+10. skills/ai-product-engineering.md — princípios reutilizáveis.
 
-## PolÃ­tica de versionamento
+## Política de versionamento
 
-Versionar docs e especificaÃ§Ãµes tÃ©cnicas.
-NÃ£o guardar aqui credenciais, reflexÃµes pessoais ou histÃ³rico integral.
+Versionar docs e especificações técnicas.
+Não guardar aqui credenciais, reflexões pessoais ou histórico integral.
 
-ReferÃªncias pessoais e capturas ficam em .local-context/, fora do Git.
-Assets publicados precisam de procedÃªncia registrada.
+Referências pessoais e capturas ficam em .local-context/, fora do Git.
+Assets publicados precisam de procedência registrada.
 
 ## Fonte de verdade
 
-O cÃ³digo local, o histÃ³rico Git e os resultados observados determinam
-o estado real da implementaÃ§Ã£o.
+O código local, o histórico Git e os resultados observados determinam
+o estado real da implementação.
 
-Documentos de planejamento nÃ£o comprovam funcionalidades prontas.
+Documentos de planejamento não comprovam funcionalidades prontas.

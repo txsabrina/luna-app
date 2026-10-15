@@ -1,8 +1,8 @@
-# ADR 0001 â€” Arquitetura inicial
+# ADR 0001 — Arquitetura inicial
 
-Status: direÃ§Ã£o aprovada; configuraÃ§Ã£o efetiva deve ser inspecionada.
+Status: direção aprovada; configuração efetiva deve ser inspecionada.
 
-## DecisÃ£o
+## Decisão
 
 Monorepo:
 - backend
@@ -10,44 +10,44 @@ Monorepo:
 - content
 - infra
 - docs
-- skills, quando aplicÃ¡vel
+- skills, quando aplicável
 
-MonÃ³lito modular por funcionalidade.
-Separar domÃ­nio, aplicaÃ§Ã£o e infraestrutura conforme necessidade.
+Monólito modular por funcionalidade.
+Separar domínio, aplicação e infraestrutura conforme necessidade.
 
 ## Stack
 
 Java 25, Quarkus, Maven Wrapper.
 React, TypeScript e Vite.
 PostgreSQL, Hibernate ORM e Flyway.
-OpenAPI, validaÃ§Ã£o e health checks.
+OpenAPI, validação e health checks.
 
 Bootstrap proposto utilizou Quarkus 3.33.3.
-NÃ£o significa patch mais recente.
-Revisar seguranÃ§a e compatibilidade antes de publicar.
+Não significa patch mais recente.
+Revisar segurança e compatibilidade antes de publicar.
 
 ## Regras
 
-DTOs prÃ³prios, injeÃ§Ã£o por construtor e transaÃ§Ãµes nos casos de uso.
-Interfaces nos limites reais, nÃ£o para toda classe.
-ConteÃºdo separado dos componentes e da avaliaÃ§Ã£o.
-Contratos e conteÃºdo versionados.
+DTOs próprios, injeção por construtor e transações nos casos de uso.
+Interfaces nos limites reais, não para toda classe.
+Conteúdo separado dos componentes e da avaliação.
+Contratos e conteúdo versionados.
 Tentativas e recompensas idempotentes.
-NÃ£o aceitar XP arbitrÃ¡rio do cliente.
+Não aceitar XP arbitrário do cliente.
 
-Evitar microsserviÃ§os, event sourcing e abstraÃ§Ãµes prematuras.
+Evitar microsserviços, event sourcing e abstrações prematuras.
 
-## ManutenÃ§Ã£o
+## Manutenção
 
-Nomes claros, funÃ§Ãµes focadas, tipos explÃ­citos e fluxo previsÃ­vel.
-ComentÃ¡rios devem explicar decisÃµes.
-Extrair responsabilidades, nÃ£o criar camadas por estÃ©tica.
+Nomes claros, funções focadas, tipos explícitos e fluxo previsível.
+Comentários devem explicar decisões.
+Extrair responsabilidades, não criar camadas por estética.
 
 Versionar lockfiles e wrappers.
-NÃ£o editar package-lock.json manualmente.
+Não editar package-lock.json manualmente.
 
 ## IA
 
-Desenvolver com IA nÃ£o exige LLM no produto.
-ComeÃ§ar com conteÃºdo editorial versionado.
-Tutor generativo sÃ³ com caso de uso, avaliaÃ§Ãµes, privacidade e limites.
+Desenvolver com IA não exige LLM no produto.
+Começar com conteúdo editorial versionado.
+Tutor generativo só com caso de uso, avaliações, privacidade e limites.

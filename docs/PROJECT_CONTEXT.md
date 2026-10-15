@@ -1,138 +1,138 @@
-# Luna â€” Contexto do produto
+# Luna — Contexto do produto
 
 ## Objetivo
 
-Aplicativo pessoal em portuguÃªs brasileiro para estudar:
-- TarÃ´ Waiteâ€“Smith.
+Aplicativo pessoal em português brasileiro para estudar:
+- Tarô Waite–Smith.
 - Numerologia.
-- PadrÃµes e autoconhecimento.
+- Padrões e autoconhecimento.
 
-Uso prioritÃ¡rio: iPhone.
-NÃ£o inclui prestaÃ§Ã£o de consultas nem ofertas e precificaÃ§Ã£o.
+Uso prioritário: iPhone.
+Não inclui prestação de consultas nem ofertas e precificação.
 
-ExperiÃªncia desejada:
-participaÃ§Ã£o, estÃ­mulos ajustÃ¡veis, repetiÃ§Ã£o variada e retomada.
-NÃ£o apresentar essas escolhas como tratamento ou garantia para TDAH.
+Experiência desejada:
+participação, estímulos ajustáveis, repetição variada e retomada.
+Não apresentar essas escolhas como tratamento ou garantia para TDAH.
 
 ## Identidade
 
 - Aplicativo: Luna.
 - Personagem: Lume, bruxinha adulta e companheira de estudos.
 - Frase: Conhecimento em fases. No seu ritmo.
-- Linguagem prÃ³xima, despojada, culta e tecnicamente compreensÃ­vel.
-- NÃ£o infantilizar a estudante.
+- Linguagem próxima, despojada, culta e tecnicamente compreensível.
+- Não infantilizar a estudante.
 
-## ReferÃªncias
+## Referências
 
 - https://astratarot.net/pt/professions/tarot-reader
 - https://astratarot.net/pt/products/tarot
 - https://astratarot.net/pt/products/numerology
 - https://astratarot.net/pt/products/psychology
 
-Astra orienta abrangÃªncia e experiÃªncia.
+Astra orienta abrangência e experiência.
 Luna deve ter textos, atividades, personagens e assets originais.
 
-A pesquisa anterior utilizou pÃ¡ginas pÃºblicas e prints de parte do demo.
-NÃ£o houve acesso integral ao currÃ­culo pago.
-TÃ­tulos e contagens devem ser revalidados antes de uso como inventÃ¡rio.
+A pesquisa anterior utilizou páginas públicas e prints de parte do demo.
+Não houve acesso integral ao currículo pago.
+Títulos e contagens devem ser revalidados antes de uso como inventário.
 
 ## Hierarquia aprovada
 
-Trilha â†’ Curso â†’ MÃ³dulo â†’ Aula â†’ Etapa.
+Trilha → Curso → Módulo → Aula → Etapa.
 
-Uma carta Ã© uma aula ou conjunto de aulas, nÃ£o uma trilha principal.
+Uma carta é uma aula ou conjunto de aulas, não uma trilha principal.
 Cada aula pode ter um caminho visual.
-ConclusÃµes avanÃ§am mÃ³dulo, curso e trilha conforme regras explÃ­citas.
+Conclusões avançam módulo, curso e trilha conforme regras explícitas.
 
-## CurrÃ­culo planejado
+## Currículo planejado
 
-### TarÃ´ â€” quatro cursos
+### Tarô — quatro cursos
 
 1. Cartas e fundamentos.
-2. InversÃµes.
-3. CombinaÃ§Ãµes.
-4. CorrespondÃªncias astrolÃ³gicas.
+2. Inversões.
+3. Combinações.
+4. Correspondências astrológicas.
 
 Cobertura progressiva:
 estrutura do baralho, arcanos maiores, menores e corte,
-observaÃ§Ã£o visual, sÃ­mbolos, cores, nÃºmeros, contexto,
-inversÃµes opcionais, combinaÃ§Ãµes e tiragens pessoais.
+observação visual, símbolos, cores, números, contexto,
+inversões opcionais, combinações e tiragens pessoais.
 
-### Numerologia â€” seis cursos
+### Numerologia — seis cursos
 
-1. HistÃ³ria e fundamentos.
-2. NÃºmeros de 0 a 9.
-3. ReduÃ§Ã£o e conexÃµes.
-4. Letras e nÃºmeros.
-5. NÃºmeros superiores e mestres.
+1. História e fundamentos.
+2. Números de 0 a 9.
+3. Redução e conexões.
+4. Letras e números.
+5. Números superiores e mestres.
 6. Palavras e nomes.
 
 Identificar o sistema utilizado.
-NÃ£o misturar silenciosamente valores ordinais, reduÃ§Ã£o pitagÃ³rica
+Não misturar silenciosamente valores ordinais, redução pitagórica
 e gematria.
 
-### PadrÃµes e autoconhecimento â€” quatorze cursos planejados
+### Padrões e autoconhecimento — quatorze cursos planejados
 
-1. Processamento automÃ¡tico.
-2. Sinais corporais e emoÃ§Ãµes.
+1. Processamento automático.
+2. Sinais corporais e emoções.
 3. Narrativas internas.
-4. HÃ¡bitos e evitaÃ§Ã£o.
-5. VÃ­nculos e apego.
+4. Hábitos e evitação.
+5. Vínculos e apego.
 6. Gatilhos e conflito.
 7. Identidade, trabalho e valores.
-8. Sonhos, sÃ­mbolos e interpretaÃ§Ã£o.
-9. InfluÃªncia de experiÃªncias anteriores.
-10. ExperimentaÃ§Ã£o de comportamentos.
-11. DiÃ¡logo interno.
-12. RelaÃ§Ãµes e limites.
-13. ExperiÃªncias sob pressÃ£o.
-14. IntegraÃ§Ã£o num mapa pessoal de padrÃµes.
+8. Sonhos, símbolos e interpretação.
+9. Influência de experiências anteriores.
+10. Experimentação de comportamentos.
+11. Diálogo interno.
+12. Relações e limites.
+13. Experiências sob pressão.
+14. Integração num mapa pessoal de padrões.
 
-SÃ£o objetivos editoriais, nÃ£o cursos implementados.
+São objetivos editoriais, não cursos implementados.
 
 ## Rigor
 
-TarÃ´ e numerologia sÃ£o tradiÃ§Ãµes simbÃ³licas:
-nÃ£o mÃ©todos comprovados de previsÃ£o ou determinaÃ§Ã£o de personalidade.
+Tarô e numerologia são tradições simbólicas:
+não métodos comprovados de previsão ou determinação de personalidade.
 
 Distinguir:
-- ObservaÃ§Ã£o da imagem.
-- TradiÃ§Ã£o histÃ³rica/esotÃ©rica identificada.
+- Observação da imagem.
+- Tradição histórica/esotérica identificada.
 - Possibilidade interpretativa.
 
-NÃ£o diagnosticar, oferecer terapia, inferir traumas pelas cartas
-ou prometer reprogramaÃ§Ã£o do subconsciente.
+Não diagnosticar, oferecer terapia, inferir traumas pelas cartas
+ou prometer reprogramação do subconsciente.
 
-InversÃµes sÃ£o opcionais.
-Normal nÃ£o equivale automaticamente a positivo.
-Invertida nÃ£o equivale automaticamente a negativo.
+Inversões são opcionais.
+Normal não equivale automaticamente a positivo.
+Invertida não equivale automaticamente a negativo.
 
 ## Stack e arquitetura
 
 Requisito principal: Java e Quarkus.
 Frontend proposto: React, TypeScript e Vite.
-PersistÃªncia: PostgreSQL, Hibernate ORM e Flyway.
-Maven Wrapper, contratos OpenAPI, validaÃ§Ã£o e health checks.
+Persistência: PostgreSQL, Hibernate ORM e Flyway.
+Maven Wrapper, contratos OpenAPI, validação e health checks.
 
-DireÃ§Ã£o inicial: Java 25 e Quarkus 3.x suportado.
-As versÃµes efetivas devem ser verificadas no projeto.
-NÃ£o usar versÃµes flutuantes em produÃ§Ã£o.
+Direção inicial: Java 25 e Quarkus 3.x suportado.
+As versões efetivas devem ser verificadas no projeto.
+Não usar versões flutuantes em produção.
 
-Monorepo e monÃ³lito modular por funcionalidade.
-CÃ³digo deve ser fÃ¡cil de ler, manter e modificar.
+Monorepo e monólito modular por funcionalidade.
+Código deve ser fácil de ler, manter e modificar.
 
 ## Privacidade
 
-NÃ£o versionar credenciais, notas pessoais, logs sensÃ­veis
-ou histÃ³rico integral.
+Não versionar credenciais, notas pessoais, logs sensíveis
+ou histórico integral.
 
-NÃ£o sincronizar reflexÃµes sem escolha explÃ­cita.
-Implementar exportaÃ§Ã£o/importaÃ§Ã£o antes de migraÃ§Ãµes de progresso.
-RepositÃ³rio privado nÃ£o torna site publicado privado.
+Não sincronizar reflexões sem escolha explícita.
+Implementar exportação/importação antes de migrações de progresso.
+Repositório privado não torna site publicado privado.
 
-## PublicaÃ§Ã£o
+## Publicação
 
-Frontend estÃ¡tico e Quarkus precisam de hospedagens compatÃ­veis.
-Cloudflare Pages nÃ£o executa backend Java.
-Banco deve ser durÃ¡vel.
-NÃ£o prometer custo zero ou disponibilidade contÃ­nua sem validar limites.
+Frontend estático e Quarkus precisam de hospedagens compatíveis.
+Cloudflare Pages não executa backend Java.
+Banco deve ser durável.
+Não prometer custo zero ou disponibilidade contínua sem validar limites.

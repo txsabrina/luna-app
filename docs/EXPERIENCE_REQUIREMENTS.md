@@ -1,59 +1,59 @@
-# Luna â€” Requisitos da experiÃªncia
+# Luna — Requisitos da experiência
 
-## IntenÃ§Ã£o central
+## Intenção central
 
-NÃ£o entregar apenas:
-- EnciclopÃ©dia.
+Não entregar apenas:
+- Enciclopédia.
 - Flashcards.
-- CatÃ¡logo com quizzes repetidos.
-- Interface bonita com conteÃºdo superficial.
+- Catálogo com quizzes repetidos.
+- Interface bonita com conteúdo superficial.
 
 Distribuir profundidade em pequenas etapas.
 
 ## Pedagogia
 
-Cada aula deve declarar objetivos observÃ¡veis.
-Alternar explicaÃ§Ã£o, observaÃ§Ã£o, reconhecimento, associaÃ§Ã£o,
-comparaÃ§Ã£o, aplicaÃ§Ã£o, recuperaÃ§Ã£o e reflexÃ£o.
+Cada aula deve declarar objetivos observáveis.
+Alternar explicação, observação, reconhecimento, associação,
+comparação, aplicação, recuperação e reflexão.
 
 Repetir conceitos por perspectivas diferentes.
-NÃ£o repetir somente a definiÃ§Ã£o ou trocar palavras de um template.
+Não repetir somente a definição ou trocar palavras de um template.
 
 Quizzes:
-- Distratores plausÃ­veis.
+- Distratores plausíveis.
 - Feedback por alternativa.
-- Resposta correta sem posiÃ§Ã£o ou tamanho previsÃ­vel.
-- SeleÃ§Ã£o e confirmaÃ§Ã£o separadas quando apropriado.
-- NÃ£o avaliar preferÃªncias pessoais como erro.
+- Resposta correta sem posição ou tamanho previsível.
+- Seleção e confirmação separadas quando apropriado.
+- Não avaliar preferências pessoais como erro.
 
-ReflexÃµes livres:
-opcionais e sem correÃ§Ã£o automÃ¡tica arbitrÃ¡ria.
+Reflexões livres:
+opcionais e sem correção automática arbitrária.
 
 ## Lume
 
-Companheira de estudos, nÃ£o guru ou autoridade clÃ­nica.
+Companheira de estudos, não guru ou autoridade clínica.
 Acolhe, pergunta, explica termos e ajuda a comparar ideias.
 Responde a erros sem constranger.
-Celebra conexÃµes e esforÃ§o.
+Celebra conexões e esforço.
 Respeita pausas.
-NÃ£o precisa aparecer em todas as telas.
+Não precisa aparecer em todas as telas.
 
-IlustraÃ§Ã£o 2.5D:
+Ilustração 2.5D:
 volume, tecido, sombras e luz suaves.
-NÃ£o necessariamente realista.
-Imagem estÃ¡tica nÃ£o Ã© personagem articulada.
+Não necessariamente realista.
+Imagem estática não é personagem articulada.
 
-## DireÃ§Ã£o visual
+## Direção visual
 
-- Ameixa profundo na navegaÃ§Ã£o.
-- Marfim nas Ã¡reas de leitura.
-- Lavanda para interaÃ§Ã£o.
+- Ameixa profundo na navegação.
+- Marfim nas áreas de leitura.
+- Lavanda para interação.
 - Dourado envelhecido nos marcos.
-- ConstelaÃ§Ãµes com alternativa acessÃ­vel em lista.
-- TÃ­tulos editoriais, corpo legÃ­vel.
+- Constelações com alternativa acessível em lista.
+- Títulos editoriais, corpo legível.
 
-Movimento comunica estado, progresso ou relaÃ§Ã£o.
-NÃ£o usar flashes nem animaÃ§Ã£o decorativa constante.
+Movimento comunica estado, progresso ou relação.
+Não usar flashes nem animação decorativa constante.
 Respeitar prefers-reduced-motion e modo tranquilo.
 
 Nada essencial depende de hover ou arrastar.
@@ -62,27 +62,27 @@ Nada essencial depende de hover ou arrastar.
 
 Guardar ponto por aula.
 Permitir pausas sem penalidade.
-Recompensas educativas, previsÃ­veis e idempotentes.
-Sem compras, sorteios, escassez artificial ou puniÃ§Ã£o por ausÃªncia.
+Recompensas educativas, previsíveis e idempotentes.
+Sem compras, sorteios, escassez artificial ou punição por ausência.
 
-ConclusÃ£o registra estudo, nÃ£o domÃ­nio comprovado.
+Conclusão registra estudo, não domínio comprovado.
 
-## ReferÃªncias observadas
+## Referências observadas
 
 Prints Astra mostram:
 - Aula de O Louco com 31 etapas, observada parcialmente.
-- Narrativa, perguntas e explicaÃ§Ãµes intercaladas.
-- Escolha Ãºnica, mÃºltipla seleÃ§Ã£o, verdadeiro/falso e associaÃ§Ã£o.
-- XP, nÃ­vel, marcos e abertura de colecionÃ¡vel.
-- Uso de diferentes tradiÃ§Ãµes visuais.
+- Narrativa, perguntas e explicações intercaladas.
+- Escolha única, múltipla seleção, verdadeiro/falso e associação.
+- XP, nível, marcos e abertura de colecionável.
+- Uso de diferentes tradições visuais.
 
-Luna prioriza Waiteâ€“Smith.
-NÃ£o copiar linguagem, personagens e assets.
-NÃ£o tratar afirmaÃ§Ãµes dos prints como fontes verificadas.
+Luna prioriza Waite–Smith.
+Não copiar linguagem, personagens e assets.
+Não tratar afirmações dos prints como fontes verificadas.
 
-## ExpansÃ£o
+## Expansão
 
-Primeiro construir uma aula aprofundada de referÃªncia.
-Testar e obter aprovaÃ§Ã£o da desenvolvedora.
+Primeiro construir uma aula aprofundada de referência.
+Testar e obter aprovação da desenvolvedora.
 Expandir em lotes revisados.
-NÃ£o gerar 78 versÃµes superficiais e chamar curso completo.
+Não gerar 78 versões superficiais e chamar curso completo.
