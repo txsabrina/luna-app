@@ -1,4 +1,5 @@
 /.local-context/
+/docs/
 **/target/
 **/node_modules/
 **/dist/

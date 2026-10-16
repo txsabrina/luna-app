@@ -61,6 +61,35 @@ describe('Carregamento e contrato', () => {
   });
 });
 
+describe('Navegação da prévia', () => {
+  it('liga a trilha de Tarô ao curso existente', () => {
+    const fetch = vi.fn();
+    vi.stubGlobal('fetch', fetch);
+    render(<LearningPage path="/trails/tarot" />);
+    expect(screen.getByRole('link', { name: 'Cartas e fundamentos' })
+      .getAttribute('href')).toBe('/courses/tarot-cards-foundations');
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    { section: 'courses', id: 'tarot-cards-foundations', title: 'Cartas e fundamentos',
+      parentId: 'tarot', childId: 'major-arcana', childTitle: 'Arcanos Maiores', nextSection: 'modules' },
+    { section: 'modules', id: 'major-arcana', title: 'Arcanos Maiores',
+      parentId: 'tarot-cards-foundations', childId: lesson.id, childTitle: lesson.title, nextSection: 'lessons' },
+  ])('carrega $section e oferece o próximo nível', async item => {
+    const fetch = vi.fn().mockResolvedValue(response({
+      id: item.id, title: item.title, status: 'PREVIEW', parentId: item.parentId,
+      children: [{ id: item.childId, title: item.childTitle, status: 'PREVIEW' }],
+    }));
+    vi.stubGlobal('fetch', fetch);
+    render(<LearningPage path={`/${item.section}/${item.id}`} />);
+    expect(await screen.findByRole('heading', { level: 1, name: item.title })).toBeTruthy();
+    expect(screen.getByRole('link', { name: item.childTitle }).getAttribute('href'))
+      .toBe(`/${item.nextSection}/${item.childId}`);
+    expect(fetch).toHaveBeenCalledWith(`/api/v1/${item.section}/${item.id}`, expect.objectContaining({ method: 'GET' }));
+  });
+});
+
 describe('Escolha contextual', () => {
   it('separa seleção de confirmação e mostra feedback e resposta esperada', async () => {
     const fetch = vi.fn().mockResolvedValue(response(result));
@@ -127,9 +156,19 @@ describe('Caminho da prévia', () => {
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Confirmar alternativa' }));
     await userEvent.click(await screen.findByRole('button', { name: 'Concluir esta prévia' }));
-    expect(screen.getByText('Você concluiu esta prévia. Os próximos caminhos estão em produção.')).toBeTruthy();
+    expect(screen.getByText('Você percorreu o primeiro caminho. Os próximos caminhos estão em produção.')).toBeTruthy();
     expect(screen.getByText(/A aula completa não foi concluída/)).toBeTruthy();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+    expect(screen.getByRole('link', { name: 'Voltar ao módulo' }).getAttribute('href'))
+      .toBe('/modules/major-arcana');
+    await userEvent.click(screen.getByRole('button', { name: 'Revisitar a prévia' }));
+    expect(screen.getByRole('heading', { name: 'Abertura' })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Abertura' })).toBe(document.activeElement);
+    expect(screen.queryByRole('heading', { name: 'Prévia concluída' })).toBeNull();
+    await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
+    expect(screen.getByRole('button', { name: 'Continuar' })).toHaveProperty('disabled', true);
+    expect(screen.getByRole('radio', { name: 'Cachorro' })).toHaveProperty('checked', false);
+    expect(fetch).toHaveBeenCalledTimes(1);
   });
   it('oferece baralho físico quando a carta está ausente', async () => {
     render(<CardViewer src="/assets/tarot/waite-smith/fool.jpg" alt="Uma figura e um cachorro." />);

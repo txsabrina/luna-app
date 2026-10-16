@@ -1,7 +1,25 @@
 :root {
-  font-family: system-ui, -apple-system, sans-serif;
+  --color-plum: #120e22;
+  --color-ivory: #fffaf2;
+  --color-lavender: #e2ccff;
+  --color-gold: #d6b979;
+  --color-muted: #d0c4dc;
+  --color-card-text: #35263f;
+  --color-card-muted: #65566e;
+  --color-focus: #dbc1ff;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-editorial: Georgia, serif;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --radius-control: 14px;
+  --radius-panel: 24px;
+  --transition-interaction: .2s ease;
+  font-family: var(--font-body);
   color: #f8f3ff;
-  background: #120e22;
+  background: var(--color-plum);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +29,6 @@ body { margin: 0; min-width: 320px; }
 button, input { font: inherit; }
 button { cursor: pointer; }
 button:focus-visible, a:focus-visible, input:focus-visible {
-  outline: 3px solid #dbc1ff;
+  outline: 3px solid var(--color-focus);
   outline-offset: 5px;
 }
