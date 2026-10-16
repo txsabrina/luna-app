@@ -35,7 +35,7 @@ describe('Preview local isolada', () => {
       '/assets/preview/numerology-medallion.png', '/assets/preview/patterns-medallion.png',
     ]);
     expect(screen.queryByText('Retomar')).toBeNull();
-    expect(screen.getByRole('link', { name: 'Tarô' }).getAttribute('href')).toBe('/preview/trilhas#tarot');
+    expect(screen.getByRole('link', { name: 'Tarô' }).getAttribute('href')).toBe('/preview/taro');
     expect(screen.getByRole('link', { name: 'Padrões' }).getAttribute('href'))
       .toBe('/preview/trilhas#patterns');
     expect(screen.queryByText('Lume, sua companheira de estudos.')).toBeNull();

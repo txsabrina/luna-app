@@ -62,7 +62,15 @@
 .lp-navigation small { font-size: 11px; }
 .lp-skip { position: absolute; top: 8px; left: 8px; transform: translateY(-160%); background: var(--lp-ivory); padding: 12px; z-index: 2; }
 .lp-skip:focus { transform: none; }
+.lp-back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 8px; }
+.lp-catalog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.lp-catalog-action { margin-top: 12px; }
+.lp-tarot-guide { display: grid; grid-template-columns: 100px 1fr 100px; align-items: center; gap: 16px; margin-bottom: 20px; }
+.lp-tarot-emblem { width: min(100%, 100px); }
 @media (max-width: 767px) {
+  .lp-catalog-grid { grid-template-columns: 1fr; }
+  .lp-tarot-guide { grid-template-columns: 80px 1fr; gap: 12px; }
+  .lp-tarot-emblem { grid-column: 1 / -1; width: 80px; }
   .lp-trail-grid { grid-template-columns: 1fr; }
   .lp-trail-card { display: flow-root; }
   .lp-trail-card .lp-image { width: min(100%, 104px); }

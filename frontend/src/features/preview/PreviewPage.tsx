@@ -1,26 +1,19 @@
-import { useState } from 'react';
+import { PreviewImage, RemotePreviewLink } from './PreviewElements';
+import { CardCatalogPage, CardPresentationPage } from './CardCatalogPage';
+import { TarotPages } from './TarotPages';
 import { previewTrails, remotePreview } from './data';
 import './preview.css';
 
-function PreviewImage({ src, size, label, className = '' }: {
-  src: string; size: number; label: string; className?: string;
-}) {
-  const [missing, setMissing] = useState(false);
-  return <div className={`lp-image ${className}`}>
-    {missing ? <p role="status">Ilustração de {label} indisponível.</p> :
-      <img src={src} width={size} height={size} alt="" onError={() => setMissing(true)} />}
-  </div>;
-}
+export type PreviewPath = '/preview' | '/preview/trilhas' | '/preview/taro' | '/preview/taro/cartas-e-fundamentos' | `/preview/taro/cartas-e-fundamentos/modulos/${string}` | `/preview/taro/cartas/${string}`;
 
-function RemotePreviewLink() {
-  return <div className="lp-remote">
-    <a className="lp-action" href={remotePreview.href}>Explorar a prévia</a>
-    <p className="lp-note">{remotePreview.apiNotice}</p>
-  </div>;
-}
-
-export function PreviewPage({ path }: { path: '/preview' | '/preview/trilhas' }) {
+export function PreviewPage({ path }: { path: PreviewPath }) {
   const trailsPage = path === '/preview/trilhas';
+  const tarotPage = path === '/preview/taro' || path === '/preview/taro/cartas-e-fundamentos';
+  const homePage = path === '/preview';
+  const catalogPrefix = '/preview/taro/cartas-e-fundamentos/modulos/';
+  const cardPrefix = '/preview/taro/cartas/';
+  const catalogPage = path.startsWith(catalogPrefix);
+  const cardPage = path.startsWith(cardPrefix);
   return <div className="local-preview">
     <a className="lp-skip" href="#preview-content">Ir para o conteúdo</a>
     <header className="lp-header">
@@ -28,7 +21,8 @@ export function PreviewPage({ path }: { path: '/preview' | '/preview/trilhas' })
       <span className="lp-label">Prévia visual</span>
     </header>
     <main className="lp-main" id="preview-content">
-      {trailsPage ? <>
+      {catalogPage ? <CardCatalogPage key={path} groupId={path.slice(catalogPrefix.length)} /> :
+        cardPage ? <CardPresentationPage key={path} cardId={path.slice(cardPrefix.length)} /> : tarotPage ? <TarotPages modulesPage={path === '/preview/taro/cartas-e-fundamentos'} /> : trailsPage ? <>
         <header className="lp-intro">
           <h1>Nossas trilhas de conhecimento</h1>
           <p>Escolha um caminho para explorar.</p>
@@ -40,6 +34,7 @@ export function PreviewPage({ path }: { path: '/preview' | '/preview/trilhas' })
             <p>{trail.description}</p>
             <p className="lp-count">{trail.plannedCourseCount} cursos planejados</p>
             <p className="lp-status">{trail.status}</p>
+            {trail.coursesHref && <a className="lp-action lp-catalog-action" href={trail.coursesHref}>Explorar os cursos</a>}
             {trail.previewAvailable && <>
               <p className="lp-availability">Prévia de O Louco disponível</p>
               <RemotePreviewLink />
@@ -66,7 +61,7 @@ export function PreviewPage({ path }: { path: '/preview' | '/preview/trilhas' })
             <a href="/preview/trilhas">Conhecer as trilhas</a>
           </div>
           <ul className="lp-medallions">{previewTrails.map(trail => <li key={trail.id}>
-            <a href={`/preview/trilhas#${trail.id}`}>
+            <a href={trail.coursesHref ?? `/preview/trilhas#${trail.id}`}>
               <PreviewImage src={trail.asset} size={trail.imageSize} label={trail.name} />
               <span>{trail.homeLabel}</span>
             </a>
@@ -76,8 +71,8 @@ export function PreviewPage({ path }: { path: '/preview' | '/preview/trilhas' })
       <p className="lp-disclaimer">Interface com dados locais em revisão. Cursos planejados não representam conteúdo concluído.</p>
     </main>
     <nav className="lp-navigation" aria-label="Navegação da prévia visual">
-      <a href="/preview" aria-current={!trailsPage ? 'page' : undefined}>Início</a>
-      <a href="/preview/trilhas" aria-current={trailsPage ? 'page' : undefined}>Trilhas</a>
+      <a href="/preview" aria-current={homePage ? 'page' : undefined}>Início</a>
+      <a href="/preview/trilhas" aria-current={!homePage ? 'page' : undefined}>Trilhas</a>
       <span>Biblioteca<small>Em preparação</small></span>
       <span>Meu espaço<small>Em preparação</small></span>
     </nav>

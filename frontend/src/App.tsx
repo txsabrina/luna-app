@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { LearningPage } from './features/learning/LearningPage';
-import { PreviewPage } from './features/preview/PreviewPage';
+import { PreviewPage, type PreviewPath } from './features/preview/PreviewPage';
 
 type Status = 'PLANNED' | 'IN_PROGRESS' | 'AVAILABLE';
 
@@ -97,8 +97,10 @@ export default function App() {
     return () => controller.abort();
   }, [attempt, showCatalog]);
 
-    if (path === '/preview' || path === '/preview/trilhas') {
-    return <PreviewPage path={path} />;
+  if (path === '/preview' || path === '/preview/trilhas' ||
+      path === '/preview/taro' || path === '/preview/taro/cartas-e-fundamentos' ||
+      path.startsWith('/preview/taro/cartas-e-fundamentos/modulos/') || path.startsWith('/preview/taro/cartas/')) {
+    return <PreviewPage path={path as PreviewPath} />;
   }
 
   return (
