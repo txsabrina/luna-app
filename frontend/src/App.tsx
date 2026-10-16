@@ -78,7 +78,7 @@ export default function App() {
           throw new Error('O catálogo recebido tem um formato inesperado.');
         }
 
-        setCatalog({ kind: 'success', trails: data });
+        if (!controller.signal.aborted) setCatalog({ kind: 'success', trails: data });
       } catch (error) {
         if (controller.signal.aborted) return;
 
@@ -127,7 +127,7 @@ export default function App() {
             )}
             <div>
               <p className="eyebrow">Lume</p>
-              <p>“Vamos observar antes de decorar?”</p>
+              <p>“Vamos observar antes de decorar? Nosso primeiro encontro é com O Louco.”</p>
               {!portraitAvailable && (
                 <small>Retrato da personagem ainda não adicionado.</small>
               )}
@@ -165,7 +165,11 @@ export default function App() {
                   <h3>{trail.title}</h3>
                   <p>{trail.description}</p>
                   <footer>{trail.plannedCourseCount} cursos planejados</footer>
-                  {trail.id === 'tarot' && <a href="/trails/tarot">Explorar prévia de Tarô</a>}
+                  {trail.id === 'tarot' ? <div className="preview-entry">
+                    <p id="fool-preview-description" className="preview-description">Prévia disponível · 4 etapas</p>
+                    <a className="primary-action" href="/lessons/fool-first-step"
+                      aria-describedby="fool-preview-description">Conhecer O Louco</a>
+                  </div> : <p className="preparation-note">Cursos em preparação</p>}
                 </article>
               ))}
             </div>
@@ -179,7 +183,9 @@ export default function App() {
             checked={quiet}
             onChange={event => setQuiet(event.target.checked)}
           />
-          Modo tranquilo: sem animações
+          <span>Modo tranquilo: sem animações
+            <small>{quiet ? 'Ativado nesta sessão' : 'Desativado · respeita a preferência do dispositivo'}</small>
+          </span>
         </label>
 
         <p className="scope-note">
