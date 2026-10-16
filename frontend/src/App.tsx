@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { LearningPage } from './features/learning/LearningPage';
+import { PreviewPage } from './features/preview/PreviewPage';
 
 type Status = 'PLANNED' | 'IN_PROGRESS' | 'AVAILABLE';
 
@@ -95,6 +96,10 @@ export default function App() {
     void load();
     return () => controller.abort();
   }, [attempt, showCatalog]);
+
+    if (path === '/preview' || path === '/preview/trilhas') {
+    return <PreviewPage path={path} />;
+  }
 
   return (
     <div className={`universe ${quiet ? 'quiet' : ''}`}>
