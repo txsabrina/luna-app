@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "mode": "sample",
+  "generator": {
+    "sharp": "0.35.5",
+    "node": "v22.23.2",
+    "format": "webp",
+    "quality": 85,
+    "effort": 6,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "concurrency": 1,
+    "colour": "sRGB, ICC preserved when present"
+  },
+  "masterCount": 78,
+  "copiedMasters": [
+    {
+      "cardId": "major-00-fool",
+      "filename": "01_the_fool.png",
+      "sha256": "89c962659a5c5c7aa47eb564ec9b3bbcdcfdb911b39bc270bae0a26b801d0dc0",
+      "bytes": 1552886
+    },
+    {
+      "cardId": "major-01-magician",
+      "filename": "02_the_magician.png",
+      "sha256": "7cbb9908d2018416021c126b84287a6ce60e045ecff88ce64e84b0d36d7d3476",
+      "bytes": 1739251
+    },
+    {
+      "cardId": "major-02-high-priestess",
+      "filename": "03_the_high_priestess.png",
+      "sha256": "055f75211291a22fd07bde99ee006f283c1cc2f6509964040c02b6960ab5fbf3",
+      "bytes": 2060217
+    },
+    {
+      "cardId": "major-03-empress",
+      "filename": "04_the_empress.png",
+      "sha256": "2732d486cb310f9a1cdb1a3705d6958b66e5851ffbed5122b2f263482e47bd83",
+      "bytes": 1981943
+    },
+    {
+      "cardId": "major-04-emperor",
+      "filename": "05_the_emperor.png",
+      "sha256": "091bc2455fa14099ac7a0f1786b842c0acf25462f159c8af38b76fba5477fb94",
+      "bytes": 1857895
+    },
+    {
+      "cardId": "major-05-hierophant",
+      "filename": "06_the_hierophant.png",
+      "sha256": "4651d5a443c84fcb8655baece459cb5df708d9f2895cd6956799d9386a04f136",
+      "bytes": 1770687
+    },
+    {
+      "cardId": "major-06-lovers",
+      "filename": "07_the_lovers.png",
+      "sha256": "f70a8db8b33ae72a40d7fff83482e73dbf463f6a5583c08340f9e7db317e2f55",
+      "bytes": 1716216
+    },
+    {
+      "cardId": "major-07-chariot",
+      "filename": "08_the_chariot.png",
+      "sha256": "8c10f5c7ff5e899067af39af8cf2a30db9f556b28dfc1574a62d54e3d1838920",
+      "bytes": 1813828
+    },
+    {
+      "cardId": "major-08-strength",
+      "filename": "09_strength.png",
+      "sha256": "645463cb9c580c3b9c5b435845b456d8a8616fd1c52e00bd3770fc13bfc40d13",
+      "bytes": 1754833
+    },
+    {
+      "cardId": "major-09-hermit",
+      "filename": "10_the_hermit.png",
+      "sha256": "3fec300672c8b19a6c4ce69d4940b009db394168571550c19cb0b95d3ba13d19",
+      "bytes": 1275194
+    },
+    {
+      "cardId": "major-10-wheel-of-fortune",
+      "filename": "11_wheel_of_fortune.png",
+      "sha256": "8c66ca21ee2a410ecb117e5023c52cdfae9e9066c709442ac8eb7def00581488",
+      "bytes": 1899034
+    },
+    {
+      "cardId": "major-11-justice",
+      "filename": "12_justice.png",
+      "sha256": "050e8980291c63163260d003a8f9d6b756b04832664ace0223acca478b9b6cfa",
+      "bytes": 1520935
+    },
+    {
+      "cardId": "major-12-hanged-man",
+      "filename": "13_the_hanged_man.png",
+      "sha256": "4db40c0ae74c2050d66b3cad6aac6abdfb1e1078c8e6e44390dc4ee2627e7937",
+      "bytes": 1256531
+    },
+    {
+      "cardId": "major-13-death",
+      "filename": "14_death.png",
+      "sha256": "a8c44b9d2c6f51a2b4c28fb471e418dcda8d406ed64573d7019b58516094301f",
+      "bytes": 1759497
+    },
+    {
+      "cardId": "major-14-temperance",
+      "filename": "15_temperance.png",
+      "sha256": "7afbd56429cbd519ffa1f33f8e171e3127c092915686b5b2c62a55859fcff125",
+      "bytes": 1860270
+    },
+    {
+      "cardId": "major-15-devil",
+      "filename": "16_the_devil.png",
+      "sha256": "eaf32fd3236ec1ed3421138e76513367ab935550d82c53e43e2fa4b8dcbfd03a",
+      "bytes": 1405565
+    },
+    {
+      "cardId": "major-16-tower",
+      "filename": "17_the_tower.png",
+      "sha256": "3ccbc69db9653fec6f3b24e60eb5bb06931c93b9d329494a3b48acc583ba55c6",
+      "bytes": 1649646
+    },
+    {
+      "cardId": "major-17-star",
+      "filename": "18_the_star.png",
+      "sha256": "9e8583d5ceea5f411dd719dc694157d71598b24fdccfb3c4401d5cc30dd04085",
+      "bytes": 1339132
+    },
+    {
+      "cardId": "major-18-moon",
+      "filename": "19_the_moon.png",
+      "sha256": "58aafa373ff9f62c25c604a0c15f6f0502540d6a367177c05a8bc03fc4edf193",
+      "bytes": 1290391
+    },
+    {
+      "cardId": "major-19-sun",
+      "filename": "20_the_sun.png",
+      "sha256": "547ea99256347893c8481b926b25677e5c716f19de152879a7465045f541cc45",
+      "bytes": 1639522
+    },
+    {
+      "cardId": "major-20-judgement",
+      "filename": "21_judgement.png",
+      "sha256": "f33c1d66432f9c68a1bcc211f505ee97e0e8718391e34bea81815668d88ad87c",
+      "bytes": 1626508
+    },
+    {
+      "cardId": "major-21-world",
+      "filename": "22_the_world.png",
+      "sha256": "fba6dfaf7a96c80dded5da3cb34c3e28ec55439ec8a5df1b7a468c2189ea4c21",
+      "bytes": 1793708
+    },
+    {
+      "cardId": "wands-ace",
+      "filename": "23_ace_of_wands.png",
+      "sha256": "d7efc5ec18c0018387d9108acc5714e592861dba7e252a4d3e05b79b9c3640c1",
+      "bytes": 1515694
+    },
+    {
+      "cardId": "wands-two",
+      "filename": "24_two_of_wands.png",
+      "sha256": "b56ae30e9dea6ffb588084c8415d6ec263d2f8dc6ef305b981c892e402111c41",
+      "bytes": 1610983
+    },
+    {
+      "cardId": "wands-three",
+      "filename": "25_three_of_wands.png",
+      "sha256": "3c45c2cb84959be7ef1b71accdacc2ddc03bbf956a49b02ca7c6b9d56e8981cf",
+      "bytes": 1466485
+    },
+    {
+      "cardId": "wands-four",
+      "filename": "26_four_of_wands.png",
+      "sha256": "85f3d92e7bf00891829a8985bffcfd685e746dab7e745e74f7800b48a17e6005",
+      "bytes": 1719854
+    },
+    {
+      "cardId": "wands-five",
+      "filename": "27_five_of_wands.png",
+      "sha256": "86148f7b8e3a5b21153cd906419eae57450a91853205f8fb92cac6bd5b31c1c0",
+      "bytes": 1733969
+    },
+    {
+      "cardId": "wands-six",
+      "filename": "28_six_of_wands.png",
+      "sha256": "17b76455168b3ef63a126bff52e27be6c2d6260bfbf50927bdbb6a039d5e1d4f",
+      "bytes": 1515867
+    },
+    {
+      "cardId": "wands-seven",
+      "filename": "29_seven_of_wands.png",
+      "sha256": "c264a4e5db214278707e9f179fa414bfddc3524012fe011e56a18fa34acbb4c2",
+      "bytes": 1453344
+    },
+    {
+      "cardId": "wands-eight",
+      "filename": "30_eight_of_wands.png",
+      "sha256": "a32cd4d21bc854df126688f9a029a7ab799e7f84d4535645142631797ef1b004",
+      "bytes": 1610261
+    },
+    {
+      "cardId": "wands-nine",
+      "filename": "31_nine_of_wands.png",
+      "sha256": "fa918443f84f993c6cb6272f632334eba35a750d9a37627b611546a15fb254e6",
+      "bytes": 1646820
+    },
+    {
+      "cardId": "wands-ten",
+      "filename": "32_ten_of_wands.png",
+      "sha256": "668628454d4c87b34ab78dd97c4907f9ee0d589891c1af35365ac5cf815fafed",
+      "bytes": 1562505
+    },
+    {
+      "cardId": "wands-page",
+      "filename": "33_page_of_wands.png",
+      "sha256": "3df2d42af9488977a41fe050127dc97a8d8e698373188050317ef3bfad2417dd",
+      "bytes": 1333091
+    },
+    {
+      "cardId": "wands-knight",
+      "filename": "34_knight_of_wands.png",
+      "sha256": "6271be5485247d656f6cfe0364137235c41d054ca3c5f87672efc7e4e8ee0b54",
+      "bytes": 1945886
+    },
+    {
+      "cardId": "wands-queen",
+      "filename": "35_queen_of_wands.png",
+      "sha256": "1e6f46e4ac07563a5f5cd77b9f6b8c530bdc79b1e1282a92803f0146b9ad70d8",
+      "bytes": 1655268
+    },
+    {
+      "cardId": "wands-king",
+      "filename": "36_king_of_wands.png",
+      "sha256": "4422be5545ae064a32d9250bb774897a5c5c9e3381445644a3daf17ad9f995fd",
+      "bytes": 1831318
+    },
+    {
+      "cardId": "cups-ace",
+      "filename": "37_ace_of_cups.png",
+      "sha256": "3a1f473e0a33f15da57ee4353058005e661990e9099c4d385468c8c8c3fbad92",
+      "bytes": 1462688
+    },
+    {
+      "cardId": "cups-two",
+      "filename": "38_two_of_cups.png",
+      "sha256": "a2ccf790147f8150e37dd2a042264fcd067f7c14c6fcddca6282908a77c1c625",
+      "bytes": 1569999
+    },
+    {
+      "cardId": "cups-three",
+      "filename": "39_three_of_cups.png",
+      "sha256": "141e7b4c40dbc415b7330c781349f67124aebfa8a7974bdfc066b250550223be",
+      "bytes": 1692103
+    },
+    {
+      "cardId": "cups-four",
+      "filename": "40_four_of_cups.png",
+      "sha256": "f7ae333a3a13af6a5eac39b9d0f446abaf8a6bc3d46b3acd947a4a4d7d22710a",
+      "bytes": 1712972
+    },
+    {
+      "cardId": "cups-five",
+      "filename": "41_five_of_cups.png",
+      "sha256": "cf54e6805aa7fee12d291a071718b9c4f32fbf5b048950d3a13c6b5b317910e7",
+      "bytes": 1298303
+    },
+    {
+      "cardId": "cups-six",
+      "filename": "42_six_of_cups.png",
+      "sha256": "d445606bc0a140adf3f697342b4944cffa544f9e157d774dfabb9677dd5ed421",
+      "bytes": 1802853
+    },
+    {
+      "cardId": "cups-seven",
+      "filename": "43_seven_of_cups.png",
+      "sha256": "8d0fbd54b41d58fef60bb47001c9de8bd19ac278737d55b5ee452d5b1da110a8",
+      "bytes": 1685675
+    },
+    {
+      "cardId": "cups-eight",
+      "filename": "44_eight_of_cups.png",
+      "sha256": "aae860dff28309ab8e5eb8381bbcdbf432bdb28ffcff5adaf28f9be226b23c64",
+      "bytes": 1434428
+    },
+    {
+      "cardId": "cups-nine",
+      "filename": "45_nine_of_cups.png",
+      "sha256": "c40149c337c4334920f44c24a2a5f04686382946a04c77dcd9c1d379b84e83c9",
+      "bytes": 1602608
+    },
+    {
+      "cardId": "cups-ten",
+      "filename": "46_ten_of_cups.png",
+      "sha256": "7708d1fa1a6a3ede45b7ba5440a6dfac1cda06881ca8a6a9cfa4cf343059f93c",
+      "bytes": 1503796
+    },
+    {
+      "cardId": "cups-page",
+      "filename": "47_page_of_cups.png",
+      "sha256": "7c69335e340d172093bd0bf28219afb1ba9d32ead32f1eb9595fee7b7843f787",
+      "bytes": 1640440
+    },
+    {
+      "cardId": "cups-knight",
+      "filename": "48_knight_of_cups.png",
+      "sha256": "066f22bf25f9268c37fa385d49746c71294e0889ab60b9b6a109d38b94097c6b",
+      "bytes": 1552377
+    },
+    {
+      "cardId": "cups-queen",
+      "filename": "49_queen_of_cups.png",
+      "sha256": "3d33e84533dad74902ff4f2c8d5d412b7387c3e1fdb8c2949ef967ece6996a27",
+      "bytes": 1675484
+    },
+    {
+      "cardId": "cups-king",
+      "filename": "50_king_of_cups.png",
+      "sha256": "3c84b86e19c15c91391b785dbfa54763aab253b3053151f633e12a84dc8cddd7",
+      "bytes": 1375656
+    },
+    {
+      "cardId": "swords-ace",
+      "filename": "51_ace_of_swords.png",
+      "sha256": "f31086258e41846b695caec06da28c3910953d6f99dc18f5c92bb66ed04a1e48",
+      "bytes": 1438344
+    },
+    {
+      "cardId": "swords-two",
+      "filename": "52_two_of_swords.png",
+      "sha256": "f53b2581bef1b03fb120f9575dbb350ddf127013132b4993083c3d81f210eb75",
+      "bytes": 1320972
+    },
+    {
+      "cardId": "swords-three",
+      "filename": "53_three_of_swords.png",
+      "sha256": "42e20e2acbc1f0c855de7cdfb3fe383b48c842119c926025badc315ad92cd38a",
+      "bytes": 1193271
+    },
+    {
+      "cardId": "swords-four",
+      "filename": "54_four_of_swords.png",
+      "sha256": "ef7a97ea36b32b160f0358bc8e78ad351b28649e225ca4d4846703ad00fe9109",
+      "bytes": 1478219
+    },
+    {
+      "cardId": "swords-five",
+      "filename": "55_five_of_swords.png",
+      "sha256": "38ead016b238d728be5c9a4896490aedc25b81c8420eadb166472b0b02adff57",
+      "bytes": 1642569
+    },
+    {
+      "cardId": "swords-six",
+      "filename": "56_six_of_swords.png",
+      "sha256": "d505ad699c4282832e13dbc8c4487bf8fe852da3956ca36994b2e5b82218eac9",
+      "bytes": 1742379
+    },
+    {
+      "cardId": "swords-seven",
+      "filename": "57_seven_of_swords.png",
+      "sha256": "84ccd50f97bac377367f9fb9b330919132673b4c904bec359601f3fa1fe529c8",
+      "bytes": 1292596
+    },
+    {
+      "cardId": "swords-eight",
+      "filename": "58_eight_of_swords.png",
+      "sha256": "b120d9b27b68be5641b4e8b981a4c7dcc935be5965ed0392386afbceba8755ef",
+      "bytes": 1525765
+    },
+    {
+      "cardId": "swords-nine",
+      "filename": "59_nine_of_swords.png",
+      "sha256": "5265d3dca9f3722541616ba28a0657988805eb076905323d8c508693c46ade90",
+      "bytes": 1611334
+    },
+    {
+      "cardId": "swords-ten",
+      "filename": "60_ten_of_swords.png",
+      "sha256": "b1d09dbba7f31006b14fd9c1a4316e295921963a97731e2b83b8b05a340ad740",
+      "bytes": 1345522
+    },
+    {
+      "cardId": "swords-page",
+      "filename": "61_page_of_swords.png",
+      "sha256": "b8538b34dcda8fdd227841c26aa53adff741fbd9fbc71c29f8e37d822f80a168",
+      "bytes": 1519308
+    },
+    {
+      "cardId": "swords-knight",
+      "filename": "62_knight_of_swords.png",
+      "sha256": "66c80a1c1a75e425cb2364d2f9a5506e7becbb58df9db8b6d4af8aab8b6b596d",
+      "bytes": 1619812
+    },
+    {
+      "cardId": "swords-queen",
+      "filename": "63_queen_of_swords.png",
+      "sha256": "33b0275d0cd126fe025e90126205430172f74ba051c1c76c1371443868266ba2",
+      "bytes": 1624958
+    },
+    {
+      "cardId": "swords-king",
+      "filename": "64_king_of_swords.png",
+      "sha256": "5099a2bc0496eecefc7731b4a5bfff8387421dacb13ccfed1cac740f6870905d",
+      "bytes": 1706656
+    },
+    {
+      "cardId": "pentacles-ace",
+      "filename": "65_ace_of_pentacles.png",
+      "sha256": "b6532bef45c7633d816f8a4c3d3b4f84cd4312997242d47ddffb4fa6b2c2a171",
+      "bytes": 1439885
+    },
+    {
+      "cardId": "pentacles-two",
+      "filename": "66_two_of_pentacles.png",
+      "sha256": "7ff58392dabe07bbb0b2b47b401fa18e92da81cea55804c7b96e75b1a199d461",
+      "bytes": 1485080
+    },
+    {
+      "cardId": "pentacles-three",
+      "filename": "67_three_of_pentacles.png",
+      "sha256": "321949e2eb06fdf7db6a69ed32e378ada83e27fee44dda28cc0ce8cb837ee289",
+      "bytes": 1634684
+    },
+    {
+      "cardId": "pentacles-four",
+      "filename": "68_four_of_pentacles.png",
+      "sha256": "2d6b1403469447b8e72a856fc2b7d01a6476d7b34e7d7b613e5b088e6c1f6637",
+      "bytes": 1645589
+    },
+    {
+      "cardId": "pentacles-five",
+      "filename": "69_five_of_pentacles.png",
+      "sha256": "9e4f24f806a2d50f6856d74395b74fc9bc96a8f88d13dd991349a61ae008397d",
+      "bytes": 1626187
+    },
+    {
+      "cardId": "pentacles-six",
+      "filename": "70_six_of_pentacles.png",
+      "sha256": "b38e51ed7c9a2d9e7b479168b219c8ed4edf67d02f84301c5e9736429c9f3939",
+      "bytes": 1736735
+    },
+    {
+      "cardId": "pentacles-seven",
+      "filename": "71_seven_of_pentacles.png",
+      "sha256": "f8050cd8f41be39d2de07219112d8b8a6ae8fcb43e70681229e7bd0d4daa755c",
+      "bytes": 1823672
+    },
+    {
+      "cardId": "pentacles-eight",
+      "filename": "72_eight_of_pentacles.png",
+      "sha256": "fc7e9e66592f84f4648b91010c21ba004eb962065962638b3a3ee2e1d6c5ed0c",
+      "bytes": 1736816
+    },
+    {
+      "cardId": "pentacles-nine",
+      "filename": "73_nine_of_pentacles.png",
+      "sha256": "61d5bbbde8e6001bc1c582779ca13757823862e9210633ab11f434f6542c8c0b",
+      "bytes": 1781482
+    },
+    {
+      "cardId": "pentacles-ten",
+      "filename": "74_ten_of_pentacles.png",
+      "sha256": "0e9016a0f8d583bb857f599978b6e6f0bbda33bb70fc644bd48bc22967b64bb2",
+      "bytes": 1966516
+    },
+    {
+      "cardId": "pentacles-page",
+      "filename": "75_page_of_pentacles.png",
+      "sha256": "764ba3f339379a4daebcfc76fe0debf1ea02c38a36428bb0512c68295d8e83f4",
+      "bytes": 1473518
+    },
+    {
+      "cardId": "pentacles-knight",
+      "filename": "76_knight_of_pentacles.png",
+      "sha256": "c37984c9edae8cb6a1ee86f75c6d095dc1e7cb9693e82fc40aec5273693ba6de",
+      "bytes": 1423261
+    },
+    {
+      "cardId": "pentacles-queen",
+      "filename": "77_queen_of_pentacles.png",
+      "sha256": "92033b1206252043ec455660fcc4772b55263f87ede754bd0f024eb2ecaa7b42",
+      "bytes": 1396653
+    },
+    {
+      "cardId": "pentacles-king",
+      "filename": "78_king_of_pentacles.png",
+      "sha256": "38d4e45e7c0ea761a1c95ac940de217f120c9481788b05e6fe259a91038f4a5e",
+      "bytes": 1697508
+    }
+  ],
+  "selectedCount": 5,
+  "derivativeCount": 15,
+  "selectedMasterBytes": 7409497,
+  "derivativeBytes": 922814,
+  "profiles": [
+    {
+      "requestedWidth": 320,
+      "bytes": 129362
+    },
+    {
+      "requestedWidth": 640,
+      "bytes": 344528
+    },
+    {
+      "requestedWidth": 1280,
+      "bytes": 448924
+    }
+  ],
+  "smallest": {
+    "width": 320,
+    "height": 560,
+    "bytes": 21048,
+    "src": "/assets/tarot/optimized/swords-ace-320.webp",
+    "sha256": "4aff57e1309714d34c0432761c6d093c5f0a65854a1a4aea97cb10c9417fd4ba"
+  },
+  "largest": {
+    "width": 777,
+    "height": 1360,
+    "bytes": 108356,
+    "src": "/assets/tarot/optimized/major-00-fool-777.webp",
+    "sha256": "11eeabcc7a04e2e89d9ab4b802b88c5182478bab5ac6c89c03f8c785e2a4d81c"
+  },
+  "generationMs": 1787,
+  "cards": [
+    {
+      "cardId": "major-00-fool",
+      "master": {
+        "cardId": "major-00-fool",
+        "filename": "01_the_fool.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1552886,
+        "sha256": "89c962659a5c5c7aa47eb564ec9b3bbcdcfdb911b39bc270bae0a26b801d0dc0",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30872,
+          "src": "/assets/tarot/optimized/major-00-fool-320.webp",
+          "sha256": "bf6fefc5dc160f8da3774fe04e1eba655a9e3b3870ff1ae11492931f0762432c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 82654,
+          "src": "/assets/tarot/optimized/major-00-fool-640.webp",
+          "sha256": "743f36e57149a982832e1af04c83a701984b0b98e6c07e2fa787a1e68d70600d"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 108356,
+          "src": "/assets/tarot/optimized/major-00-fool-777.webp",
+          "sha256": "11eeabcc7a04e2e89d9ab4b802b88c5182478bab5ac6c89c03f8c785e2a4d81c"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-ace",
+      "master": {
+        "cardId": "wands-ace",
+        "filename": "23_ace_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1515694,
+        "sha256": "d7efc5ec18c0018387d9108acc5714e592861dba7e252a4d3e05b79b9c3640c1",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21334,
+          "src": "/assets/tarot/optimized/wands-ace-320.webp",
+          "sha256": "0e2f980fff755a1855103b12b5b27e3884c91289d7e1c9756d30048739f5cda7"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 59586,
+          "src": "/assets/tarot/optimized/wands-ace-640.webp",
+          "sha256": "71088f8fdd8483badb8bc5fd90894a75d8e51b0d3c50915f7d9b50511c4850ff"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 77450,
+          "src": "/assets/tarot/optimized/wands-ace-768.webp",
+          "sha256": "ee1f6053b16951cec2308164e1d2e77e3b5ddc93c2dcc74dae2c21a05d7aa4e8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-ace",
+      "master": {
+        "cardId": "cups-ace",
+        "filename": "37_ace_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1462688,
+        "sha256": "3a1f473e0a33f15da57ee4353058005e661990e9099c4d385468c8c8c3fbad92",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 27500,
+          "src": "/assets/tarot/optimized/cups-ace-320.webp",
+          "sha256": "0bac373dcb0608997f2bac5d45666d8312b5644dc54e49986d6beff3e06d4856"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 72564,
+          "src": "/assets/tarot/optimized/cups-ace-640.webp",
+          "sha256": "18bae61687bb86ae7134634dc73b16841a06b6fa88e22bdf233c0b882ede7dfc"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 94996,
+          "src": "/assets/tarot/optimized/cups-ace-768.webp",
+          "sha256": "46e61d838a69682288304d935d8e23813594ffabe1f30c03519e87bde40ea8e8"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-ace",
+      "master": {
+        "cardId": "swords-ace",
+        "filename": "51_ace_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1438344,
+        "sha256": "f31086258e41846b695caec06da28c3910953d6f99dc18f5c92bb66ed04a1e48",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21048,
+          "src": "/assets/tarot/optimized/swords-ace-320.webp",
+          "sha256": "4aff57e1309714d34c0432761c6d093c5f0a65854a1a4aea97cb10c9417fd4ba"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 58810,
+          "src": "/assets/tarot/optimized/swords-ace-640.webp",
+          "sha256": "520e3eff188e6a587b38fdef7aa92907da904f2edbc1bc8bf111eb4d2f5de7d6"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 77562,
+          "src": "/assets/tarot/optimized/swords-ace-768.webp",
+          "sha256": "c74aeb55fc50ad3545fa9fc7131a9bb820ae186aff193c8aaf2265be627da8d6"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-ace",
+      "master": {
+        "cardId": "pentacles-ace",
+        "filename": "65_ace_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1439885,
+        "sha256": "b6532bef45c7633d816f8a4c3d3b4f84cd4312997242d47ddffb4fa6b2c2a171",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28608,
+          "src": "/assets/tarot/optimized/pentacles-ace-320.webp",
+          "sha256": "4ba7b77bd5e5cb6f8eec54537c05d98f628787a9dd5ec74bacbd188d1a833689"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 70914,
+          "src": "/assets/tarot/optimized/pentacles-ace-640.webp",
+          "sha256": "1c14ff7d5785ecdced0d19a542d2bf9e335113bf5bd930e504e35ae8eabf776a"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 90560,
+          "src": "/assets/tarot/optimized/pentacles-ace-768.webp",
+          "sha256": "74c29c0fb088cc8522a14c03cb96b62400f4aa9c8082f555ee9b4238835042e0"
+        }
+      ]
+    }
+  ],
+  "compatibility": "All public PNGs preserved; remote lesson and consumers unchanged.",
+  "measurement": "File bytes only, not browser download or visual approval."
+}
