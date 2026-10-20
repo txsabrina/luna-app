@@ -8,8 +8,8 @@ import ts from 'typescript';
 
 const frontend = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const source = path.resolve(frontend, '../assets-source/tarot/luna');
-const legacy = path.join(frontend, 'public/assets/tarot/waite-smith');
 const output = path.join(frontend, 'public/assets/tarot/optimized');
+const reports = path.join(frontend, 'reports/tarot');
 const imageMetadataModule = path.join(frontend, 'src/features/preview/cardImageMetadata.ts');
 const sampleIds = ['major-00-fool', 'wands-ace', 'cups-ace', 'swords-ace', 'pentacles-ace'];
 const hash = buffer => createHash('sha256').update(buffer).digest('hex');
@@ -62,8 +62,8 @@ async function inspect(entries, directory) {
   return results;
 }
 
-async function copyMasters(entries) {
-  const originals = await inspect(entries, legacy);
+async function importMasters(entries, importDirectory) {
+  const originals = await inspect(entries, importDirectory);
   // Preflight every existing destination before creating or copying anything.
   for (const entry of originals) {
     const destination = path.join(source, entry.filename);
@@ -74,7 +74,7 @@ async function copyMasters(entries) {
   await mkdir(source, { recursive: true });
   for (const entry of originals) {
     const destination = path.join(source, entry.filename);
-    if (!await exists(destination)) await copyFile(path.join(legacy, entry.filename), destination, constants.COPYFILE_EXCL);
+    if (!await exists(destination)) await copyFile(path.join(importDirectory, entry.filename), destination, constants.COPYFILE_EXCL);
     if (hash(await readFile(destination)) !== entry.sha256) throw new Error(`Copy verification failed: ${destination}`);
   }
   return originals;
@@ -116,23 +116,15 @@ async function generate(masters, mode, quality) {
     const profiles = [320, 640, 1280].map(requestedWidth => ({ requestedWidth,
       bytes: cards.reduce((sum, card) => sum + card.variants.find(variant => variant.width === Math.min(requestedWidth, card.master.width)).bytes, 0) }));
     const variants = cards.flatMap(card => card.variants);
-    const report = { schemaVersion: 1, mode, generator: { sharp: sharp.versions.sharp, node: process.version,
+    const report = { schemaVersion: 2, mode, generator: { sharp: sharp.versions.sharp, node: process.version,
       format: 'webp', quality, effort: 6, widths: [320, 640, 1280], concurrency: 1, colour: 'sRGB, ICC preserved when present' },
-      masterCount: masters.length, copiedMasters: masters.map(({ cardId, filename, sha256, bytes }) => ({ cardId, filename, sha256, bytes })),
-      removalCandidates: mode === 'all' ? masters.map(({ filename, sha256 }) => ({
-        publicPath: `/assets/tarot/waite-smith/${filename}`,
-        preservedMaster: `assets-source/tarot/luna/${filename}`,
-        sha256,
-        consumers: ['generate-tarot-images.mjs --copy-masters', 'tarot-images.test.ts compatibility check'],
-        decision: 'Preserve pending explicit removal approval; no catalogue runtime consumer remains.',
-      })) : undefined,
+      masterCount: masters.length, masters: masters.map(({ cardId, filename, sha256, bytes }) => ({ cardId, filename, sha256, bytes })),
       selectedCount: cards.length, derivativeCount: variants.length,
       selectedMasterBytes: selected.reduce((sum, entry) => sum + entry.bytes, 0),
       derivativeBytes: variants.reduce((sum, variant) => sum + variant.bytes, 0), profiles,
       smallest: variants.reduce((a, b) => a.bytes < b.bytes ? a : b), largest: variants.reduce((a, b) => a.bytes > b.bytes ? a : b),
       generationMs: Math.round(performance.now() - started), cards,
-      compatibility: mode === 'all' ? 'All public PNGs preserved; catalogue uses optimized variants; remote lesson unchanged.' :
-        'All public PNGs preserved; remote lesson and consumers unchanged.',
+      compatibility: 'Numbered masters are private build inputs; public legacy assets and the remote lesson are unchanged.',
       measurement: 'File bytes only, not browser download or visual approval.' };
     const reportName = `${mode}-metadata.json`;
     await writeFile(path.join(temporary, reportName), JSON.stringify(report, null, 2) + '\n');
@@ -148,7 +140,9 @@ async function generate(masters, mode, quality) {
       await writeFile(path.join(temporary, 'cardImageMetadata.ts'), module);
     }
     // Publish only this run's validated files; never delete masters or unrelated outputs.
-    for (const filename of [...files, reportName]) await rename(path.join(temporary, filename), path.join(output, filename));
+    for (const filename of files) await rename(path.join(temporary, filename), path.join(output, filename));
+    await mkdir(reports, { recursive: true });
+    await rename(path.join(temporary, reportName), path.join(reports, reportName));
     if (mode === 'all') await rename(path.join(temporary, 'cardImageMetadata.ts'), imageMetadataModule);
     console.log(JSON.stringify(report, null, 2));
   } finally {
@@ -160,12 +154,16 @@ async function main() {
   const args = process.argv.slice(2);
   const mode = args.includes('--sample') ? 'sample' : args.includes('--all') ? 'all' : undefined;
   const qualityArg = args.find(arg => arg.startsWith('--quality='));
+  const importArg = args.find(arg => arg.startsWith('--import-masters='));
   const quality = qualityArg ? Number(qualityArg.slice('--quality='.length)) : 85;
-  if (args.some(arg => !['--copy-masters', '--sample', '--all'].includes(arg) && arg !== qualityArg) ||
+  const importDirectory = importArg ? path.resolve(importArg.slice('--import-masters='.length)) : undefined;
+  if (args.some(arg => !['--sample', '--all'].includes(arg) && arg !== qualityArg && arg !== importArg) ||
     (args.includes('--sample') && args.includes('--all')) || !Number.isInteger(quality) || quality < 1 || quality > 100 ||
-    (!mode && !args.includes('--copy-masters'))) throw new Error('Usage: --copy-masters and/or --sample|--all [--quality=85]');
+    (importArg && !importArg.slice('--import-masters='.length)) || (!mode && !importDirectory)) {
+    throw new Error('Usage: [--import-masters=<directory>] --sample|--all [--quality=85]');
+  }
   const entries = await manifestEntries();
-  const masters = args.includes('--copy-masters') ? await copyMasters(entries) : await inspect(entries, source);
+  const masters = importDirectory ? await importMasters(entries, importDirectory) : await inspect(entries, source);
   console.log(`Verified ${masters.length} masters; SHA256 and filenames unchanged.`);
   if (mode) await generate(masters, mode, quality);
 }

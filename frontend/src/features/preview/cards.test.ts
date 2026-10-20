@@ -4,12 +4,12 @@ import { catalogCards } from './cards';
 import { searchCards } from './cardSelectors';
 
 describe('Manifesto autoral', () => {
-  it('tem 78 identidades, caminhos únicos e correspondência exata com os arquivos numerados', () => {
+  it('tem 78 identidades, caminhos únicos e correspondência exata com os masters privados', () => {
     expect(catalogCards).toHaveLength(78);
     expect(new Set(catalogCards.map(card => card.id)).size).toBe(78);
     const filenames = catalogCards.map(card => card.masterFilename);
     expect(new Set(filenames).size).toBe(78);
-    const disk = readdirSync('public/assets/tarot/waite-smith').filter(name => /^\d{2}_.*\.png$/.test(name));
+    const disk = readdirSync('../assets-source/tarot/luna').filter(name => /^\d{2}_.*\.png$/.test(name));
     expect([...filenames].sort()).toEqual(disk.sort());
   });
   it('preserva grupos, sequência e números independentes dos prefixos', () => {

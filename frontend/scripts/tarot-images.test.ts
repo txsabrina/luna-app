@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -8,17 +8,18 @@ import { describe, expect, it } from 'vitest';
 import { cardImageMetadata } from '../src/features/preview/cardImageMetadata';
 
 const digest = (buffer: Buffer) => createHash('sha256').update(buffer).digest('hex');
-const report = JSON.parse(readFileSync('public/assets/tarot/optimized/all-metadata.json', 'utf8'));
+const report = JSON.parse(readFileSync('reports/tarot/all-metadata.json', 'utf8'));
 
 describe('Conjunto técnico do incremento 011', () => {
-  it('preserva as 78 cópias e seus hashes contra a origem pública', () => {
-    expect(report.copiedMasters).toHaveLength(78);
-    for (const master of report.copiedMasters) {
+  it('preserva os 78 masters privados e retira somente suas antigas cópias públicas', () => {
+    expect(report.masters).toHaveLength(78);
+    for (const master of report.masters) {
       const copy = readFileSync(`../assets-source/tarot/luna/${master.filename}`);
-      const original = readFileSync(`public/assets/tarot/waite-smith/${master.filename}`);
+      expect(copy.length).toBe(master.bytes);
       expect(digest(copy)).toBe(master.sha256);
-      expect(digest(original)).toBe(master.sha256);
+      expect(existsSync(`public/assets/tarot/waite-smith/${master.filename}`)).toBe(false);
     }
+    expect(existsSync('public/assets/tarot/waite-smith/fool.png')).toBe(true);
   });
   it('gera 78 identidades com 234 variantes decodificáveis, sem ampliar', async () => {
     expect(report.cards).toHaveLength(78);
@@ -50,8 +51,11 @@ describe('Conjunto técnico do incremento 011', () => {
   });
   it('rejeita argumentos inválidos com saída e retorno não zero, de outro diretório', () => {
     const script = path.resolve('scripts/generate-tarot-images.mjs');
-    const result = spawnSync(process.execPath, [script, '--sample', '--quality=invalid'], { cwd: '..', encoding: 'utf8' });
-    expect(result.status).toBe(1);
-    expect(result.stderr).toContain('Usage:');
+    const invalid = spawnSync(process.execPath, [script, '--sample', '--quality=invalid'], { cwd: '..', encoding: 'utf8' });
+    expect(invalid.status).toBe(1);
+    expect(invalid.stderr).toContain('Usage:');
+    const missing = spawnSync(process.execPath, [script, '--import-masters=missing-master-directory'], { cwd: '..', encoding: 'utf8' });
+    expect(missing.status).toBe(1);
+    expect(missing.stderr).toContain('ENOENT');
   });
 });
