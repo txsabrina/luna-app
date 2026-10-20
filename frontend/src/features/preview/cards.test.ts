@@ -7,7 +7,7 @@ describe('Manifesto autoral', () => {
   it('tem 78 identidades, caminhos únicos e correspondência exata com os arquivos numerados', () => {
     expect(catalogCards).toHaveLength(78);
     expect(new Set(catalogCards.map(card => card.id)).size).toBe(78);
-    const filenames = catalogCards.map(card => card.imageSrc.split('/').at(-1));
+    const filenames = catalogCards.map(card => card.masterFilename);
     expect(new Set(filenames).size).toBe(78);
     const disk = readdirSync('public/assets/tarot/waite-smith').filter(name => /^\d{2}_.*\.png$/.test(name));
     expect([...filenames].sort()).toEqual(disk.sort());
@@ -15,7 +15,9 @@ describe('Manifesto autoral', () => {
   it('preserva grupos, sequência e números independentes dos prefixos', () => {
     expect(catalogCards.map(card => card.sortOrder)).toEqual(Array.from({ length: 78 }, (_, index) => index));
     expect(catalogCards[0].displayNumber).toBe('0');
-    expect(catalogCards[0].imageSrc).toContain('01_the_fool.png');
+    expect(catalogCards[0].masterFilename).toBe('01_the_fool.png');
+    expect(catalogCards[0].image.variants.map(variant => variant.width)).toEqual([320, 640, 777]);
+    expect(catalogCards.every(card => card.image.variants.every(variant => variant.src.startsWith(`/assets/tarot/optimized/${card.id}-`)))).toBe(true);
     expect(catalogCards[8].displayNumber).toBe('VIII');
     expect(catalogCards[8].displayNamePtBR).toBe('A Força');
     expect(catalogCards[11].displayNumber).toBe('XI');

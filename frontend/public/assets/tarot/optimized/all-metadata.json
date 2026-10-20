@@ -1,0 +1,4116 @@
+{
+  "schemaVersion": 1,
+  "mode": "all",
+  "generator": {
+    "sharp": "0.35.5",
+    "node": "v22.23.2",
+    "format": "webp",
+    "quality": 85,
+    "effort": 6,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "concurrency": 1,
+    "colour": "sRGB, ICC preserved when present"
+  },
+  "masterCount": 78,
+  "copiedMasters": [
+    {
+      "cardId": "major-00-fool",
+      "filename": "01_the_fool.png",
+      "sha256": "89c962659a5c5c7aa47eb564ec9b3bbcdcfdb911b39bc270bae0a26b801d0dc0",
+      "bytes": 1552886
+    },
+    {
+      "cardId": "major-01-magician",
+      "filename": "02_the_magician.png",
+      "sha256": "7cbb9908d2018416021c126b84287a6ce60e045ecff88ce64e84b0d36d7d3476",
+      "bytes": 1739251
+    },
+    {
+      "cardId": "major-02-high-priestess",
+      "filename": "03_the_high_priestess.png",
+      "sha256": "055f75211291a22fd07bde99ee006f283c1cc2f6509964040c02b6960ab5fbf3",
+      "bytes": 2060217
+    },
+    {
+      "cardId": "major-03-empress",
+      "filename": "04_the_empress.png",
+      "sha256": "2732d486cb310f9a1cdb1a3705d6958b66e5851ffbed5122b2f263482e47bd83",
+      "bytes": 1981943
+    },
+    {
+      "cardId": "major-04-emperor",
+      "filename": "05_the_emperor.png",
+      "sha256": "091bc2455fa14099ac7a0f1786b842c0acf25462f159c8af38b76fba5477fb94",
+      "bytes": 1857895
+    },
+    {
+      "cardId": "major-05-hierophant",
+      "filename": "06_the_hierophant.png",
+      "sha256": "4651d5a443c84fcb8655baece459cb5df708d9f2895cd6956799d9386a04f136",
+      "bytes": 1770687
+    },
+    {
+      "cardId": "major-06-lovers",
+      "filename": "07_the_lovers.png",
+      "sha256": "f70a8db8b33ae72a40d7fff83482e73dbf463f6a5583c08340f9e7db317e2f55",
+      "bytes": 1716216
+    },
+    {
+      "cardId": "major-07-chariot",
+      "filename": "08_the_chariot.png",
+      "sha256": "8c10f5c7ff5e899067af39af8cf2a30db9f556b28dfc1574a62d54e3d1838920",
+      "bytes": 1813828
+    },
+    {
+      "cardId": "major-08-strength",
+      "filename": "09_strength.png",
+      "sha256": "645463cb9c580c3b9c5b435845b456d8a8616fd1c52e00bd3770fc13bfc40d13",
+      "bytes": 1754833
+    },
+    {
+      "cardId": "major-09-hermit",
+      "filename": "10_the_hermit.png",
+      "sha256": "3fec300672c8b19a6c4ce69d4940b009db394168571550c19cb0b95d3ba13d19",
+      "bytes": 1275194
+    },
+    {
+      "cardId": "major-10-wheel-of-fortune",
+      "filename": "11_wheel_of_fortune.png",
+      "sha256": "8c66ca21ee2a410ecb117e5023c52cdfae9e9066c709442ac8eb7def00581488",
+      "bytes": 1899034
+    },
+    {
+      "cardId": "major-11-justice",
+      "filename": "12_justice.png",
+      "sha256": "050e8980291c63163260d003a8f9d6b756b04832664ace0223acca478b9b6cfa",
+      "bytes": 1520935
+    },
+    {
+      "cardId": "major-12-hanged-man",
+      "filename": "13_the_hanged_man.png",
+      "sha256": "4db40c0ae74c2050d66b3cad6aac6abdfb1e1078c8e6e44390dc4ee2627e7937",
+      "bytes": 1256531
+    },
+    {
+      "cardId": "major-13-death",
+      "filename": "14_death.png",
+      "sha256": "a8c44b9d2c6f51a2b4c28fb471e418dcda8d406ed64573d7019b58516094301f",
+      "bytes": 1759497
+    },
+    {
+      "cardId": "major-14-temperance",
+      "filename": "15_temperance.png",
+      "sha256": "7afbd56429cbd519ffa1f33f8e171e3127c092915686b5b2c62a55859fcff125",
+      "bytes": 1860270
+    },
+    {
+      "cardId": "major-15-devil",
+      "filename": "16_the_devil.png",
+      "sha256": "eaf32fd3236ec1ed3421138e76513367ab935550d82c53e43e2fa4b8dcbfd03a",
+      "bytes": 1405565
+    },
+    {
+      "cardId": "major-16-tower",
+      "filename": "17_the_tower.png",
+      "sha256": "3ccbc69db9653fec6f3b24e60eb5bb06931c93b9d329494a3b48acc583ba55c6",
+      "bytes": 1649646
+    },
+    {
+      "cardId": "major-17-star",
+      "filename": "18_the_star.png",
+      "sha256": "9e8583d5ceea5f411dd719dc694157d71598b24fdccfb3c4401d5cc30dd04085",
+      "bytes": 1339132
+    },
+    {
+      "cardId": "major-18-moon",
+      "filename": "19_the_moon.png",
+      "sha256": "58aafa373ff9f62c25c604a0c15f6f0502540d6a367177c05a8bc03fc4edf193",
+      "bytes": 1290391
+    },
+    {
+      "cardId": "major-19-sun",
+      "filename": "20_the_sun.png",
+      "sha256": "547ea99256347893c8481b926b25677e5c716f19de152879a7465045f541cc45",
+      "bytes": 1639522
+    },
+    {
+      "cardId": "major-20-judgement",
+      "filename": "21_judgement.png",
+      "sha256": "f33c1d66432f9c68a1bcc211f505ee97e0e8718391e34bea81815668d88ad87c",
+      "bytes": 1626508
+    },
+    {
+      "cardId": "major-21-world",
+      "filename": "22_the_world.png",
+      "sha256": "fba6dfaf7a96c80dded5da3cb34c3e28ec55439ec8a5df1b7a468c2189ea4c21",
+      "bytes": 1793708
+    },
+    {
+      "cardId": "wands-ace",
+      "filename": "23_ace_of_wands.png",
+      "sha256": "d7efc5ec18c0018387d9108acc5714e592861dba7e252a4d3e05b79b9c3640c1",
+      "bytes": 1515694
+    },
+    {
+      "cardId": "wands-two",
+      "filename": "24_two_of_wands.png",
+      "sha256": "b56ae30e9dea6ffb588084c8415d6ec263d2f8dc6ef305b981c892e402111c41",
+      "bytes": 1610983
+    },
+    {
+      "cardId": "wands-three",
+      "filename": "25_three_of_wands.png",
+      "sha256": "3c45c2cb84959be7ef1b71accdacc2ddc03bbf956a49b02ca7c6b9d56e8981cf",
+      "bytes": 1466485
+    },
+    {
+      "cardId": "wands-four",
+      "filename": "26_four_of_wands.png",
+      "sha256": "85f3d92e7bf00891829a8985bffcfd685e746dab7e745e74f7800b48a17e6005",
+      "bytes": 1719854
+    },
+    {
+      "cardId": "wands-five",
+      "filename": "27_five_of_wands.png",
+      "sha256": "86148f7b8e3a5b21153cd906419eae57450a91853205f8fb92cac6bd5b31c1c0",
+      "bytes": 1733969
+    },
+    {
+      "cardId": "wands-six",
+      "filename": "28_six_of_wands.png",
+      "sha256": "17b76455168b3ef63a126bff52e27be6c2d6260bfbf50927bdbb6a039d5e1d4f",
+      "bytes": 1515867
+    },
+    {
+      "cardId": "wands-seven",
+      "filename": "29_seven_of_wands.png",
+      "sha256": "c264a4e5db214278707e9f179fa414bfddc3524012fe011e56a18fa34acbb4c2",
+      "bytes": 1453344
+    },
+    {
+      "cardId": "wands-eight",
+      "filename": "30_eight_of_wands.png",
+      "sha256": "a32cd4d21bc854df126688f9a029a7ab799e7f84d4535645142631797ef1b004",
+      "bytes": 1610261
+    },
+    {
+      "cardId": "wands-nine",
+      "filename": "31_nine_of_wands.png",
+      "sha256": "fa918443f84f993c6cb6272f632334eba35a750d9a37627b611546a15fb254e6",
+      "bytes": 1646820
+    },
+    {
+      "cardId": "wands-ten",
+      "filename": "32_ten_of_wands.png",
+      "sha256": "668628454d4c87b34ab78dd97c4907f9ee0d589891c1af35365ac5cf815fafed",
+      "bytes": 1562505
+    },
+    {
+      "cardId": "wands-page",
+      "filename": "33_page_of_wands.png",
+      "sha256": "3df2d42af9488977a41fe050127dc97a8d8e698373188050317ef3bfad2417dd",
+      "bytes": 1333091
+    },
+    {
+      "cardId": "wands-knight",
+      "filename": "34_knight_of_wands.png",
+      "sha256": "6271be5485247d656f6cfe0364137235c41d054ca3c5f87672efc7e4e8ee0b54",
+      "bytes": 1945886
+    },
+    {
+      "cardId": "wands-queen",
+      "filename": "35_queen_of_wands.png",
+      "sha256": "1e6f46e4ac07563a5f5cd77b9f6b8c530bdc79b1e1282a92803f0146b9ad70d8",
+      "bytes": 1655268
+    },
+    {
+      "cardId": "wands-king",
+      "filename": "36_king_of_wands.png",
+      "sha256": "4422be5545ae064a32d9250bb774897a5c5c9e3381445644a3daf17ad9f995fd",
+      "bytes": 1831318
+    },
+    {
+      "cardId": "cups-ace",
+      "filename": "37_ace_of_cups.png",
+      "sha256": "3a1f473e0a33f15da57ee4353058005e661990e9099c4d385468c8c8c3fbad92",
+      "bytes": 1462688
+    },
+    {
+      "cardId": "cups-two",
+      "filename": "38_two_of_cups.png",
+      "sha256": "a2ccf790147f8150e37dd2a042264fcd067f7c14c6fcddca6282908a77c1c625",
+      "bytes": 1569999
+    },
+    {
+      "cardId": "cups-three",
+      "filename": "39_three_of_cups.png",
+      "sha256": "141e7b4c40dbc415b7330c781349f67124aebfa8a7974bdfc066b250550223be",
+      "bytes": 1692103
+    },
+    {
+      "cardId": "cups-four",
+      "filename": "40_four_of_cups.png",
+      "sha256": "f7ae333a3a13af6a5eac39b9d0f446abaf8a6bc3d46b3acd947a4a4d7d22710a",
+      "bytes": 1712972
+    },
+    {
+      "cardId": "cups-five",
+      "filename": "41_five_of_cups.png",
+      "sha256": "cf54e6805aa7fee12d291a071718b9c4f32fbf5b048950d3a13c6b5b317910e7",
+      "bytes": 1298303
+    },
+    {
+      "cardId": "cups-six",
+      "filename": "42_six_of_cups.png",
+      "sha256": "d445606bc0a140adf3f697342b4944cffa544f9e157d774dfabb9677dd5ed421",
+      "bytes": 1802853
+    },
+    {
+      "cardId": "cups-seven",
+      "filename": "43_seven_of_cups.png",
+      "sha256": "8d0fbd54b41d58fef60bb47001c9de8bd19ac278737d55b5ee452d5b1da110a8",
+      "bytes": 1685675
+    },
+    {
+      "cardId": "cups-eight",
+      "filename": "44_eight_of_cups.png",
+      "sha256": "aae860dff28309ab8e5eb8381bbcdbf432bdb28ffcff5adaf28f9be226b23c64",
+      "bytes": 1434428
+    },
+    {
+      "cardId": "cups-nine",
+      "filename": "45_nine_of_cups.png",
+      "sha256": "c40149c337c4334920f44c24a2a5f04686382946a04c77dcd9c1d379b84e83c9",
+      "bytes": 1602608
+    },
+    {
+      "cardId": "cups-ten",
+      "filename": "46_ten_of_cups.png",
+      "sha256": "7708d1fa1a6a3ede45b7ba5440a6dfac1cda06881ca8a6a9cfa4cf343059f93c",
+      "bytes": 1503796
+    },
+    {
+      "cardId": "cups-page",
+      "filename": "47_page_of_cups.png",
+      "sha256": "7c69335e340d172093bd0bf28219afb1ba9d32ead32f1eb9595fee7b7843f787",
+      "bytes": 1640440
+    },
+    {
+      "cardId": "cups-knight",
+      "filename": "48_knight_of_cups.png",
+      "sha256": "066f22bf25f9268c37fa385d49746c71294e0889ab60b9b6a109d38b94097c6b",
+      "bytes": 1552377
+    },
+    {
+      "cardId": "cups-queen",
+      "filename": "49_queen_of_cups.png",
+      "sha256": "3d33e84533dad74902ff4f2c8d5d412b7387c3e1fdb8c2949ef967ece6996a27",
+      "bytes": 1675484
+    },
+    {
+      "cardId": "cups-king",
+      "filename": "50_king_of_cups.png",
+      "sha256": "3c84b86e19c15c91391b785dbfa54763aab253b3053151f633e12a84dc8cddd7",
+      "bytes": 1375656
+    },
+    {
+      "cardId": "swords-ace",
+      "filename": "51_ace_of_swords.png",
+      "sha256": "f31086258e41846b695caec06da28c3910953d6f99dc18f5c92bb66ed04a1e48",
+      "bytes": 1438344
+    },
+    {
+      "cardId": "swords-two",
+      "filename": "52_two_of_swords.png",
+      "sha256": "f53b2581bef1b03fb120f9575dbb350ddf127013132b4993083c3d81f210eb75",
+      "bytes": 1320972
+    },
+    {
+      "cardId": "swords-three",
+      "filename": "53_three_of_swords.png",
+      "sha256": "42e20e2acbc1f0c855de7cdfb3fe383b48c842119c926025badc315ad92cd38a",
+      "bytes": 1193271
+    },
+    {
+      "cardId": "swords-four",
+      "filename": "54_four_of_swords.png",
+      "sha256": "ef7a97ea36b32b160f0358bc8e78ad351b28649e225ca4d4846703ad00fe9109",
+      "bytes": 1478219
+    },
+    {
+      "cardId": "swords-five",
+      "filename": "55_five_of_swords.png",
+      "sha256": "38ead016b238d728be5c9a4896490aedc25b81c8420eadb166472b0b02adff57",
+      "bytes": 1642569
+    },
+    {
+      "cardId": "swords-six",
+      "filename": "56_six_of_swords.png",
+      "sha256": "d505ad699c4282832e13dbc8c4487bf8fe852da3956ca36994b2e5b82218eac9",
+      "bytes": 1742379
+    },
+    {
+      "cardId": "swords-seven",
+      "filename": "57_seven_of_swords.png",
+      "sha256": "84ccd50f97bac377367f9fb9b330919132673b4c904bec359601f3fa1fe529c8",
+      "bytes": 1292596
+    },
+    {
+      "cardId": "swords-eight",
+      "filename": "58_eight_of_swords.png",
+      "sha256": "b120d9b27b68be5641b4e8b981a4c7dcc935be5965ed0392386afbceba8755ef",
+      "bytes": 1525765
+    },
+    {
+      "cardId": "swords-nine",
+      "filename": "59_nine_of_swords.png",
+      "sha256": "5265d3dca9f3722541616ba28a0657988805eb076905323d8c508693c46ade90",
+      "bytes": 1611334
+    },
+    {
+      "cardId": "swords-ten",
+      "filename": "60_ten_of_swords.png",
+      "sha256": "b1d09dbba7f31006b14fd9c1a4316e295921963a97731e2b83b8b05a340ad740",
+      "bytes": 1345522
+    },
+    {
+      "cardId": "swords-page",
+      "filename": "61_page_of_swords.png",
+      "sha256": "b8538b34dcda8fdd227841c26aa53adff741fbd9fbc71c29f8e37d822f80a168",
+      "bytes": 1519308
+    },
+    {
+      "cardId": "swords-knight",
+      "filename": "62_knight_of_swords.png",
+      "sha256": "66c80a1c1a75e425cb2364d2f9a5506e7becbb58df9db8b6d4af8aab8b6b596d",
+      "bytes": 1619812
+    },
+    {
+      "cardId": "swords-queen",
+      "filename": "63_queen_of_swords.png",
+      "sha256": "33b0275d0cd126fe025e90126205430172f74ba051c1c76c1371443868266ba2",
+      "bytes": 1624958
+    },
+    {
+      "cardId": "swords-king",
+      "filename": "64_king_of_swords.png",
+      "sha256": "5099a2bc0496eecefc7731b4a5bfff8387421dacb13ccfed1cac740f6870905d",
+      "bytes": 1706656
+    },
+    {
+      "cardId": "pentacles-ace",
+      "filename": "65_ace_of_pentacles.png",
+      "sha256": "b6532bef45c7633d816f8a4c3d3b4f84cd4312997242d47ddffb4fa6b2c2a171",
+      "bytes": 1439885
+    },
+    {
+      "cardId": "pentacles-two",
+      "filename": "66_two_of_pentacles.png",
+      "sha256": "7ff58392dabe07bbb0b2b47b401fa18e92da81cea55804c7b96e75b1a199d461",
+      "bytes": 1485080
+    },
+    {
+      "cardId": "pentacles-three",
+      "filename": "67_three_of_pentacles.png",
+      "sha256": "321949e2eb06fdf7db6a69ed32e378ada83e27fee44dda28cc0ce8cb837ee289",
+      "bytes": 1634684
+    },
+    {
+      "cardId": "pentacles-four",
+      "filename": "68_four_of_pentacles.png",
+      "sha256": "2d6b1403469447b8e72a856fc2b7d01a6476d7b34e7d7b613e5b088e6c1f6637",
+      "bytes": 1645589
+    },
+    {
+      "cardId": "pentacles-five",
+      "filename": "69_five_of_pentacles.png",
+      "sha256": "9e4f24f806a2d50f6856d74395b74fc9bc96a8f88d13dd991349a61ae008397d",
+      "bytes": 1626187
+    },
+    {
+      "cardId": "pentacles-six",
+      "filename": "70_six_of_pentacles.png",
+      "sha256": "b38e51ed7c9a2d9e7b479168b219c8ed4edf67d02f84301c5e9736429c9f3939",
+      "bytes": 1736735
+    },
+    {
+      "cardId": "pentacles-seven",
+      "filename": "71_seven_of_pentacles.png",
+      "sha256": "f8050cd8f41be39d2de07219112d8b8a6ae8fcb43e70681229e7bd0d4daa755c",
+      "bytes": 1823672
+    },
+    {
+      "cardId": "pentacles-eight",
+      "filename": "72_eight_of_pentacles.png",
+      "sha256": "fc7e9e66592f84f4648b91010c21ba004eb962065962638b3a3ee2e1d6c5ed0c",
+      "bytes": 1736816
+    },
+    {
+      "cardId": "pentacles-nine",
+      "filename": "73_nine_of_pentacles.png",
+      "sha256": "61d5bbbde8e6001bc1c582779ca13757823862e9210633ab11f434f6542c8c0b",
+      "bytes": 1781482
+    },
+    {
+      "cardId": "pentacles-ten",
+      "filename": "74_ten_of_pentacles.png",
+      "sha256": "0e9016a0f8d583bb857f599978b6e6f0bbda33bb70fc644bd48bc22967b64bb2",
+      "bytes": 1966516
+    },
+    {
+      "cardId": "pentacles-page",
+      "filename": "75_page_of_pentacles.png",
+      "sha256": "764ba3f339379a4daebcfc76fe0debf1ea02c38a36428bb0512c68295d8e83f4",
+      "bytes": 1473518
+    },
+    {
+      "cardId": "pentacles-knight",
+      "filename": "76_knight_of_pentacles.png",
+      "sha256": "c37984c9edae8cb6a1ee86f75c6d095dc1e7cb9693e82fc40aec5273693ba6de",
+      "bytes": 1423261
+    },
+    {
+      "cardId": "pentacles-queen",
+      "filename": "77_queen_of_pentacles.png",
+      "sha256": "92033b1206252043ec455660fcc4772b55263f87ede754bd0f024eb2ecaa7b42",
+      "bytes": 1396653
+    },
+    {
+      "cardId": "pentacles-king",
+      "filename": "78_king_of_pentacles.png",
+      "sha256": "38d4e45e7c0ea761a1c95ac940de217f120c9481788b05e6fe259a91038f4a5e",
+      "bytes": 1697508
+    }
+  ],
+  "removalCandidates": [
+    {
+      "publicPath": "/assets/tarot/waite-smith/01_the_fool.png",
+      "preservedMaster": "assets-source/tarot/luna/01_the_fool.png",
+      "sha256": "89c962659a5c5c7aa47eb564ec9b3bbcdcfdb911b39bc270bae0a26b801d0dc0",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/02_the_magician.png",
+      "preservedMaster": "assets-source/tarot/luna/02_the_magician.png",
+      "sha256": "7cbb9908d2018416021c126b84287a6ce60e045ecff88ce64e84b0d36d7d3476",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/03_the_high_priestess.png",
+      "preservedMaster": "assets-source/tarot/luna/03_the_high_priestess.png",
+      "sha256": "055f75211291a22fd07bde99ee006f283c1cc2f6509964040c02b6960ab5fbf3",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/04_the_empress.png",
+      "preservedMaster": "assets-source/tarot/luna/04_the_empress.png",
+      "sha256": "2732d486cb310f9a1cdb1a3705d6958b66e5851ffbed5122b2f263482e47bd83",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/05_the_emperor.png",
+      "preservedMaster": "assets-source/tarot/luna/05_the_emperor.png",
+      "sha256": "091bc2455fa14099ac7a0f1786b842c0acf25462f159c8af38b76fba5477fb94",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/06_the_hierophant.png",
+      "preservedMaster": "assets-source/tarot/luna/06_the_hierophant.png",
+      "sha256": "4651d5a443c84fcb8655baece459cb5df708d9f2895cd6956799d9386a04f136",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/07_the_lovers.png",
+      "preservedMaster": "assets-source/tarot/luna/07_the_lovers.png",
+      "sha256": "f70a8db8b33ae72a40d7fff83482e73dbf463f6a5583c08340f9e7db317e2f55",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/08_the_chariot.png",
+      "preservedMaster": "assets-source/tarot/luna/08_the_chariot.png",
+      "sha256": "8c10f5c7ff5e899067af39af8cf2a30db9f556b28dfc1574a62d54e3d1838920",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/09_strength.png",
+      "preservedMaster": "assets-source/tarot/luna/09_strength.png",
+      "sha256": "645463cb9c580c3b9c5b435845b456d8a8616fd1c52e00bd3770fc13bfc40d13",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/10_the_hermit.png",
+      "preservedMaster": "assets-source/tarot/luna/10_the_hermit.png",
+      "sha256": "3fec300672c8b19a6c4ce69d4940b009db394168571550c19cb0b95d3ba13d19",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/11_wheel_of_fortune.png",
+      "preservedMaster": "assets-source/tarot/luna/11_wheel_of_fortune.png",
+      "sha256": "8c66ca21ee2a410ecb117e5023c52cdfae9e9066c709442ac8eb7def00581488",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/12_justice.png",
+      "preservedMaster": "assets-source/tarot/luna/12_justice.png",
+      "sha256": "050e8980291c63163260d003a8f9d6b756b04832664ace0223acca478b9b6cfa",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/13_the_hanged_man.png",
+      "preservedMaster": "assets-source/tarot/luna/13_the_hanged_man.png",
+      "sha256": "4db40c0ae74c2050d66b3cad6aac6abdfb1e1078c8e6e44390dc4ee2627e7937",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/14_death.png",
+      "preservedMaster": "assets-source/tarot/luna/14_death.png",
+      "sha256": "a8c44b9d2c6f51a2b4c28fb471e418dcda8d406ed64573d7019b58516094301f",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/15_temperance.png",
+      "preservedMaster": "assets-source/tarot/luna/15_temperance.png",
+      "sha256": "7afbd56429cbd519ffa1f33f8e171e3127c092915686b5b2c62a55859fcff125",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/16_the_devil.png",
+      "preservedMaster": "assets-source/tarot/luna/16_the_devil.png",
+      "sha256": "eaf32fd3236ec1ed3421138e76513367ab935550d82c53e43e2fa4b8dcbfd03a",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/17_the_tower.png",
+      "preservedMaster": "assets-source/tarot/luna/17_the_tower.png",
+      "sha256": "3ccbc69db9653fec6f3b24e60eb5bb06931c93b9d329494a3b48acc583ba55c6",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/18_the_star.png",
+      "preservedMaster": "assets-source/tarot/luna/18_the_star.png",
+      "sha256": "9e8583d5ceea5f411dd719dc694157d71598b24fdccfb3c4401d5cc30dd04085",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/19_the_moon.png",
+      "preservedMaster": "assets-source/tarot/luna/19_the_moon.png",
+      "sha256": "58aafa373ff9f62c25c604a0c15f6f0502540d6a367177c05a8bc03fc4edf193",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/20_the_sun.png",
+      "preservedMaster": "assets-source/tarot/luna/20_the_sun.png",
+      "sha256": "547ea99256347893c8481b926b25677e5c716f19de152879a7465045f541cc45",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/21_judgement.png",
+      "preservedMaster": "assets-source/tarot/luna/21_judgement.png",
+      "sha256": "f33c1d66432f9c68a1bcc211f505ee97e0e8718391e34bea81815668d88ad87c",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/22_the_world.png",
+      "preservedMaster": "assets-source/tarot/luna/22_the_world.png",
+      "sha256": "fba6dfaf7a96c80dded5da3cb34c3e28ec55439ec8a5df1b7a468c2189ea4c21",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/23_ace_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/23_ace_of_wands.png",
+      "sha256": "d7efc5ec18c0018387d9108acc5714e592861dba7e252a4d3e05b79b9c3640c1",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/24_two_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/24_two_of_wands.png",
+      "sha256": "b56ae30e9dea6ffb588084c8415d6ec263d2f8dc6ef305b981c892e402111c41",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/25_three_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/25_three_of_wands.png",
+      "sha256": "3c45c2cb84959be7ef1b71accdacc2ddc03bbf956a49b02ca7c6b9d56e8981cf",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/26_four_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/26_four_of_wands.png",
+      "sha256": "85f3d92e7bf00891829a8985bffcfd685e746dab7e745e74f7800b48a17e6005",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/27_five_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/27_five_of_wands.png",
+      "sha256": "86148f7b8e3a5b21153cd906419eae57450a91853205f8fb92cac6bd5b31c1c0",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/28_six_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/28_six_of_wands.png",
+      "sha256": "17b76455168b3ef63a126bff52e27be6c2d6260bfbf50927bdbb6a039d5e1d4f",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/29_seven_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/29_seven_of_wands.png",
+      "sha256": "c264a4e5db214278707e9f179fa414bfddc3524012fe011e56a18fa34acbb4c2",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/30_eight_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/30_eight_of_wands.png",
+      "sha256": "a32cd4d21bc854df126688f9a029a7ab799e7f84d4535645142631797ef1b004",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/31_nine_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/31_nine_of_wands.png",
+      "sha256": "fa918443f84f993c6cb6272f632334eba35a750d9a37627b611546a15fb254e6",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/32_ten_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/32_ten_of_wands.png",
+      "sha256": "668628454d4c87b34ab78dd97c4907f9ee0d589891c1af35365ac5cf815fafed",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/33_page_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/33_page_of_wands.png",
+      "sha256": "3df2d42af9488977a41fe050127dc97a8d8e698373188050317ef3bfad2417dd",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/34_knight_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/34_knight_of_wands.png",
+      "sha256": "6271be5485247d656f6cfe0364137235c41d054ca3c5f87672efc7e4e8ee0b54",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/35_queen_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/35_queen_of_wands.png",
+      "sha256": "1e6f46e4ac07563a5f5cd77b9f6b8c530bdc79b1e1282a92803f0146b9ad70d8",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/36_king_of_wands.png",
+      "preservedMaster": "assets-source/tarot/luna/36_king_of_wands.png",
+      "sha256": "4422be5545ae064a32d9250bb774897a5c5c9e3381445644a3daf17ad9f995fd",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/37_ace_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/37_ace_of_cups.png",
+      "sha256": "3a1f473e0a33f15da57ee4353058005e661990e9099c4d385468c8c8c3fbad92",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/38_two_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/38_two_of_cups.png",
+      "sha256": "a2ccf790147f8150e37dd2a042264fcd067f7c14c6fcddca6282908a77c1c625",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/39_three_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/39_three_of_cups.png",
+      "sha256": "141e7b4c40dbc415b7330c781349f67124aebfa8a7974bdfc066b250550223be",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/40_four_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/40_four_of_cups.png",
+      "sha256": "f7ae333a3a13af6a5eac39b9d0f446abaf8a6bc3d46b3acd947a4a4d7d22710a",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/41_five_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/41_five_of_cups.png",
+      "sha256": "cf54e6805aa7fee12d291a071718b9c4f32fbf5b048950d3a13c6b5b317910e7",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/42_six_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/42_six_of_cups.png",
+      "sha256": "d445606bc0a140adf3f697342b4944cffa544f9e157d774dfabb9677dd5ed421",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/43_seven_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/43_seven_of_cups.png",
+      "sha256": "8d0fbd54b41d58fef60bb47001c9de8bd19ac278737d55b5ee452d5b1da110a8",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/44_eight_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/44_eight_of_cups.png",
+      "sha256": "aae860dff28309ab8e5eb8381bbcdbf432bdb28ffcff5adaf28f9be226b23c64",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/45_nine_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/45_nine_of_cups.png",
+      "sha256": "c40149c337c4334920f44c24a2a5f04686382946a04c77dcd9c1d379b84e83c9",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/46_ten_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/46_ten_of_cups.png",
+      "sha256": "7708d1fa1a6a3ede45b7ba5440a6dfac1cda06881ca8a6a9cfa4cf343059f93c",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/47_page_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/47_page_of_cups.png",
+      "sha256": "7c69335e340d172093bd0bf28219afb1ba9d32ead32f1eb9595fee7b7843f787",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/48_knight_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/48_knight_of_cups.png",
+      "sha256": "066f22bf25f9268c37fa385d49746c71294e0889ab60b9b6a109d38b94097c6b",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/49_queen_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/49_queen_of_cups.png",
+      "sha256": "3d33e84533dad74902ff4f2c8d5d412b7387c3e1fdb8c2949ef967ece6996a27",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/50_king_of_cups.png",
+      "preservedMaster": "assets-source/tarot/luna/50_king_of_cups.png",
+      "sha256": "3c84b86e19c15c91391b785dbfa54763aab253b3053151f633e12a84dc8cddd7",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/51_ace_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/51_ace_of_swords.png",
+      "sha256": "f31086258e41846b695caec06da28c3910953d6f99dc18f5c92bb66ed04a1e48",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/52_two_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/52_two_of_swords.png",
+      "sha256": "f53b2581bef1b03fb120f9575dbb350ddf127013132b4993083c3d81f210eb75",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/53_three_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/53_three_of_swords.png",
+      "sha256": "42e20e2acbc1f0c855de7cdfb3fe383b48c842119c926025badc315ad92cd38a",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/54_four_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/54_four_of_swords.png",
+      "sha256": "ef7a97ea36b32b160f0358bc8e78ad351b28649e225ca4d4846703ad00fe9109",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/55_five_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/55_five_of_swords.png",
+      "sha256": "38ead016b238d728be5c9a4896490aedc25b81c8420eadb166472b0b02adff57",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/56_six_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/56_six_of_swords.png",
+      "sha256": "d505ad699c4282832e13dbc8c4487bf8fe852da3956ca36994b2e5b82218eac9",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/57_seven_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/57_seven_of_swords.png",
+      "sha256": "84ccd50f97bac377367f9fb9b330919132673b4c904bec359601f3fa1fe529c8",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/58_eight_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/58_eight_of_swords.png",
+      "sha256": "b120d9b27b68be5641b4e8b981a4c7dcc935be5965ed0392386afbceba8755ef",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/59_nine_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/59_nine_of_swords.png",
+      "sha256": "5265d3dca9f3722541616ba28a0657988805eb076905323d8c508693c46ade90",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/60_ten_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/60_ten_of_swords.png",
+      "sha256": "b1d09dbba7f31006b14fd9c1a4316e295921963a97731e2b83b8b05a340ad740",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/61_page_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/61_page_of_swords.png",
+      "sha256": "b8538b34dcda8fdd227841c26aa53adff741fbd9fbc71c29f8e37d822f80a168",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/62_knight_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/62_knight_of_swords.png",
+      "sha256": "66c80a1c1a75e425cb2364d2f9a5506e7becbb58df9db8b6d4af8aab8b6b596d",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/63_queen_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/63_queen_of_swords.png",
+      "sha256": "33b0275d0cd126fe025e90126205430172f74ba051c1c76c1371443868266ba2",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/64_king_of_swords.png",
+      "preservedMaster": "assets-source/tarot/luna/64_king_of_swords.png",
+      "sha256": "5099a2bc0496eecefc7731b4a5bfff8387421dacb13ccfed1cac740f6870905d",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/65_ace_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/65_ace_of_pentacles.png",
+      "sha256": "b6532bef45c7633d816f8a4c3d3b4f84cd4312997242d47ddffb4fa6b2c2a171",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/66_two_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/66_two_of_pentacles.png",
+      "sha256": "7ff58392dabe07bbb0b2b47b401fa18e92da81cea55804c7b96e75b1a199d461",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/67_three_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/67_three_of_pentacles.png",
+      "sha256": "321949e2eb06fdf7db6a69ed32e378ada83e27fee44dda28cc0ce8cb837ee289",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/68_four_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/68_four_of_pentacles.png",
+      "sha256": "2d6b1403469447b8e72a856fc2b7d01a6476d7b34e7d7b613e5b088e6c1f6637",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/69_five_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/69_five_of_pentacles.png",
+      "sha256": "9e4f24f806a2d50f6856d74395b74fc9bc96a8f88d13dd991349a61ae008397d",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/70_six_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/70_six_of_pentacles.png",
+      "sha256": "b38e51ed7c9a2d9e7b479168b219c8ed4edf67d02f84301c5e9736429c9f3939",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/71_seven_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/71_seven_of_pentacles.png",
+      "sha256": "f8050cd8f41be39d2de07219112d8b8a6ae8fcb43e70681229e7bd0d4daa755c",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/72_eight_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/72_eight_of_pentacles.png",
+      "sha256": "fc7e9e66592f84f4648b91010c21ba004eb962065962638b3a3ee2e1d6c5ed0c",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/73_nine_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/73_nine_of_pentacles.png",
+      "sha256": "61d5bbbde8e6001bc1c582779ca13757823862e9210633ab11f434f6542c8c0b",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/74_ten_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/74_ten_of_pentacles.png",
+      "sha256": "0e9016a0f8d583bb857f599978b6e6f0bbda33bb70fc644bd48bc22967b64bb2",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/75_page_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/75_page_of_pentacles.png",
+      "sha256": "764ba3f339379a4daebcfc76fe0debf1ea02c38a36428bb0512c68295d8e83f4",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/76_knight_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/76_knight_of_pentacles.png",
+      "sha256": "c37984c9edae8cb6a1ee86f75c6d095dc1e7cb9693e82fc40aec5273693ba6de",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/77_queen_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/77_queen_of_pentacles.png",
+      "sha256": "92033b1206252043ec455660fcc4772b55263f87ede754bd0f024eb2ecaa7b42",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    },
+    {
+      "publicPath": "/assets/tarot/waite-smith/78_king_of_pentacles.png",
+      "preservedMaster": "assets-source/tarot/luna/78_king_of_pentacles.png",
+      "sha256": "38d4e45e7c0ea761a1c95ac940de217f120c9481788b05e6fe259a91038f4a5e",
+      "consumers": [
+        "generate-tarot-images.mjs --copy-masters",
+        "tarot-images.test.ts compatibility check"
+      ],
+      "decision": "Preserve pending explicit removal approval; no catalogue runtime consumer remains."
+    }
+  ],
+  "selectedCount": 78,
+  "derivativeCount": 234,
+  "selectedMasterBytes": 125103707,
+  "derivativeBytes": 20407582,
+  "profiles": [
+    {
+      "requestedWidth": 320,
+      "bytes": 2714420
+    },
+    {
+      "requestedWidth": 640,
+      "bytes": 7747396
+    },
+    {
+      "requestedWidth": 1280,
+      "bytes": 9945766
+    }
+  ],
+  "smallest": {
+    "width": 320,
+    "height": 560,
+    "bytes": 16848,
+    "src": "/assets/tarot/optimized/swords-three-320.webp",
+    "sha256": "ee4c2bcf66e003ef7b32b51baf69399ee3b21303a3d8d5e686c37e563316c25e"
+  },
+  "largest": {
+    "width": 777,
+    "height": 1360,
+    "bytes": 237638,
+    "src": "/assets/tarot/optimized/major-02-high-priestess-777.webp",
+    "sha256": "fa3a3bfa949197480dea64fff954d2520c4a334cd51a2f2fe5a926eb52202260"
+  },
+  "generationMs": 43287,
+  "cards": [
+    {
+      "cardId": "major-00-fool",
+      "master": {
+        "cardId": "major-00-fool",
+        "filename": "01_the_fool.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1552886,
+        "sha256": "89c962659a5c5c7aa47eb564ec9b3bbcdcfdb911b39bc270bae0a26b801d0dc0",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30872,
+          "src": "/assets/tarot/optimized/major-00-fool-320.webp",
+          "sha256": "bf6fefc5dc160f8da3774fe04e1eba655a9e3b3870ff1ae11492931f0762432c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 82654,
+          "src": "/assets/tarot/optimized/major-00-fool-640.webp",
+          "sha256": "743f36e57149a982832e1af04c83a701984b0b98e6c07e2fa787a1e68d70600d"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 108356,
+          "src": "/assets/tarot/optimized/major-00-fool-777.webp",
+          "sha256": "11eeabcc7a04e2e89d9ab4b802b88c5182478bab5ac6c89c03f8c785e2a4d81c"
+        }
+      ]
+    },
+    {
+      "cardId": "major-01-magician",
+      "master": {
+        "cardId": "major-01-magician",
+        "filename": "02_the_magician.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1739251,
+        "sha256": "7cbb9908d2018416021c126b84287a6ce60e045ecff88ce64e84b0d36d7d3476",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 37584,
+          "src": "/assets/tarot/optimized/major-01-magician-320.webp",
+          "sha256": "4631ccab563db2245eace9ce9e91f97bafab4be9d4f80cc2fcaf3e765dc152b1"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 114662,
+          "src": "/assets/tarot/optimized/major-01-magician-640.webp",
+          "sha256": "3cddb456e08f9a1f115249f0009368d81d66185e2ea00aca8c0b89eec48c2a01"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 152622,
+          "src": "/assets/tarot/optimized/major-01-magician-777.webp",
+          "sha256": "f3aa4703d06bc53c9d0075fb8024df107077c7db5526bdc66fe03553e62f0f98"
+        }
+      ]
+    },
+    {
+      "cardId": "major-02-high-priestess",
+      "master": {
+        "cardId": "major-02-high-priestess",
+        "filename": "03_the_high_priestess.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 2060217,
+        "sha256": "055f75211291a22fd07bde99ee006f283c1cc2f6509964040c02b6960ab5fbf3",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 47250,
+          "src": "/assets/tarot/optimized/major-02-high-priestess-320.webp",
+          "sha256": "8e96684a004bc448e74a196571a066a6fdd53e1d826bc2e2ccad131a05f8398a"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 166262,
+          "src": "/assets/tarot/optimized/major-02-high-priestess-640.webp",
+          "sha256": "029efa5d7c2f939373d88f26b299941e0df4b8ef9386a7067829fc8330eaf257"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 237638,
+          "src": "/assets/tarot/optimized/major-02-high-priestess-777.webp",
+          "sha256": "fa3a3bfa949197480dea64fff954d2520c4a334cd51a2f2fe5a926eb52202260"
+        }
+      ]
+    },
+    {
+      "cardId": "major-03-empress",
+      "master": {
+        "cardId": "major-03-empress",
+        "filename": "04_the_empress.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1981943,
+        "sha256": "2732d486cb310f9a1cdb1a3705d6958b66e5851ffbed5122b2f263482e47bd83",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 57136,
+          "src": "/assets/tarot/optimized/major-03-empress-320.webp",
+          "sha256": "e3226e223d9c3874222aff15ffa7df8281a9b2d468d9b2538701094b24c73683"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 164634,
+          "src": "/assets/tarot/optimized/major-03-empress-640.webp",
+          "sha256": "bfff12d0cd58d578521a6c159494aa523ade1051e7497f6faba86cb1bdb1166b"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 219472,
+          "src": "/assets/tarot/optimized/major-03-empress-777.webp",
+          "sha256": "fa771febfdbd27b4464ca11817d9e1b8bdfe8c1aae4bbf0ea39cb08e45b1fa86"
+        }
+      ]
+    },
+    {
+      "cardId": "major-04-emperor",
+      "master": {
+        "cardId": "major-04-emperor",
+        "filename": "05_the_emperor.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1857895,
+        "sha256": "091bc2455fa14099ac7a0f1786b842c0acf25462f159c8af38b76fba5477fb94",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 40258,
+          "src": "/assets/tarot/optimized/major-04-emperor-320.webp",
+          "sha256": "dc2687de3dc4e333aad981748218872d97e1fb731b344c51644f27679d2bb514"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 124276,
+          "src": "/assets/tarot/optimized/major-04-emperor-640.webp",
+          "sha256": "f95719fb129e75dee1f05046bbb3638f070cc687d26a308c4bb712c0841533a9"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 172234,
+          "src": "/assets/tarot/optimized/major-04-emperor-777.webp",
+          "sha256": "5f2321e54e0e69ce9dc84c7c6e93c1ae59e0ffa4acd8a8b412eb795618a92967"
+        }
+      ]
+    },
+    {
+      "cardId": "major-05-hierophant",
+      "master": {
+        "cardId": "major-05-hierophant",
+        "filename": "06_the_hierophant.png",
+        "width": 777,
+        "height": 1360,
+        "bytes": 1770687,
+        "sha256": "4651d5a443c84fcb8655baece459cb5df708d9f2895cd6956799d9386a04f136",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 40612,
+          "src": "/assets/tarot/optimized/major-05-hierophant-320.webp",
+          "sha256": "dcea0b959cc39b03427a8cc5c2ef91654fb27d891093f73a242a557cfab96d03"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 117662,
+          "src": "/assets/tarot/optimized/major-05-hierophant-640.webp",
+          "sha256": "7620bd51dabcb34f087c395f8650aedcad7b2ba7ba8fdb2c53c8d54b58a3ffe2"
+        },
+        {
+          "width": 777,
+          "height": 1360,
+          "bytes": 154476,
+          "src": "/assets/tarot/optimized/major-05-hierophant-777.webp",
+          "sha256": "82c77b9543630b418c4885cdd754be8b91530a73df0a58c09f122a2f7f9e457a"
+        }
+      ]
+    },
+    {
+      "cardId": "major-06-lovers",
+      "master": {
+        "cardId": "major-06-lovers",
+        "filename": "07_the_lovers.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1716216,
+        "sha256": "f70a8db8b33ae72a40d7fff83482e73dbf463f6a5583c08340f9e7db317e2f55",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 41658,
+          "src": "/assets/tarot/optimized/major-06-lovers-320.webp",
+          "sha256": "9bfe9054074290d3f3d073690d5e58c4210476ae51b2174ba611727350f152c4"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 115796,
+          "src": "/assets/tarot/optimized/major-06-lovers-640.webp",
+          "sha256": "3e1b6c1bfedb4c7a8b7074e54327c8dae05f5334ab8a8a55b44594685dcaa96a"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 150088,
+          "src": "/assets/tarot/optimized/major-06-lovers-768.webp",
+          "sha256": "f393a495d6b5dcfeb9e74af65794e5e56a84d6478399bbe85bd005d618902ecf"
+        }
+      ]
+    },
+    {
+      "cardId": "major-07-chariot",
+      "master": {
+        "cardId": "major-07-chariot",
+        "filename": "08_the_chariot.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1813828,
+        "sha256": "8c10f5c7ff5e899067af39af8cf2a30db9f556b28dfc1574a62d54e3d1838920",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 50490,
+          "src": "/assets/tarot/optimized/major-07-chariot-320.webp",
+          "sha256": "202c5c0453107c6c071ead4f81417c40fcebd4d588b1d9325a045ae28fead4b9"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 144248,
+          "src": "/assets/tarot/optimized/major-07-chariot-640.webp",
+          "sha256": "22b3f1cf64808aa944597fd18513f3e0bf9f476ec51c4b7d144364753a3216b5"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 190626,
+          "src": "/assets/tarot/optimized/major-07-chariot-768.webp",
+          "sha256": "89d349abe2e1e4b9af2ea1cc78f51674f16308a8555ffec6bac46db5cd94fb40"
+        }
+      ]
+    },
+    {
+      "cardId": "major-08-strength",
+      "master": {
+        "cardId": "major-08-strength",
+        "filename": "09_strength.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1754833,
+        "sha256": "645463cb9c580c3b9c5b435845b456d8a8616fd1c52e00bd3770fc13bfc40d13",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 38716,
+          "src": "/assets/tarot/optimized/major-08-strength-320.webp",
+          "sha256": "25b09d8e0edf11badd16f10cb29e59254260dc8bdf2650fb7d0e7c3378595473"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 113030,
+          "src": "/assets/tarot/optimized/major-08-strength-640.webp",
+          "sha256": "28a1409ecfde7cd70889de92d3b86a33433c9818ef3e2af1d163ae223a843791"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 151416,
+          "src": "/assets/tarot/optimized/major-08-strength-768.webp",
+          "sha256": "c2a1d017d0c205de77e44fb24daa675eacf87976fad0460b4648a5abcf4b4072"
+        }
+      ]
+    },
+    {
+      "cardId": "major-09-hermit",
+      "master": {
+        "cardId": "major-09-hermit",
+        "filename": "10_the_hermit.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1275194,
+        "sha256": "3fec300672c8b19a6c4ce69d4940b009db394168571550c19cb0b95d3ba13d19",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21690,
+          "src": "/assets/tarot/optimized/major-09-hermit-320.webp",
+          "sha256": "954800dcbd1c6c64fbd35eeddb57e5d924d801d721fef45d82417524d14b715c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 57128,
+          "src": "/assets/tarot/optimized/major-09-hermit-640.webp",
+          "sha256": "c37408249cf04ac9678f660145ef90999481ff95d4412bbc1dd0db8ef6c5ffdc"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 68630,
+          "src": "/assets/tarot/optimized/major-09-hermit-722.webp",
+          "sha256": "fe1bd2b9883b35e18600c7cd9159256665aa99e0f29a3aa1df558d9c26df534b"
+        }
+      ]
+    },
+    {
+      "cardId": "major-10-wheel-of-fortune",
+      "master": {
+        "cardId": "major-10-wheel-of-fortune",
+        "filename": "11_wheel_of_fortune.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1899034,
+        "sha256": "8c66ca21ee2a410ecb117e5023c52cdfae9e9066c709442ac8eb7def00581488",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 51902,
+          "src": "/assets/tarot/optimized/major-10-wheel-of-fortune-320.webp",
+          "sha256": "cda29dae92c38cd77676a86b4e6427b6236dfb096e48e6f781403563270ddc59"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 152186,
+          "src": "/assets/tarot/optimized/major-10-wheel-of-fortune-640.webp",
+          "sha256": "ef1563952e7551b97c15d66cbe9a9337f8614d1428225d80bda46cf9199432ff"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 199982,
+          "src": "/assets/tarot/optimized/major-10-wheel-of-fortune-768.webp",
+          "sha256": "079f227a77916f5be24ebafcc93365f1672bd52b6d2a060f7fa6905d05f9de0a"
+        }
+      ]
+    },
+    {
+      "cardId": "major-11-justice",
+      "master": {
+        "cardId": "major-11-justice",
+        "filename": "12_justice.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1520935,
+        "sha256": "050e8980291c63163260d003a8f9d6b756b04832664ace0223acca478b9b6cfa",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 26770,
+          "src": "/assets/tarot/optimized/major-11-justice-320.webp",
+          "sha256": "eee1a19ae0c20b0b967b7e87b9ed70e7b7af7dba53404dd771a80c264a407d6a"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 78438,
+          "src": "/assets/tarot/optimized/major-11-justice-640.webp",
+          "sha256": "d6f337b14bf0e8efbfb2a6631f45635d05495da644b51f90712b102a3c2d65e4"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 104428,
+          "src": "/assets/tarot/optimized/major-11-justice-768.webp",
+          "sha256": "bb54fb8031612413aa42c69c6f929985105d6058f34dee02444a72a13f581533"
+        }
+      ]
+    },
+    {
+      "cardId": "major-12-hanged-man",
+      "master": {
+        "cardId": "major-12-hanged-man",
+        "filename": "13_the_hanged_man.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1256531,
+        "sha256": "4db40c0ae74c2050d66b3cad6aac6abdfb1e1078c8e6e44390dc4ee2627e7937",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 24126,
+          "src": "/assets/tarot/optimized/major-12-hanged-man-320.webp",
+          "sha256": "426396315fe6f83feed04e811f9c1d243712853900a5118d5436d80cb3cb7c7b"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 61408,
+          "src": "/assets/tarot/optimized/major-12-hanged-man-640.webp",
+          "sha256": "e806d02322301e8126fb9a6d142319837cd84918212fccd2780313c6c9319820"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 72632,
+          "src": "/assets/tarot/optimized/major-12-hanged-man-722.webp",
+          "sha256": "4215a5d4dbc1169371030828a6f170371eeffbc3d8bcd1fef71c4ef4d7b474eb"
+        }
+      ]
+    },
+    {
+      "cardId": "major-13-death",
+      "master": {
+        "cardId": "major-13-death",
+        "filename": "14_death.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1759497,
+        "sha256": "a8c44b9d2c6f51a2b4c28fb471e418dcda8d406ed64573d7019b58516094301f",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 36024,
+          "src": "/assets/tarot/optimized/major-13-death-320.webp",
+          "sha256": "07418fe80c954fdf3e1bc1278fe0c02b992e16bd2ff7f0fc14832c16a4dc2acc"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 109470,
+          "src": "/assets/tarot/optimized/major-13-death-640.webp",
+          "sha256": "f3f283ae3be7ae356e7a7f0f456733db342294c690ae3c2d35e3f60cc82eb7ac"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 142276,
+          "src": "/assets/tarot/optimized/major-13-death-768.webp",
+          "sha256": "346bc05308a559c9a8c9b765d926f0e1e13cc9927b7a5d55275dafdbf543640c"
+        }
+      ]
+    },
+    {
+      "cardId": "major-14-temperance",
+      "master": {
+        "cardId": "major-14-temperance",
+        "filename": "15_temperance.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1860270,
+        "sha256": "7afbd56429cbd519ffa1f33f8e171e3127c092915686b5b2c62a55859fcff125",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 45548,
+          "src": "/assets/tarot/optimized/major-14-temperance-320.webp",
+          "sha256": "6f848e5324cb2c652728b36d9932cb2a34b73d4da3f19e9416ff0be72a47a83d"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 137058,
+          "src": "/assets/tarot/optimized/major-14-temperance-640.webp",
+          "sha256": "e04dea78cb027d93f21a5d6538687c0a2ba28ec5cf5223153c67ff1ebb54ba28"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 176130,
+          "src": "/assets/tarot/optimized/major-14-temperance-768.webp",
+          "sha256": "ef03ca36f6463d2fd39a2d1db8f02743fda2b60ccbcee68caf8e1d5f779f4e3c"
+        }
+      ]
+    },
+    {
+      "cardId": "major-15-devil",
+      "master": {
+        "cardId": "major-15-devil",
+        "filename": "16_the_devil.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1405565,
+        "sha256": "eaf32fd3236ec1ed3421138e76513367ab935550d82c53e43e2fa4b8dcbfd03a",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 20258,
+          "src": "/assets/tarot/optimized/major-15-devil-320.webp",
+          "sha256": "cd45fd3035a128a80878032a0e5963ec0e66d572fe6e144e8c67d18e68396769"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 52140,
+          "src": "/assets/tarot/optimized/major-15-devil-640.webp",
+          "sha256": "0953fd8ab3936bdf50fea7cfb3324589d7d8b622174254975c9649ff099b883c"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 67794,
+          "src": "/assets/tarot/optimized/major-15-devil-768.webp",
+          "sha256": "769807f8e35ae21c0224a2aa39dc6d84af30650ea111e52dac084862f6c910f6"
+        }
+      ]
+    },
+    {
+      "cardId": "major-16-tower",
+      "master": {
+        "cardId": "major-16-tower",
+        "filename": "17_the_tower.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1649646,
+        "sha256": "3ccbc69db9653fec6f3b24e60eb5bb06931c93b9d329494a3b48acc583ba55c6",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28500,
+          "src": "/assets/tarot/optimized/major-16-tower-320.webp",
+          "sha256": "56e26afe572024f8802711e83193af5a4d9f9b5d468fdfbb0e205b61d1cc3d37"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 82768,
+          "src": "/assets/tarot/optimized/major-16-tower-640.webp",
+          "sha256": "406a114386050f57f0269d03c563d59492a63b623e7860de9b7dc889e94076ab"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 111410,
+          "src": "/assets/tarot/optimized/major-16-tower-768.webp",
+          "sha256": "b2a3135416c6e2a9bdcd454c460e08bc6b3561d8c16bb2693e05139d51abb028"
+        }
+      ]
+    },
+    {
+      "cardId": "major-17-star",
+      "master": {
+        "cardId": "major-17-star",
+        "filename": "18_the_star.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1339132,
+        "sha256": "9e8583d5ceea5f411dd719dc694157d71598b24fdccfb3c4401d5cc30dd04085",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21324,
+          "src": "/assets/tarot/optimized/major-17-star-320.webp",
+          "sha256": "a74f39144db9d44379e8247b3c44491accfc25d4c3298545ffd5aa9282d53ce1"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 57628,
+          "src": "/assets/tarot/optimized/major-17-star-640.webp",
+          "sha256": "0273b759bd985079eacbf53aefbfaccb6db1f5814b1499a1463df0f86fcb7630"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 74978,
+          "src": "/assets/tarot/optimized/major-17-star-768.webp",
+          "sha256": "c2c234ba3b5ce85d0caa1cf53ed979048ff1a80c4ae09ba0fd5350f686fd7284"
+        }
+      ]
+    },
+    {
+      "cardId": "major-18-moon",
+      "master": {
+        "cardId": "major-18-moon",
+        "filename": "19_the_moon.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1290391,
+        "sha256": "58aafa373ff9f62c25c604a0c15f6f0502540d6a367177c05a8bc03fc4edf193",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 25386,
+          "src": "/assets/tarot/optimized/major-18-moon-320.webp",
+          "sha256": "1c9b1721cf1159fea255511c363d4fdaf7fc825651d31d9cbbef24db9834b34c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 66334,
+          "src": "/assets/tarot/optimized/major-18-moon-640.webp",
+          "sha256": "3f89cf1754cc4ea1495ea03dade52c278bc3258a955c210f693568c60b6dd9c9"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 79086,
+          "src": "/assets/tarot/optimized/major-18-moon-722.webp",
+          "sha256": "31166fa12f0360df745ab97393deec4d316f60cc883e165abcd8e2f1643246bf"
+        }
+      ]
+    },
+    {
+      "cardId": "major-19-sun",
+      "master": {
+        "cardId": "major-19-sun",
+        "filename": "20_the_sun.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1639522,
+        "sha256": "547ea99256347893c8481b926b25677e5c716f19de152879a7465045f541cc45",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 53022,
+          "src": "/assets/tarot/optimized/major-19-sun-320.webp",
+          "sha256": "a3ad487f30c1480737ccb6949919bf3ad3ec1419a2af4e462cc858d4e99e20b1"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 148818,
+          "src": "/assets/tarot/optimized/major-19-sun-640.webp",
+          "sha256": "a8c7584cc98a1c044e1d72b5df15af9be6811c442e474bacadd72240a1478f13"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 177936,
+          "src": "/assets/tarot/optimized/major-19-sun-722.webp",
+          "sha256": "479c50bc2e1e479ba057f8a9c032a41fc78919bd04a556cca9f5137a7c6cb9d5"
+        }
+      ]
+    },
+    {
+      "cardId": "major-20-judgement",
+      "master": {
+        "cardId": "major-20-judgement",
+        "filename": "21_judgement.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1626508,
+        "sha256": "f33c1d66432f9c68a1bcc211f505ee97e0e8718391e34bea81815668d88ad87c",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 48424,
+          "src": "/assets/tarot/optimized/major-20-judgement-320.webp",
+          "sha256": "3754356b8e1f4035ca4fcc24cb206f041b1a3e4b276a5e02c4b69f283ad69e41"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 136058,
+          "src": "/assets/tarot/optimized/major-20-judgement-640.webp",
+          "sha256": "78b10968b1fa366c8eb7fcc2380b68ffb0f880d330bdd18a5765eeab4dea6f61"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 162120,
+          "src": "/assets/tarot/optimized/major-20-judgement-722.webp",
+          "sha256": "dc55ddbd03846923347cda40e5e27a08d91d9df38b10e4f2e971e0635c1a1a90"
+        }
+      ]
+    },
+    {
+      "cardId": "major-21-world",
+      "master": {
+        "cardId": "major-21-world",
+        "filename": "22_the_world.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1793708,
+        "sha256": "fba6dfaf7a96c80dded5da3cb34c3e28ec55439ec8a5df1b7a468c2189ea4c21",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 45544,
+          "src": "/assets/tarot/optimized/major-21-world-320.webp",
+          "sha256": "dcd0aa200717dd7969e9fff84bc2e9b66d1c68e8e2fbd4a7a4f085801048f09b"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 128882,
+          "src": "/assets/tarot/optimized/major-21-world-640.webp",
+          "sha256": "4877a5d714a24d87507f3c86a3bfb475661e07c296dd97a7313f9e0f6dddb062"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 167648,
+          "src": "/assets/tarot/optimized/major-21-world-768.webp",
+          "sha256": "4f3aa172eb6e7d6752de272e3750985574a2d874d14d2173775fafc919e83352"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-ace",
+      "master": {
+        "cardId": "wands-ace",
+        "filename": "23_ace_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1515694,
+        "sha256": "d7efc5ec18c0018387d9108acc5714e592861dba7e252a4d3e05b79b9c3640c1",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21334,
+          "src": "/assets/tarot/optimized/wands-ace-320.webp",
+          "sha256": "0e2f980fff755a1855103b12b5b27e3884c91289d7e1c9756d30048739f5cda7"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 59586,
+          "src": "/assets/tarot/optimized/wands-ace-640.webp",
+          "sha256": "71088f8fdd8483badb8bc5fd90894a75d8e51b0d3c50915f7d9b50511c4850ff"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 77450,
+          "src": "/assets/tarot/optimized/wands-ace-768.webp",
+          "sha256": "ee1f6053b16951cec2308164e1d2e77e3b5ddc93c2dcc74dae2c21a05d7aa4e8"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-two",
+      "master": {
+        "cardId": "wands-two",
+        "filename": "24_two_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1610983,
+        "sha256": "b56ae30e9dea6ffb588084c8415d6ec263d2f8dc6ef305b981c892e402111c41",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 29548,
+          "src": "/assets/tarot/optimized/wands-two-320.webp",
+          "sha256": "aafa4b4236dbc6aa019870b5a8cf5d44a53f4d4365defcc44b6e0f513295d03b"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 83392,
+          "src": "/assets/tarot/optimized/wands-two-640.webp",
+          "sha256": "78e20af3ec4a1fbd0083decb84b19886453966bef38ea92cc2f00b407dc02e38"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 107844,
+          "src": "/assets/tarot/optimized/wands-two-768.webp",
+          "sha256": "d71cbe84dfb52343399abce11984c2855942a12645839f51743a0483cd817ceb"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-three",
+      "master": {
+        "cardId": "wands-three",
+        "filename": "25_three_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1466485,
+        "sha256": "3c45c2cb84959be7ef1b71accdacc2ddc03bbf956a49b02ca7c6b9d56e8981cf",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 22772,
+          "src": "/assets/tarot/optimized/wands-three-320.webp",
+          "sha256": "eeaaf084b2fd5f86f66e62e78a3c28992733e3a83ccc57dd4369bcc479d72abf"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 67576,
+          "src": "/assets/tarot/optimized/wands-three-640.webp",
+          "sha256": "15d1e9d9ec331f04058c3d5fecd3659c9d46fd0ca05a0a5a0d6f9f8af0e133e4"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 89408,
+          "src": "/assets/tarot/optimized/wands-three-768.webp",
+          "sha256": "54757187c30d63c6b5a402d60a0cb15da37eca418f08597ca3d44bd9cb0d0581"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-four",
+      "master": {
+        "cardId": "wands-four",
+        "filename": "26_four_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1719854,
+        "sha256": "85f3d92e7bf00891829a8985bffcfd685e746dab7e745e74f7800b48a17e6005",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 45338,
+          "src": "/assets/tarot/optimized/wands-four-320.webp",
+          "sha256": "fe983e6299de2d8d3e0c4f4a1534dcf00b734765f912c47eb5a76ed007c61f5b"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 124544,
+          "src": "/assets/tarot/optimized/wands-four-640.webp",
+          "sha256": "6a9258b7cb6f4c5aa6a5a033da528ab9837ac2de4b9f48ebeaca5333487e8894"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 159728,
+          "src": "/assets/tarot/optimized/wands-four-768.webp",
+          "sha256": "65a23ccb80b8e313ebf33599a16ae72a3602c3faa1b101090b35087c3bb28bd3"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-five",
+      "master": {
+        "cardId": "wands-five",
+        "filename": "27_five_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1733969,
+        "sha256": "86148f7b8e3a5b21153cd906419eae57450a91853205f8fb92cac6bd5b31c1c0",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 39376,
+          "src": "/assets/tarot/optimized/wands-five-320.webp",
+          "sha256": "0bdea2500effe04c2e263a4471ea6dd827f0675c9bd47c56d7d97417650b51f2"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 113544,
+          "src": "/assets/tarot/optimized/wands-five-640.webp",
+          "sha256": "9550101fa1df1de41df3caf316e8193e5e2f216c4016fcebb4d7b15eb65606d4"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 145312,
+          "src": "/assets/tarot/optimized/wands-five-768.webp",
+          "sha256": "f113beef7d6967ae2385b11267333a26153074d600be0a61ac4b76d131b80315"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-six",
+      "master": {
+        "cardId": "wands-six",
+        "filename": "28_six_of_wands.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1515867,
+        "sha256": "17b76455168b3ef63a126bff52e27be6c2d6260bfbf50927bdbb6a039d5e1d4f",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 41950,
+          "src": "/assets/tarot/optimized/wands-six-320.webp",
+          "sha256": "f4e639d0ee58d0395269c279ee5a883598aaa6a9f02df14ac2fc778d6589f91e"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 117904,
+          "src": "/assets/tarot/optimized/wands-six-640.webp",
+          "sha256": "93d87441b5e08d43377c2e1e6fa163ae2c3bbc16d0421a445932bc7f801d9688"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 142264,
+          "src": "/assets/tarot/optimized/wands-six-722.webp",
+          "sha256": "edadb8afa67a8a509ed86a68e9845fc6e19a052b3bda345197d7828c80d51e32"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-seven",
+      "master": {
+        "cardId": "wands-seven",
+        "filename": "29_seven_of_wands.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1453344,
+        "sha256": "c264a4e5db214278707e9f179fa414bfddc3524012fe011e56a18fa34acbb4c2",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 31440,
+          "src": "/assets/tarot/optimized/wands-seven-320.webp",
+          "sha256": "4060a3b83a4a39f8c72dc4ce6241a6b20c71698c481adfd992b5df8a987f077d"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 90586,
+          "src": "/assets/tarot/optimized/wands-seven-640.webp",
+          "sha256": "b112d7ab5deacb140431918a90e526bd6e64fda82737702d8470055206443f02"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 108098,
+          "src": "/assets/tarot/optimized/wands-seven-722.webp",
+          "sha256": "6f6ed2edcf0c6b393d5870d1911a01b9f9bc8ceb1d4bd47d32e58c2fd6e2f642"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-eight",
+      "master": {
+        "cardId": "wands-eight",
+        "filename": "30_eight_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1610261,
+        "sha256": "a32cd4d21bc854df126688f9a029a7ab799e7f84d4535645142631797ef1b004",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 26218,
+          "src": "/assets/tarot/optimized/wands-eight-320.webp",
+          "sha256": "b6de06d74d5568da420a5f4ae4e76d1485666e96bf3ae21f61f43d03dee9e2a3"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 68742,
+          "src": "/assets/tarot/optimized/wands-eight-640.webp",
+          "sha256": "5eea2f41ba450534068068ed28db48c3b5a56675e98f34fcaee45d127550322d"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 91130,
+          "src": "/assets/tarot/optimized/wands-eight-768.webp",
+          "sha256": "b0b67693498724b59ae5291d0cd81ea9976e4dd8b5564a15756effe7823c06c4"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-nine",
+      "master": {
+        "cardId": "wands-nine",
+        "filename": "31_nine_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1646820,
+        "sha256": "fa918443f84f993c6cb6272f632334eba35a750d9a37627b611546a15fb254e6",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 29836,
+          "src": "/assets/tarot/optimized/wands-nine-320.webp",
+          "sha256": "f34dac8a69e93ef8d200be6ee71bbbfc95347413b67b378ac5f88945fb891a99"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 100148,
+          "src": "/assets/tarot/optimized/wands-nine-640.webp",
+          "sha256": "d8438b4f588f88ae3239caf7f317d8c36da4ded6d85409e84ba894bda22f60cb"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 132778,
+          "src": "/assets/tarot/optimized/wands-nine-768.webp",
+          "sha256": "b8f960c3731cc2f14679d4aee8c4cb607a225838134b2912dd9592585aae4c0e"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-ten",
+      "master": {
+        "cardId": "wands-ten",
+        "filename": "32_ten_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1562505,
+        "sha256": "668628454d4c87b34ab78dd97c4907f9ee0d589891c1af35365ac5cf815fafed",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30150,
+          "src": "/assets/tarot/optimized/wands-ten-320.webp",
+          "sha256": "e60220c65f07fc765b91efd8f2fc87f5edd09f2ca9ee03fc8a5773899e0aea1c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 81122,
+          "src": "/assets/tarot/optimized/wands-ten-640.webp",
+          "sha256": "026db3125d301281dc5d51ebd6a59522a8435336ffada326f39a5c945ec3cd3a"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 101512,
+          "src": "/assets/tarot/optimized/wands-ten-768.webp",
+          "sha256": "44ec9b6350f2250f900c8d470112563d44396b267f7c1631e65520da7a018bf6"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-page",
+      "master": {
+        "cardId": "wands-page",
+        "filename": "33_page_of_wands.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1333091,
+        "sha256": "3df2d42af9488977a41fe050127dc97a8d8e698373188050317ef3bfad2417dd",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 31708,
+          "src": "/assets/tarot/optimized/wands-page-320.webp",
+          "sha256": "76e413e16535ba5ea4bf7baae11f3702a3f55ccaf480019ba77b7bdc70340afa"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 85138,
+          "src": "/assets/tarot/optimized/wands-page-640.webp",
+          "sha256": "8fd60735e5e7be3b427a4ced091dec3e37d147833c87967e5c3576ccf34f9300"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 101066,
+          "src": "/assets/tarot/optimized/wands-page-722.webp",
+          "sha256": "bf7f4ac72bef6bfd5ef1229465dc0f1167f12886415e34d213384132af2a0231"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-knight",
+      "master": {
+        "cardId": "wands-knight",
+        "filename": "34_knight_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1945886,
+        "sha256": "6271be5485247d656f6cfe0364137235c41d054ca3c5f87672efc7e4e8ee0b54",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 43012,
+          "src": "/assets/tarot/optimized/wands-knight-320.webp",
+          "sha256": "47e78bc66de8596d4df08a8cf2982eb544caa3a373c926ebdfa15692092cdb71"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 144886,
+          "src": "/assets/tarot/optimized/wands-knight-640.webp",
+          "sha256": "1b9cabf6c1ee6910f4a9c944ec1bda2c85f4880b1a37eebf3bc1b7c75c10474e"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 198326,
+          "src": "/assets/tarot/optimized/wands-knight-768.webp",
+          "sha256": "4342ebd84e55482b099b66452332511fe4ccc38c6a4fa82828e684c1489eecb2"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-queen",
+      "master": {
+        "cardId": "wands-queen",
+        "filename": "35_queen_of_wands.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1655268,
+        "sha256": "1e6f46e4ac07563a5f5cd77b9f6b8c530bdc79b1e1282a92803f0146b9ad70d8",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 38556,
+          "src": "/assets/tarot/optimized/wands-queen-320.webp",
+          "sha256": "d3d20a2e3f9c878625311004c1249de6f88e0f975eed419bf4c445a31c122722"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 107680,
+          "src": "/assets/tarot/optimized/wands-queen-640.webp",
+          "sha256": "15fa72ff8dd0cd4c378dc99eae9765d7a6af59478843b9c67291be2035058fca"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 140248,
+          "src": "/assets/tarot/optimized/wands-queen-768.webp",
+          "sha256": "ce8749fe8adfdf03b8cc3b29d9fba3755db4f9f177225cd73c4e15be04ff0009"
+        }
+      ]
+    },
+    {
+      "cardId": "wands-king",
+      "master": {
+        "cardId": "wands-king",
+        "filename": "36_king_of_wands.png",
+        "width": 750,
+        "height": 1312,
+        "bytes": 1831318,
+        "sha256": "4422be5545ae064a32d9250bb774897a5c5c9e3381445644a3daf17ad9f995fd",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 51678,
+          "src": "/assets/tarot/optimized/wands-king-320.webp",
+          "sha256": "777627a40a44ec332ceeb8ad8d2bcf3a914ef836cff3ce1c4ee82f843ff7af00"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 164242,
+          "src": "/assets/tarot/optimized/wands-king-640.webp",
+          "sha256": "98031f7f609ab65c889c824bb7c9b0421b0c06b7313c0e6427b06909e1072eb6"
+        },
+        {
+          "width": 750,
+          "height": 1312,
+          "bytes": 212020,
+          "src": "/assets/tarot/optimized/wands-king-750.webp",
+          "sha256": "08f549814d114a45b51460468c101c2c78338e2a605f2a73ade71c568fa42ea4"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-ace",
+      "master": {
+        "cardId": "cups-ace",
+        "filename": "37_ace_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1462688,
+        "sha256": "3a1f473e0a33f15da57ee4353058005e661990e9099c4d385468c8c8c3fbad92",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 27500,
+          "src": "/assets/tarot/optimized/cups-ace-320.webp",
+          "sha256": "0bac373dcb0608997f2bac5d45666d8312b5644dc54e49986d6beff3e06d4856"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 72564,
+          "src": "/assets/tarot/optimized/cups-ace-640.webp",
+          "sha256": "18bae61687bb86ae7134634dc73b16841a06b6fa88e22bdf233c0b882ede7dfc"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 94996,
+          "src": "/assets/tarot/optimized/cups-ace-768.webp",
+          "sha256": "46e61d838a69682288304d935d8e23813594ffabe1f30c03519e87bde40ea8e8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-two",
+      "master": {
+        "cardId": "cups-two",
+        "filename": "38_two_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1569999,
+        "sha256": "a2ccf790147f8150e37dd2a042264fcd067f7c14c6fcddca6282908a77c1c625",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 32092,
+          "src": "/assets/tarot/optimized/cups-two-320.webp",
+          "sha256": "900624d5082c9a6418a86daebbe137c56426e158c2e54aa99f518aa633caa55d"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 85698,
+          "src": "/assets/tarot/optimized/cups-two-640.webp",
+          "sha256": "b4be609e896bff75a19a6699bb9f9f198babc6066f1610f7ddbcd7809ddd50de"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 109870,
+          "src": "/assets/tarot/optimized/cups-two-768.webp",
+          "sha256": "51234d5208a813058e9cc75695eb3a16b61662dd65b39a90b3558d1b1e017a10"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-three",
+      "master": {
+        "cardId": "cups-three",
+        "filename": "39_three_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1692103,
+        "sha256": "141e7b4c40dbc415b7330c781349f67124aebfa8a7974bdfc066b250550223be",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 39934,
+          "src": "/assets/tarot/optimized/cups-three-320.webp",
+          "sha256": "75ee63919dc87938759bdb486f06ba5c70ac3778f6a74f22e333c70773d88766"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 112392,
+          "src": "/assets/tarot/optimized/cups-three-640.webp",
+          "sha256": "0c35b122cbe537c1db74fdbed1a38167ef0266c76fe71925b5ed514cab7cc800"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 145058,
+          "src": "/assets/tarot/optimized/cups-three-768.webp",
+          "sha256": "62c3896da05df0b7872b4a9e7617301e0cb84a37e5c991cdda0a091a49b9955e"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-four",
+      "master": {
+        "cardId": "cups-four",
+        "filename": "40_four_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1712972,
+        "sha256": "f7ae333a3a13af6a5eac39b9d0f446abaf8a6bc3d46b3acd947a4a4d7d22710a",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 42814,
+          "src": "/assets/tarot/optimized/cups-four-320.webp",
+          "sha256": "41b5db43ae943172346a492409eed54018380d0239d94cd8082555415157e350"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 108964,
+          "src": "/assets/tarot/optimized/cups-four-640.webp",
+          "sha256": "411a36f2297dd93f92920bf2f2f83bbb25896b2aa0e9433d2146075249e09f04"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 141344,
+          "src": "/assets/tarot/optimized/cups-four-768.webp",
+          "sha256": "6b0af274f7b1688acbf91e2c91e297f422b113abb6573dbecb43dc94061903b8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-five",
+      "master": {
+        "cardId": "cups-five",
+        "filename": "41_five_of_cups.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1298303,
+        "sha256": "cf54e6805aa7fee12d291a071718b9c4f32fbf5b048950d3a13c6b5b317910e7",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 24664,
+          "src": "/assets/tarot/optimized/cups-five-320.webp",
+          "sha256": "7a0e54180ad114555db53456169f062872d888a46e3c1718291e852caf8bd107"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 62622,
+          "src": "/assets/tarot/optimized/cups-five-640.webp",
+          "sha256": "21116187353aff05a60f6f7b321601d6f2744476cbe9f898945dadda4ea2b328"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 76080,
+          "src": "/assets/tarot/optimized/cups-five-722.webp",
+          "sha256": "2d92de35009c659da266f18fd14d46c43ce675230068b5b7d7b3585b1c06a351"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-six",
+      "master": {
+        "cardId": "cups-six",
+        "filename": "42_six_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1802853,
+        "sha256": "d445606bc0a140adf3f697342b4944cffa544f9e157d774dfabb9677dd5ed421",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 46342,
+          "src": "/assets/tarot/optimized/cups-six-320.webp",
+          "sha256": "972727faf6e51805e1cfcb8de32888f6a724480f1843168d422ce7999e46caea"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 135646,
+          "src": "/assets/tarot/optimized/cups-six-640.webp",
+          "sha256": "70236d4ad4363390283c59f00ee3cee36913aa63c8e5078aa635c827d0a08c42"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 171616,
+          "src": "/assets/tarot/optimized/cups-six-768.webp",
+          "sha256": "4b5651d6f260437679879a37111daeba1e0873d7759bae77aece2b3c3a4018f7"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-seven",
+      "master": {
+        "cardId": "cups-seven",
+        "filename": "43_seven_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1685675,
+        "sha256": "8d0fbd54b41d58fef60bb47001c9de8bd19ac278737d55b5ee452d5b1da110a8",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 29384,
+          "src": "/assets/tarot/optimized/cups-seven-320.webp",
+          "sha256": "6a2df47e5856a61a309370f542dacb243f4ef92b7a61972c4530c02fd671b152"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 92806,
+          "src": "/assets/tarot/optimized/cups-seven-640.webp",
+          "sha256": "2f505aa78c952c479653db59ce28523b0e086ca6f747277b1e72b8a5a3dc4ca5"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 128370,
+          "src": "/assets/tarot/optimized/cups-seven-768.webp",
+          "sha256": "787e4ae382032a595ef0e434a25a2ef7da431bba0a138d17dc61637775330113"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-eight",
+      "master": {
+        "cardId": "cups-eight",
+        "filename": "44_eight_of_cups.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1434428,
+        "sha256": "aae860dff28309ab8e5eb8381bbcdbf432bdb28ffcff5adaf28f9be226b23c64",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30996,
+          "src": "/assets/tarot/optimized/cups-eight-320.webp",
+          "sha256": "e7109b193b406a85ce740d7281202d528f7dc043df0188123ae06546b92cb982"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 84880,
+          "src": "/assets/tarot/optimized/cups-eight-640.webp",
+          "sha256": "935bbffce37b78eec09a2c43680fcf19a67d693a494c8d04326b93c787005678"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 104050,
+          "src": "/assets/tarot/optimized/cups-eight-722.webp",
+          "sha256": "3c9490faec3bc94e7861339f1f1d93cba940c1205a4e7cc513fe0bd09bec3550"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-nine",
+      "master": {
+        "cardId": "cups-nine",
+        "filename": "45_nine_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1602608,
+        "sha256": "c40149c337c4334920f44c24a2a5f04686382946a04c77dcd9c1d379b84e83c9",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 32908,
+          "src": "/assets/tarot/optimized/cups-nine-320.webp",
+          "sha256": "c939b49cbb24876a63743149ca86d950786baa86502de6d626fb6d4b35ee5623"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 91152,
+          "src": "/assets/tarot/optimized/cups-nine-640.webp",
+          "sha256": "7ba912029110ee43bf4868fc24aa0143e5853b4fa496309849bb0e0ce1a61c51"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 122198,
+          "src": "/assets/tarot/optimized/cups-nine-768.webp",
+          "sha256": "7682f4e864a01c12f8253afe808154cd102b3422cf024c8d06661141007a3eb8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-ten",
+      "master": {
+        "cardId": "cups-ten",
+        "filename": "46_ten_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1503796,
+        "sha256": "7708d1fa1a6a3ede45b7ba5440a6dfac1cda06881ca8a6a9cfa4cf343059f93c",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28282,
+          "src": "/assets/tarot/optimized/cups-ten-320.webp",
+          "sha256": "601101e3de0bca2808088d3c5a29db90656b9bf3db5d9bb3614d9472cf2434fa"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 77190,
+          "src": "/assets/tarot/optimized/cups-ten-640.webp",
+          "sha256": "6de92fa786963a3f2c7045bc3cee6997351b84cf3af21c49fd998fe7a179ba5e"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 99066,
+          "src": "/assets/tarot/optimized/cups-ten-768.webp",
+          "sha256": "6a2be9b95cd439f4942072175a1579094a50db25225de0cd5f17c83c55b2c06c"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-page",
+      "master": {
+        "cardId": "cups-page",
+        "filename": "47_page_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1640440,
+        "sha256": "7c69335e340d172093bd0bf28219afb1ba9d32ead32f1eb9595fee7b7843f787",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28998,
+          "src": "/assets/tarot/optimized/cups-page-320.webp",
+          "sha256": "5008bd7a226e0276cc7837def8ca54ffa369238a50f079ff1ddc2c5778b46a9c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 86644,
+          "src": "/assets/tarot/optimized/cups-page-640.webp",
+          "sha256": "7cc3042f9f6e3cd7a8d199bb1d5c8dac14c023cbb12f44a68b54c6e8f1549049"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 115960,
+          "src": "/assets/tarot/optimized/cups-page-768.webp",
+          "sha256": "12eb80361656de76dbdf761a8813e308387ec589b4b9eab25da2af3dc33df41e"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-knight",
+      "master": {
+        "cardId": "cups-knight",
+        "filename": "48_knight_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1552377,
+        "sha256": "066f22bf25f9268c37fa385d49746c71294e0889ab60b9b6a109d38b94097c6b",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 26394,
+          "src": "/assets/tarot/optimized/cups-knight-320.webp",
+          "sha256": "381f5db9b582b40b0f6946468eaf84b6b43a4caaea46f02e9f6c375c3e4b8485"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 74152,
+          "src": "/assets/tarot/optimized/cups-knight-640.webp",
+          "sha256": "cca2ca0b6539ec174988ceab9c73a52d233a9f777bff02934f7e2926e2d8ab73"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 96388,
+          "src": "/assets/tarot/optimized/cups-knight-768.webp",
+          "sha256": "0224431fc8b848a7193825d1872b53d292a424bb5b711541c70b1ac62bf79be8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-queen",
+      "master": {
+        "cardId": "cups-queen",
+        "filename": "49_queen_of_cups.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1675484,
+        "sha256": "3d33e84533dad74902ff4f2c8d5d412b7387c3e1fdb8c2949ef967ece6996a27",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 37636,
+          "src": "/assets/tarot/optimized/cups-queen-320.webp",
+          "sha256": "9bdc6b4ff363c60eb7073b3510f29f2d7e085f691027576485e86c259659af13"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 106090,
+          "src": "/assets/tarot/optimized/cups-queen-640.webp",
+          "sha256": "3276d5190b39ab4e85ab39ea5f7dbd225ebb2addc50853f32ebd66fd85c35163"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 135454,
+          "src": "/assets/tarot/optimized/cups-queen-768.webp",
+          "sha256": "f91e6e276160d843adb8dd63546464040400178e422e7fbcfca010a5718d06b8"
+        }
+      ]
+    },
+    {
+      "cardId": "cups-king",
+      "master": {
+        "cardId": "cups-king",
+        "filename": "50_king_of_cups.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1375656,
+        "sha256": "3c84b86e19c15c91391b785dbfa54763aab253b3053151f633e12a84dc8cddd7",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28484,
+          "src": "/assets/tarot/optimized/cups-king-320.webp",
+          "sha256": "fc2148a18e51b5bebd02023d2f20afdf1fd8a7538ae194d594fcfd3a106ddea2"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 74444,
+          "src": "/assets/tarot/optimized/cups-king-640.webp",
+          "sha256": "ac0353de588ce9bd68ea139f41ed62ea0f337df5346d8f72e4db567ff7a9b7ad"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 90702,
+          "src": "/assets/tarot/optimized/cups-king-722.webp",
+          "sha256": "825ab9321154b6ec684be4891b640f408f387135939fe2b796cb32bfaf438e01"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-ace",
+      "master": {
+        "cardId": "swords-ace",
+        "filename": "51_ace_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1438344,
+        "sha256": "f31086258e41846b695caec06da28c3910953d6f99dc18f5c92bb66ed04a1e48",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21048,
+          "src": "/assets/tarot/optimized/swords-ace-320.webp",
+          "sha256": "4aff57e1309714d34c0432761c6d093c5f0a65854a1a4aea97cb10c9417fd4ba"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 58810,
+          "src": "/assets/tarot/optimized/swords-ace-640.webp",
+          "sha256": "520e3eff188e6a587b38fdef7aa92907da904f2edbc1bc8bf111eb4d2f5de7d6"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 77562,
+          "src": "/assets/tarot/optimized/swords-ace-768.webp",
+          "sha256": "c74aeb55fc50ad3545fa9fc7131a9bb820ae186aff193c8aaf2265be627da8d6"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-two",
+      "master": {
+        "cardId": "swords-two",
+        "filename": "52_two_of_swords.png",
+        "width": 750,
+        "height": 1312,
+        "bytes": 1320972,
+        "sha256": "f53b2581bef1b03fb120f9575dbb350ddf127013132b4993083c3d81f210eb75",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 19364,
+          "src": "/assets/tarot/optimized/swords-two-320.webp",
+          "sha256": "1782f833d5e2ee5921c0505ff8a46ffbb797c94f9235e5b3b17eef4619d60cc8"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 51282,
+          "src": "/assets/tarot/optimized/swords-two-640.webp",
+          "sha256": "0cf0cb68fc899680ea6face1778f6cee426c22d43f576e7a77c01fcb0774c2da"
+        },
+        {
+          "width": 750,
+          "height": 1312,
+          "bytes": 62674,
+          "src": "/assets/tarot/optimized/swords-two-750.webp",
+          "sha256": "03e5f6155a1017b4382d092b6e2e0a64b03596be63984870bf103044416c6b85"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-three",
+      "master": {
+        "cardId": "swords-three",
+        "filename": "53_three_of_swords.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1193271,
+        "sha256": "42e20e2acbc1f0c855de7cdfb3fe383b48c842119c926025badc315ad92cd38a",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 16848,
+          "src": "/assets/tarot/optimized/swords-three-320.webp",
+          "sha256": "ee4c2bcf66e003ef7b32b51baf69399ee3b21303a3d8d5e686c37e563316c25e"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 42466,
+          "src": "/assets/tarot/optimized/swords-three-640.webp",
+          "sha256": "c22ad48f0714322ebeb04d9db477d38228bcd10414ae49d4ada3cd39868e4639"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 50802,
+          "src": "/assets/tarot/optimized/swords-three-722.webp",
+          "sha256": "941f83081dec8a2ca110c35e235dc9d389778d3128b9d8c8be0e2e68591a22a7"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-four",
+      "master": {
+        "cardId": "swords-four",
+        "filename": "54_four_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1478219,
+        "sha256": "ef7a97ea36b32b160f0358bc8e78ad351b28649e225ca4d4846703ad00fe9109",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21854,
+          "src": "/assets/tarot/optimized/swords-four-320.webp",
+          "sha256": "75ee52d6f09bc78415051c503806e93b40980a0b1c615a12d3dc5e1dde67f0c5"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 62228,
+          "src": "/assets/tarot/optimized/swords-four-640.webp",
+          "sha256": "057ef517e21119aae0380675a85579cf77d07b2a67b958c3b86de75f162099bc"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 80760,
+          "src": "/assets/tarot/optimized/swords-four-768.webp",
+          "sha256": "a42e3e09996feb481e037e4bf16387a37e9cede075459d61038132357e414c2e"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-five",
+      "master": {
+        "cardId": "swords-five",
+        "filename": "55_five_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1642569,
+        "sha256": "38ead016b238d728be5c9a4896490aedc25b81c8420eadb166472b0b02adff57",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 32060,
+          "src": "/assets/tarot/optimized/swords-five-320.webp",
+          "sha256": "680737441f645c2d5ae6a66bea6edb7f3fb0e099ae23dbbf015820432f5cd0f0"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 91532,
+          "src": "/assets/tarot/optimized/swords-five-640.webp",
+          "sha256": "ce5e3d18f6ec8ffb2ba5aa53f70e6d45d34bf21afc70e6c2aee57faae36976a6"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 120072,
+          "src": "/assets/tarot/optimized/swords-five-768.webp",
+          "sha256": "7071a8234e38b8b7b298711f614d24656775e17c245763ede91ded1d6ec62c76"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-six",
+      "master": {
+        "cardId": "swords-six",
+        "filename": "56_six_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1742379,
+        "sha256": "d505ad699c4282832e13dbc8c4487bf8fe852da3956ca36994b2e5b82218eac9",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 32444,
+          "src": "/assets/tarot/optimized/swords-six-320.webp",
+          "sha256": "2e23364487a178c2224b0effce390c22000b16e287eca0fce68fe5a52a4ddad7"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 104040,
+          "src": "/assets/tarot/optimized/swords-six-640.webp",
+          "sha256": "7e9d0522a819924325a18ee1adbab9caa18400d9587979be7732d6d2d4f07dc9"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 139080,
+          "src": "/assets/tarot/optimized/swords-six-768.webp",
+          "sha256": "9c60f2d80ae907b28ef9eaf308497feee83e5dddff7288cfecc900d3ef768d8a"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-seven",
+      "master": {
+        "cardId": "swords-seven",
+        "filename": "57_seven_of_swords.png",
+        "width": 720,
+        "height": 1260,
+        "bytes": 1292596,
+        "sha256": "84ccd50f97bac377367f9fb9b330919132673b4c904bec359601f3fa1fe529c8",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 25036,
+          "src": "/assets/tarot/optimized/swords-seven-320.webp",
+          "sha256": "e0c0c20e0ac11eef368b0fe22c70f46d519801fc9fbb0b7170f04a18fd59cccc"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 66080,
+          "src": "/assets/tarot/optimized/swords-seven-640.webp",
+          "sha256": "a29e71e81cf5b7a66f6f7559ad937ddbac2df6f9e62db897905ce79b37e841b6"
+        },
+        {
+          "width": 720,
+          "height": 1260,
+          "bytes": 77310,
+          "src": "/assets/tarot/optimized/swords-seven-720.webp",
+          "sha256": "2464d6d0947c133becca36eed053108ed7216b7f1b1de9dcaf702b060357462f"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-eight",
+      "master": {
+        "cardId": "swords-eight",
+        "filename": "58_eight_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1525765,
+        "sha256": "b120d9b27b68be5641b4e8b981a4c7dcc935be5965ed0392386afbceba8755ef",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30414,
+          "src": "/assets/tarot/optimized/swords-eight-320.webp",
+          "sha256": "c42a8e707f174f8b47e9883b0f1779e3e9a646a259b11a571265986c65725fe8"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 85934,
+          "src": "/assets/tarot/optimized/swords-eight-640.webp",
+          "sha256": "1b5a1825b15e4f6a091bd193786235a20b7b88a37df64b500d7ea3d6ab61fbdb"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 109124,
+          "src": "/assets/tarot/optimized/swords-eight-768.webp",
+          "sha256": "8b92e64a4923c74eb888283e05f35666469375c9db506873a916a3a71b7f82df"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-nine",
+      "master": {
+        "cardId": "swords-nine",
+        "filename": "59_nine_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1611334,
+        "sha256": "5265d3dca9f3722541616ba28a0657988805eb076905323d8c508693c46ade90",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 26898,
+          "src": "/assets/tarot/optimized/swords-nine-320.webp",
+          "sha256": "bcea422ebad6de7e65d6404d9b4909ff40ca5b4e516d51391a6d27b90d7d38f9"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 80526,
+          "src": "/assets/tarot/optimized/swords-nine-640.webp",
+          "sha256": "8d22ebd87b63bec0954851ea4b475234c30377f206c8f727ed2969684289a30d"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 107822,
+          "src": "/assets/tarot/optimized/swords-nine-768.webp",
+          "sha256": "02b6caa75e1520d26251c5ecf6ed4ad1bcb60f9a611594057168de2cfbb08728"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-ten",
+      "master": {
+        "cardId": "swords-ten",
+        "filename": "60_ten_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1345522,
+        "sha256": "b1d09dbba7f31006b14fd9c1a4316e295921963a97731e2b83b8b05a340ad740",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 19168,
+          "src": "/assets/tarot/optimized/swords-ten-320.webp",
+          "sha256": "8f0c4833efac58938a7fff4f1d72930ac01737234ddf17a374f1d88edf57799c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 50354,
+          "src": "/assets/tarot/optimized/swords-ten-640.webp",
+          "sha256": "5dfbc93b610820e6e4c12e79589a01c40c7c4fd9de221413e324a46a00dff666"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 64882,
+          "src": "/assets/tarot/optimized/swords-ten-768.webp",
+          "sha256": "fdb3f1f69fa94490178029ed96dafb972c58bd95bcfa7b002d3d0d1a06b57a27"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-page",
+      "master": {
+        "cardId": "swords-page",
+        "filename": "61_page_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1519308,
+        "sha256": "b8538b34dcda8fdd227841c26aa53adff741fbd9fbc71c29f8e37d822f80a168",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 30470,
+          "src": "/assets/tarot/optimized/swords-page-320.webp",
+          "sha256": "3f7df27ad2f259bee0c29ab659a93092c0c4316045d68f65ccad4990d4cc03da"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 78848,
+          "src": "/assets/tarot/optimized/swords-page-640.webp",
+          "sha256": "e1fa95109290f0a430230d5effddf8971c311de771e8ae9ef0f84baab2c66135"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 97658,
+          "src": "/assets/tarot/optimized/swords-page-768.webp",
+          "sha256": "f412226103ed020731c242804fe017ff66b627198cc35bc5b60029bff4ee77aa"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-knight",
+      "master": {
+        "cardId": "swords-knight",
+        "filename": "62_knight_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1619812,
+        "sha256": "66c80a1c1a75e425cb2364d2f9a5506e7becbb58df9db8b6d4af8aab8b6b596d",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 32204,
+          "src": "/assets/tarot/optimized/swords-knight-320.webp",
+          "sha256": "a7f7e5c1f45ed19eac90fe6e095d9adfc703138056524c414e96bb6ba93a07fb"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 85860,
+          "src": "/assets/tarot/optimized/swords-knight-640.webp",
+          "sha256": "f954c2246159fd097b4981f4f26edd30adcdb8c47c056aad123d4bffe73ccd55"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 111022,
+          "src": "/assets/tarot/optimized/swords-knight-768.webp",
+          "sha256": "e15e90dad7e74f58a0b698a320705bc4c17a6fd11a890e59bf4df4f83a52edc3"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-queen",
+      "master": {
+        "cardId": "swords-queen",
+        "filename": "63_queen_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1624958,
+        "sha256": "33b0275d0cd126fe025e90126205430172f74ba051c1c76c1371443868266ba2",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 31558,
+          "src": "/assets/tarot/optimized/swords-queen-320.webp",
+          "sha256": "02fec0cf67d32bcc2eb0c00bc346db3335ec4e0206e3f82c2e952904e749e94f"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 87518,
+          "src": "/assets/tarot/optimized/swords-queen-640.webp",
+          "sha256": "8321988ca307318bf3718ebddfcd3ad807af607b2e85e7e0bce2e14f7e6a70a1"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 111760,
+          "src": "/assets/tarot/optimized/swords-queen-768.webp",
+          "sha256": "fac769de278be86efd9ce1577122534a1219e6ad505eb37dea130498474d9401"
+        }
+      ]
+    },
+    {
+      "cardId": "swords-king",
+      "master": {
+        "cardId": "swords-king",
+        "filename": "64_king_of_swords.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1706656,
+        "sha256": "5099a2bc0496eecefc7731b4a5bfff8387421dacb13ccfed1cac740f6870905d",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 41664,
+          "src": "/assets/tarot/optimized/swords-king-320.webp",
+          "sha256": "6c9a4af1633de47f73cf68a1b74d613d2190a838209bbf182b020fa8c401aa8a"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 112126,
+          "src": "/assets/tarot/optimized/swords-king-640.webp",
+          "sha256": "5fcf851caceaa5fa3e396e948d92ef2640d9b2b051b95a70da487c7372820723"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 140370,
+          "src": "/assets/tarot/optimized/swords-king-768.webp",
+          "sha256": "670b402a6e848e88b50bd9dcd9f46fe8669cadf022f76db919e24bcc00efed76"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-ace",
+      "master": {
+        "cardId": "pentacles-ace",
+        "filename": "65_ace_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1439885,
+        "sha256": "b6532bef45c7633d816f8a4c3d3b4f84cd4312997242d47ddffb4fa6b2c2a171",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 28608,
+          "src": "/assets/tarot/optimized/pentacles-ace-320.webp",
+          "sha256": "4ba7b77bd5e5cb6f8eec54537c05d98f628787a9dd5ec74bacbd188d1a833689"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 70914,
+          "src": "/assets/tarot/optimized/pentacles-ace-640.webp",
+          "sha256": "1c14ff7d5785ecdced0d19a542d2bf9e335113bf5bd930e504e35ae8eabf776a"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 90560,
+          "src": "/assets/tarot/optimized/pentacles-ace-768.webp",
+          "sha256": "74c29c0fb088cc8522a14c03cb96b62400f4aa9c8082f555ee9b4238835042e0"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-two",
+      "master": {
+        "cardId": "pentacles-two",
+        "filename": "66_two_of_pentacles.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1485080,
+        "sha256": "7ff58392dabe07bbb0b2b47b401fa18e92da81cea55804c7b96e75b1a199d461",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 36064,
+          "src": "/assets/tarot/optimized/pentacles-two-320.webp",
+          "sha256": "0d7decee9320fff87874017287b9bcaeb47da877753ee50f93e6436737abd37d"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 99200,
+          "src": "/assets/tarot/optimized/pentacles-two-640.webp",
+          "sha256": "edf6a236938503aca80787defcc528a94ac22c4f73afc57fef4bd6f987a79228"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 119210,
+          "src": "/assets/tarot/optimized/pentacles-two-722.webp",
+          "sha256": "079bff727906061d0619ed0d94f37c80f519a8076272d8c20dc38eca1f6ecaf0"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-three",
+      "master": {
+        "cardId": "pentacles-three",
+        "filename": "67_three_of_pentacles.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1634684,
+        "sha256": "321949e2eb06fdf7db6a69ed32e378ada83e27fee44dda28cc0ce8cb837ee289",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 50228,
+          "src": "/assets/tarot/optimized/pentacles-three-320.webp",
+          "sha256": "7642adbf4dddf618302e921e60f42a327228d453e8d49cfd1413eda046e12299"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 140590,
+          "src": "/assets/tarot/optimized/pentacles-three-640.webp",
+          "sha256": "d1d298afbfea5bca50960b7c0d494004f2465c19bdf9d8ec9ebd08c1f8b8ca70"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 167702,
+          "src": "/assets/tarot/optimized/pentacles-three-722.webp",
+          "sha256": "a1d479985f74b875d9e1cea416bc9d0225459d3730cc369852e3d15bb1654704"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-four",
+      "master": {
+        "cardId": "pentacles-four",
+        "filename": "68_four_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1645589,
+        "sha256": "2d6b1403469447b8e72a856fc2b7d01a6476d7b34e7d7b613e5b088e6c1f6637",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 33138,
+          "src": "/assets/tarot/optimized/pentacles-four-320.webp",
+          "sha256": "22928fb8a85136b9abf6dceaa0930fd354bd6a99eeb0276b366170444e63f3f8"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 94774,
+          "src": "/assets/tarot/optimized/pentacles-four-640.webp",
+          "sha256": "e7e37451dc3a17787ed30bb73cd6406093c5604f489c938c3152204961d6ea85"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 123852,
+          "src": "/assets/tarot/optimized/pentacles-four-768.webp",
+          "sha256": "95eb7c958cb3a22f77371bad6b9b3ec915d31c3db95af0be56968e92a05a06d9"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-five",
+      "master": {
+        "cardId": "pentacles-five",
+        "filename": "69_five_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1626187,
+        "sha256": "9e4f24f806a2d50f6856d74395b74fc9bc96a8f88d13dd991349a61ae008397d",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 36110,
+          "src": "/assets/tarot/optimized/pentacles-five-320.webp",
+          "sha256": "28c37752453d7eefc73ac78e4e3d3faaa93492296f2ac6ae4b973803ddffb384"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 96922,
+          "src": "/assets/tarot/optimized/pentacles-five-640.webp",
+          "sha256": "d12d6a99e23b79fcb1509ff27f1d3426840f7275e7dceeffcc841ee75bd2f19c"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 127080,
+          "src": "/assets/tarot/optimized/pentacles-five-768.webp",
+          "sha256": "36b7fd53425e2031a156c796f98bd86f66e7db2519924e18cf2caf0a771bea36"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-six",
+      "master": {
+        "cardId": "pentacles-six",
+        "filename": "70_six_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1736735,
+        "sha256": "b38e51ed7c9a2d9e7b479168b219c8ed4edf67d02f84301c5e9736429c9f3939",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 40768,
+          "src": "/assets/tarot/optimized/pentacles-six-320.webp",
+          "sha256": "145c1a3bbc7cec3496b8dc5b7ce073d74a9f0bf4506d2ea390b8d23e342befc9"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 115070,
+          "src": "/assets/tarot/optimized/pentacles-six-640.webp",
+          "sha256": "7925d5dbfdbc9a18e24d926cb9a640bdb44438c0067847a86a22e3ff2c185444"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 151520,
+          "src": "/assets/tarot/optimized/pentacles-six-768.webp",
+          "sha256": "7c5c89fd08fb4d48dfbaaac8c725a1d8910208e75ba193b7457ba1c5d8d0e891"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-seven",
+      "master": {
+        "cardId": "pentacles-seven",
+        "filename": "71_seven_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1823672,
+        "sha256": "f8050cd8f41be39d2de07219112d8b8a6ae8fcb43e70681229e7bd0d4daa755c",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 45180,
+          "src": "/assets/tarot/optimized/pentacles-seven-320.webp",
+          "sha256": "314165a79729fcbb751e06bdad7e3f6e4f9c96680cf7770ac816c0e1b998e668"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 134552,
+          "src": "/assets/tarot/optimized/pentacles-seven-640.webp",
+          "sha256": "6f08a5ed70fb77bb40a2882f106cde42d09ca3da513716f5ed21410b8d67cd41"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 171820,
+          "src": "/assets/tarot/optimized/pentacles-seven-768.webp",
+          "sha256": "9bb060bd3f054dc7bbf973716a270fb213e84b4e66e877d97a5b3375624c264a"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-eight",
+      "master": {
+        "cardId": "pentacles-eight",
+        "filename": "72_eight_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1736816,
+        "sha256": "fc7e9e66592f84f4648b91010c21ba004eb962065962638b3a3ee2e1d6c5ed0c",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 35886,
+          "src": "/assets/tarot/optimized/pentacles-eight-320.webp",
+          "sha256": "ae2a0aea6247339b489a0c6a8de42bdf0854c45c2827d664b9991599f1aaeeb9"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 109350,
+          "src": "/assets/tarot/optimized/pentacles-eight-640.webp",
+          "sha256": "7359ddf65c922195e3bd174160c7e10b05afceee66cbab6dcb319adaf6bcfb9e"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 142866,
+          "src": "/assets/tarot/optimized/pentacles-eight-768.webp",
+          "sha256": "7de8fedfbadbf883206845237fc3aab74b3fc1159455f835f6ac3ea4cc0f1892"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-nine",
+      "master": {
+        "cardId": "pentacles-nine",
+        "filename": "73_nine_of_pentacles.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1781482,
+        "sha256": "61d5bbbde8e6001bc1c582779ca13757823862e9210633ab11f434f6542c8c0b",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 60326,
+          "src": "/assets/tarot/optimized/pentacles-nine-320.webp",
+          "sha256": "b7b36bc608b436430c64da9ee92af876a1e54335ac5fbb4dd5ae27d26d0a489c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 180548,
+          "src": "/assets/tarot/optimized/pentacles-nine-640.webp",
+          "sha256": "f9d2f7261c5c9dbff7cb2fe6186598ac39bd9c8c9a9f41976edb268b8e412046"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 221296,
+          "src": "/assets/tarot/optimized/pentacles-nine-722.webp",
+          "sha256": "0d513d375e847369d35143cac85a8be0a3986cfad33f230629fe08094f1ca59c"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-ten",
+      "master": {
+        "cardId": "pentacles-ten",
+        "filename": "74_ten_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1966516,
+        "sha256": "0e9016a0f8d583bb857f599978b6e6f0bbda33bb70fc644bd48bc22967b64bb2",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 49034,
+          "src": "/assets/tarot/optimized/pentacles-ten-320.webp",
+          "sha256": "93d75cbcf956bc8a884afa3384219fec6353b139a724e41757582f3967e14023"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 160220,
+          "src": "/assets/tarot/optimized/pentacles-ten-640.webp",
+          "sha256": "cf7858103d4a2f3d598c8acb9a4a924e266b42a99108c2f7af3940f0f6abfe9d"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 210426,
+          "src": "/assets/tarot/optimized/pentacles-ten-768.webp",
+          "sha256": "72af8ee5bb76ecbaaa91d7baa92c37cb69af42d23a76d466c80aaa4db7b40061"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-page",
+      "master": {
+        "cardId": "pentacles-page",
+        "filename": "75_page_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1473518,
+        "sha256": "764ba3f339379a4daebcfc76fe0debf1ea02c38a36428bb0512c68295d8e83f4",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 24596,
+          "src": "/assets/tarot/optimized/pentacles-page-320.webp",
+          "sha256": "08651fb1bf43ec84d9a65b1ccc0ced66edee4593bd61c1eb1ae2ce436f9f0303"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 67840,
+          "src": "/assets/tarot/optimized/pentacles-page-640.webp",
+          "sha256": "3b40389959fc33c99811e5c28bc30318c9b675075fe6ed7a2f8d91f80590949c"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 89198,
+          "src": "/assets/tarot/optimized/pentacles-page-768.webp",
+          "sha256": "17ef76192667407a6769fcb915bdbc373a3622f1d5ce0c47fc6f0eaa9a8c8a02"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-knight",
+      "master": {
+        "cardId": "pentacles-knight",
+        "filename": "76_knight_of_pentacles.png",
+        "width": 768,
+        "height": 1344,
+        "bytes": 1423261,
+        "sha256": "c37984c9edae8cb6a1ee86f75c6d095dc1e7cb9693e82fc40aec5273693ba6de",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 21582,
+          "src": "/assets/tarot/optimized/pentacles-knight-320.webp",
+          "sha256": "9af1501ca2c3c4eb8d0f24d4257c249332098644e1a6bfebae20e527f2c9f0b4"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 56808,
+          "src": "/assets/tarot/optimized/pentacles-knight-640.webp",
+          "sha256": "e71d53d2793b8f03d16b5dd691ae10414ed18053597f51e1481fdd8e83e8f6f7"
+        },
+        {
+          "width": 768,
+          "height": 1344,
+          "bytes": 73688,
+          "src": "/assets/tarot/optimized/pentacles-knight-768.webp",
+          "sha256": "fb071859561f165465c6280162f40ade20139b6a9b88be40f0845c1104486712"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-queen",
+      "master": {
+        "cardId": "pentacles-queen",
+        "filename": "77_queen_of_pentacles.png",
+        "width": 686,
+        "height": 1200,
+        "bytes": 1396653,
+        "sha256": "92033b1206252043ec455660fcc4772b55263f87ede754bd0f024eb2ecaa7b42",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 45774,
+          "src": "/assets/tarot/optimized/pentacles-queen-320.webp",
+          "sha256": "37c6c6e705df75b8ea3ac5ce0bb1935d6690fd6cfb797c63051033e6769bbf7b"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 120444,
+          "src": "/assets/tarot/optimized/pentacles-queen-640.webp",
+          "sha256": "b9860e4d6c6907f83e02c0e5b8a32510e99f2e71d181c746df485b30ee3491e9"
+        },
+        {
+          "width": 686,
+          "height": 1200,
+          "bytes": 134586,
+          "src": "/assets/tarot/optimized/pentacles-queen-686.webp",
+          "sha256": "d15c9997e989fb50de82f747d2322e9ac193d53ee4b7ce451f187356b8d24d2e"
+        }
+      ]
+    },
+    {
+      "cardId": "pentacles-king",
+      "master": {
+        "cardId": "pentacles-king",
+        "filename": "78_king_of_pentacles.png",
+        "width": 722,
+        "height": 1264,
+        "bytes": 1697508,
+        "sha256": "38d4e45e7c0ea761a1c95ac940de217f120c9481788b05e6fe259a91038f4a5e",
+        "hasAlpha": false,
+        "hasProfile": false
+      },
+      "variants": [
+        {
+          "width": 320,
+          "height": 560,
+          "bytes": 53658,
+          "src": "/assets/tarot/optimized/pentacles-king-320.webp",
+          "sha256": "2c0170d02904a5da9d15e32730519ea56875baf2a85f692bc11dc08b504a789c"
+        },
+        {
+          "width": 640,
+          "height": 1120,
+          "bytes": 156686,
+          "src": "/assets/tarot/optimized/pentacles-king-640.webp",
+          "sha256": "bd7c2181af7e5b93d4807493149720acd3e8e286faabf3b7d2ec88bacb18e2d7"
+        },
+        {
+          "width": 722,
+          "height": 1264,
+          "bytes": 190750,
+          "src": "/assets/tarot/optimized/pentacles-king-722.webp",
+          "sha256": "92379bed5ebd2f4e7ff8e588f7918044138c1c3c3ad70bc8de7e2ca5f3f6e877"
+        }
+      ]
+    }
+  ],
+  "compatibility": "All public PNGs preserved; catalogue uses optimized variants; remote lesson unchanged.",
+  "measurement": "File bytes only, not browser download or visual approval."
+}

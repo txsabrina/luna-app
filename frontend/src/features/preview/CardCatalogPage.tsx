@@ -5,6 +5,10 @@ import { CatalogCardImage } from './CatalogCardImage';
 import { RemotePreviewLink } from './PreviewElements';
 import './card-catalog.css';
 
+const catalogGridSizes = '(max-width: 359px) calc(100vw - 32px), (max-width: 480px) calc(50vw - 26px), (max-width: 767px) calc(33vw - 24px), 180px';
+const presentationSizes = '(max-width: 332px) calc(100vw - 32px), (max-width: 600px) 300px, 340px';
+const dialogSizes = '(max-width: 520px) calc(94vw - 32px), 460px';
+
 function NotFound() {
   return <><h1>Não encontrado</h1><p>A carta ou o grupo solicitado não está no catálogo.</p>
     <a className="lp-back" href={modulesHref}>Voltar aos módulos</a></>;
@@ -35,7 +39,7 @@ export function CardCatalogPage({ groupId }: { groupId: string }) {
       <button type="button" onClick={() => { setQuery(''); search.current?.focus(); }}>Limpar busca</button>
     </div> : <ul className={`lp-card-results lp-card-results--${view}`}>
       {cards.map(card => <li key={card.id}><a href={cardHref(card.id)}>
-        <CatalogCardImage card={card} decorative lazy />
+        <CatalogCardImage card={card} decorative lazy sizes={view === 'list' ? '72px' : catalogGridSizes} />
         <div><h2>{card.displayNamePtBR}</h2><p>{card.artTitleEn} · {card.displayNumber}</p>
           <p>{card.lessonAvailability === 'preview' ? 'Prévia da aula disponível' : 'Aula em preparação'}</p>
         </div>
@@ -47,6 +51,7 @@ export function CardCatalogPage({ groupId }: { groupId: string }) {
 export function CardPresentationPage({ cardId }: { cardId: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
+  const [expanded, setExpanded] = useState(false);
   const card = catalogCards.find(item => item.id === cardId);
   if (!card) return <NotFound />;
   const group = getCardGroup(card.groupId)!;
@@ -56,8 +61,8 @@ export function CardPresentationPage({ cardId }: { cardId: string }) {
       <h1>{card.displayNamePtBR}</h1><p>{group.name} · {card.displayNumber} · {card.artTitleEn}</p>
     </header>
     <div className="lp-card-presentation">
-      <div><CatalogCardImage card={card} />
-        <button ref={trigger} type="button" onClick={() => dialog.current?.showModal()}>Ampliar carta</button>
+      <div><CatalogCardImage card={card} sizes={presentationSizes} />
+        <button ref={trigger} type="button" onClick={() => { setExpanded(true); dialog.current?.showModal(); }}>Ampliar carta</button>
       </div>
       <div><p>Baralho autoral do Luna, inspirado no Waite–Smith.</p>
         {card.lessonAvailability === 'preview' ? <RemotePreviewLink label="Abrir prévia da aula" /> :
@@ -65,11 +70,12 @@ export function CardPresentationPage({ cardId }: { cardId: string }) {
       </div>
     </div>
     <dialog ref={dialog} className="lp-card-dialog" aria-labelledby="catalog-dialog-title"
-      onClose={() => trigger.current?.focus()} onCancel={event => { event.preventDefault(); dialog.current?.close(); }}>
+      onClose={() => { setExpanded(false); trigger.current?.focus(); }}
+      onCancel={event => { event.preventDefault(); dialog.current?.close(); }}>
       <div className="lp-dialog-heading"><h2 id="catalog-dialog-title">{card.displayNamePtBR}</h2>
         <button type="button" autoFocus onClick={() => dialog.current?.close()}>Fechar ampliação</button>
       </div>
-      <CatalogCardImage card={card} />
+      {expanded && <CatalogCardImage card={card} sizes={dialogSizes} />}
     </dialog>
   </>;
 }

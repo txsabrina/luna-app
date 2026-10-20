@@ -20,6 +20,9 @@ describe('Catálogo local', () => {
     const total = group === 'major-arcana' ? 22 : 14;
     expect(container.querySelectorAll('.lp-card-results li')).toHaveLength(total);
     expect(Array.from(container.querySelectorAll('img')).every(image => image.getAttribute('loading') === 'lazy')).toBe(true);
+    expect(Array.from(container.querySelectorAll('img')).every(image => image.getAttribute('src')?.endsWith('-320.webp'))).toBe(true);
+    expect(Array.from(container.querySelectorAll('img')).every(image => image.getAttribute('srcset')?.split(', ').length === 3)).toBe(true);
+    expect(Array.from(container.querySelectorAll('img')).every(image => image.hasAttribute('width') && image.hasAttribute('height'))).toBe(true);
     expect(screen.getByRole('link', { name: 'Voltar aos módulos' }).getAttribute('href')).toBe(modulesHref);
     expect(within(screen.getByRole('navigation')).getByRole('link', { name: 'Trilhas' }).getAttribute('aria-current')).toBe('page');
   });
@@ -27,6 +30,7 @@ describe('Catálogo local', () => {
     const { container } = open(groupHref('major-arcana'));
     fireEvent.click(screen.getByRole('button', { name: 'Lista' }));
     expect(screen.getByRole('button', { name: 'Lista' }).getAttribute('aria-pressed')).toBe('true');
+    expect(container.querySelector('img')?.getAttribute('sizes')).toBe('72px');
     expect(container.querySelector('.lp-card-results--list')).toBeTruthy();
     fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'A FORCA' } });
     expect(screen.getByRole('heading', { name: 'A Força' })).toBeTruthy();
@@ -69,8 +73,12 @@ describe('Catálogo local', () => {
     dialog.showModal = vi.fn(() => dialog.setAttribute('open', ''));
     dialog.close = vi.fn(() => { dialog.removeAttribute('open'); dialog.dispatchEvent(new Event('close')); });
     const trigger = screen.getByRole('button', { name: 'Ampliar carta' });
+    expect(container.querySelectorAll('img')).toHaveLength(1);
+    expect(container.querySelector('img')?.getAttribute('sizes')).toContain('340px');
     fireEvent.click(trigger);
     expect(screen.getByRole('dialog', { name: 'Ás de Copas' })).toBeTruthy();
+    expect(container.querySelectorAll('img')).toHaveLength(2);
+    expect(within(screen.getByRole('dialog')).getByRole('img').getAttribute('sizes')).toContain('460px');
     fireEvent.click(screen.getByRole('button', { name: 'Fechar ampliação' }));
     expect(document.activeElement).toBe(trigger);
     fireEvent.click(trigger);

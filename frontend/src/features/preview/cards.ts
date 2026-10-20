@@ -1,3 +1,5 @@
+import { cardImageMetadata } from './cardImageMetadata';
+import type { CardImageMetadata } from './cardImageMetadata';
 import { remotePreview } from './data';
 
 export type CardGroupId = 'major-arcana' | 'wands' | 'cups' | 'swords' | 'pentacles';
@@ -8,7 +10,8 @@ export type CatalogCard = {
   groupId: CardGroupId;
   sortOrder: number;
   displayNumber: string;
-  imageSrc: string;
+  masterFilename: string;
+  image: CardImageMetadata;
   deckId: 'luna-authorial-waite-smith-inspired';
 } & ({ lessonAvailability: 'preview'; lessonHref: string } | { lessonAvailability: 'planned'; lessonHref?: never });
 
@@ -96,10 +99,15 @@ const entries: readonly CardEntry[] = [
   ['pentacles-king', 'Rei de Ouros', 'King of Pentacles', 'pentacles', 'Rei', '78_king_of_pentacles.png'],
 ];
 
-export const catalogCards: readonly CatalogCard[] = entries.map(([id, displayNamePtBR, artTitleEn, groupId, displayNumber, filename], index) => ({
-  id, displayNamePtBR, artTitleEn, groupId, displayNumber, sortOrder: index,
-  imageSrc: `/assets/tarot/waite-smith/${filename}`,
-  deckId: 'luna-authorial-waite-smith-inspired',
-  ...(id === 'major-00-fool' ? { lessonAvailability: 'preview', lessonHref: remotePreview.href } :
-    { lessonAvailability: 'planned' }),
-}));
+export const catalogCards: readonly CatalogCard[] = entries.map(([id, displayNamePtBR, artTitleEn, groupId, displayNumber, filename], index) => {
+  const image = cardImageMetadata[id];
+  if (!image) throw new Error(`Missing generated image metadata for ${id}.`);
+  return {
+    id, displayNamePtBR, artTitleEn, groupId, displayNumber, sortOrder: index,
+    masterFilename: filename,
+    image,
+    deckId: 'luna-authorial-waite-smith-inspired',
+    ...(id === 'major-00-fool' ? { lessonAvailability: 'preview', lessonHref: remotePreview.href } :
+      { lessonAvailability: 'planned' }),
+  };
+});
