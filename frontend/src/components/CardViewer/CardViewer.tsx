@@ -1,26 +1,38 @@
 import { useRef, useState } from 'react';
+import { cardImageMetadata } from '../../features/preview/cardImageMetadata';
 
-export function CardViewer({ src, alt }: { src: string; alt: string }) {
+export function CardViewer({ cardId, alt }: { cardId: 'major-00-fool'; alt: string }) {
+  const image = cardImageMetadata[cardId];
+  const fallback = image.variants[0];
+  const enlarged = image.variants[image.variants.length - 1];
+  const srcSet = image.variants.map(variant => `${variant.src} ${variant.width}w`).join(', ');
+  const [open, setOpen] = useState(false);
   const [missing, setMissing] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   return (
     <figure className="card-viewer">
       {missing ? <div className="asset-fallback" role="status">
-        <p>A reprodução de O Louco ainda não está disponível.</p>
+        <p>A imagem de O Louco está indisponível.</p>
         <p>Você pode continuar com seu baralho físico Waite–Smith.</p>
         <p><strong>Descrição da imagem:</strong> {alt}</p>
       </div> : <>
-        <img src={src} alt={alt} onError={() => setMissing(true)} />
-        <button ref={trigger} type="button" onClick={() => dialog.current?.showModal()}>Ampliar carta</button>
+        <img src={fallback.src} srcSet={srcSet} sizes="(max-width: 380px) 80vw, 280px"
+          width={image.width} height={image.height} alt={alt} onError={() => setMissing(true)} />
+        <button ref={trigger} type="button" onClick={() => { setOpen(true); dialog.current?.showModal(); }}>Ampliar carta</button>
         <dialog ref={dialog} aria-labelledby="card-dialog-title"
-          onClose={() => trigger.current?.focus()}>
-          <h2 id="card-dialog-title">O Louco — Waite–Smith</h2>
+          onClose={() => { setOpen(false); trigger.current?.focus(); }}>
+          <h2 id="card-dialog-title">O Louco — baralho autoral do Luna</h2>
           <button type="button" autoFocus onClick={() => dialog.current?.close()}>Fechar ampliação</button>
-          <img src={src} alt={alt} onError={() => { dialog.current?.close(); setMissing(true); }} />
+          {open && <img src={enlarged.src} srcSet={srcSet} sizes="(max-width: 640px) 80vw, 580px"
+            width={image.width} height={image.height} alt={alt}
+                        onError={() => {
+              dialog.current?.close();
+              setMissing(true);
+            }} />}
         </dialog>
       </>}
-      <figcaption>Observação da imagem · Waite–Smith. As associações da aula são interpretações contextualizadas.</figcaption>
+      <figcaption>Baralho autoral do Luna, inspirado no Waite–Smith. As associações da aula são interpretações contextualizadas.</figcaption>
     </figure>
   );
 }

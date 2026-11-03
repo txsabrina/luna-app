@@ -5,7 +5,7 @@ export type Explanation = BaseStep & {
   type: 'explanation'; paragraphs: string[]; cta: string;
 };
 export type Observation = BaseStep & {
-  type: 'observation'; imagePath: string; imageAlt: string;
+  type: 'observation'; cardId: 'major-00-fool'; imageAlt: string;
   options: (Option & { feedback: string })[];
 };
 export type SingleChoice = BaseStep & {
@@ -48,8 +48,7 @@ function isStep(value: unknown): value is Step {
     || typeof value.lume.message !== 'string') return false;
   switch (value.type) {
     case 'explanation': return strings(value.paragraphs) && typeof value.cta === 'string';
-    case 'observation': return typeof value.imagePath === 'string'
-      && value.imagePath.startsWith('/assets/tarot/waite-smith/')
+    case 'observation': return value.cardId === 'major-00-fool' && !('imagePath' in value)
       && typeof value.imageAlt === 'string' && options(value.options, true);
     case 'single-choice': return typeof value.question === 'string' && options(value.options)
       && !('expectedOptionId' in value) && !('feedback' in value);
@@ -59,7 +58,7 @@ function isStep(value: unknown): value is Step {
 export function isLesson(value: unknown): value is Lesson {
   return object(value) && typeof value.id === 'string'
     && typeof value.contentVersion === 'number' && Number.isInteger(value.contentVersion)
-    && value.contentVersion > 0 && typeof value.title === 'string'
+    && value.contentVersion === 2 && typeof value.title === 'string'
     && value.status === 'PREVIEW' && strings(value.objectives)
     && Array.isArray(value.steps) && value.steps.length === 4 && value.steps.every(isStep)
     && new Set(value.steps.map(step => step.id)).size === value.steps.length

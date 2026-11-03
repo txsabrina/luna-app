@@ -48,7 +48,7 @@ export function SingleChoiceStep({ lessonId, version, step, onNext }: {
     </fieldset>
     {!evaluated && <button type="button" disabled={!selected || state.kind === 'loading'}
       onClick={() => void confirm()}>
-      {state.kind === 'loading' ? 'Avaliando…' : state.kind === 'error' ? 'Tentar avaliação novamente' : 'Confirmar alternativa'}
+      {state.kind === 'loading' ? 'Avaliando…' : state.kind === 'error' ? 'Tentar avaliação novamente' : 'Conferir'}
     </button>}
     <div role="status" aria-live="polite" aria-atomic="true">
       {state.kind === 'loading' && <p>Consultando a avaliação…</p>}
@@ -61,10 +61,10 @@ export function SingleChoiceStep({ lessonId, version, step, onNext }: {
       </section>}
     </div>
     {state.kind === 'success' && <div className="lesson-actions">
-      {!state.result.correct && <button type="button" onClick={() => {
-        setState({ kind: 'idle' }); firstOption.current?.focus();
-      }}>Tentar outra alternativa</button>}
-      <button type="button" onClick={onNext}>Concluir esta prévia</button>
+      <button type="button" onClick={() => {
+              setState({ kind: 'idle' }); firstOption.current?.focus();
+            }}>Tentar novamente</button>
+      <button type="button" onClick={onNext}>Continuar</button>
     </div>}
   </>;
 }

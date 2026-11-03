@@ -20,11 +20,11 @@ const quiz: SingleChoice = {
   ],
 };
 const lesson: Lesson = {
-  id: 'fool-first-step', contentVersion: 1, title: 'O Louco — o primeiro passo', status: 'PREVIEW',
+  id: 'fool-first-step', contentVersion: 2, title: 'O Louco — o primeiro passo', status: 'PREVIEW',
   objectives: ['Observar antes de interpretar.'],
   steps: [
     { id: '01-opening', type: 'explanation', title: 'Abertura', lume: { mood: 'welcoming', message: 'Vamos observar.' }, paragraphs: ['Começar sem ter o mapa inteiro.'], cta: 'Vamos investigar' },
-    { id: '02-observation', type: 'observation', title: 'Observação livre', lume: { mood: 'curious', message: 'Sem resposta correta.' }, imagePath: '/assets/tarot/waite-smith/fool.jpg', imageAlt: 'Figura próxima de uma borda.', options: [{ id: 'dog', label: 'Cachorro', feedback: 'Ele acompanha a figura perto dos pés. Guarde essa pista.' }] },
+    { id: '02-observation', type: 'observation', title: 'Observação livre', lume: { mood: 'curious', message: 'Sem resposta correta.' }, cardId: 'major-00-fool', imageAlt: 'Figura próxima de uma borda.', options: [{ id: 'dog', label: 'Cachorro', feedback: 'Ele acompanha a figura perto dos pés. Guarde essa pista.' }] },
     { id: '03-core', type: 'explanation', title: 'Núcleo', lume: { mood: 'explaining', message: 'Abertura, começo e espontaneidade.' }, paragraphs: ['Isso não significa abandonar o planejamento.'], cta: 'Experimentar uma situação' },
     quiz,
   ],
@@ -58,6 +58,9 @@ describe('Carregamento e contrato', () => {
     expect(isLesson({ ...lesson, assessments: {} })).toBe(false);
     expect(isLesson({ ...lesson, steps: [...lesson.steps.slice(0, 3), { ...quiz, expectedOptionId: 'small-experiment' }] })).toBe(false);
     expect(isLesson({ ...lesson, steps: [] })).toBe(false);
+    expect(isLesson({ ...lesson, contentVersion: 1 })).toBe(false);
+    expect(isLesson({ ...lesson, steps: lesson.steps.map(step => step.type === 'observation'
+      ? { ...step, cardId: 'unknown' } : step) })).toBe(false);
   });
 });
 
@@ -95,24 +98,29 @@ describe('Escolha contextual', () => {
     const fetch = vi.fn().mockResolvedValue(response(result));
     const next = vi.fn();
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={1} step={quiz} onNext={next} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={next} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     expect(fetch).not.toHaveBeenCalled();
-    await userEvent.click(screen.getByRole('button', { name: 'Confirmar alternativa' }));
+            expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(await screen.findByText(result.selectedOptionFeedback)).toBeTruthy();
     expect(screen.getByText('Resposta esperada:')).toBeTruthy();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 1, selectedOptionId: 'reference-first' });
-    await userEvent.click(screen.getByRole('button', { name: 'Tentar outra alternativa' }));
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 2, selectedOptionId: 'reference-first' });
+    await userEvent.click(screen.getByRole('button', { name: 'Tentar novamente' }));
     expect(screen.getByRole('radio', { name: 'Reunir referências.' })).toHaveProperty('disabled', false);
+    expect(screen.queryByText(result.selectedOptionFeedback)).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
+    expect(next).not.toHaveBeenCalled();
   });
   it('preserva seleção quando a avaliação falha', async () => {
     const fetch = vi.fn().mockRejectedValueOnce(new Error('Falha de rede')).mockResolvedValueOnce(response({ ...result, correct: true }));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={1} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Experimentar um desenho simples.' }));
-    await userEvent.click(screen.getByRole('button', { name: 'Confirmar alternativa' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(await screen.findByText(/Sua seleção foi preservada/)).toBeTruthy();
+    expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
     expect(screen.getByRole('radio', { name: 'Experimentar um desenho simples.' })).toHaveProperty('checked', true);
     await userEvent.click(screen.getByRole('button', { name: 'Tentar avaliação novamente' }));
     expect(await screen.findByRole('heading', { name: 'Resposta esperada selecionada' })).toBeTruthy();
@@ -121,9 +129,9 @@ describe('Escolha contextual', () => {
   it('não permite confirmações duplicadas durante a requisição', async () => {
     const fetch = vi.fn(() => new Promise<Response>(() => {}));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={1} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
-    await userEvent.click(screen.getByRole('button', { name: 'Confirmar alternativa' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(screen.getByRole('button', { name: 'Avaliando…' })).toHaveProperty('disabled', true);
     // O fieldset desabilita os radios sem alterar a propriedade input.disabled.
     for (const radio of screen.getAllByRole('radio')) {
@@ -143,7 +151,8 @@ describe('Caminho da prévia', () => {
     vi.stubGlobal('fetch', fetch);
     render(<LessonPlayer lesson={lesson} />);
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
-    expect(screen.getByRole('button', { name: 'Continuar' })).toHaveProperty('disabled', true);
+    expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
+    expect(screen.getByRole('button', { name: 'Prefiro continuar observando' })).toHaveProperty('disabled', false);
     await userEvent.click(screen.getByRole('radio', { name: 'Cachorro' }));
     expect(screen.getByRole('status').textContent).toContain('Guarde essa pista');
     expect(fetch).not.toHaveBeenCalled();
@@ -154,10 +163,10 @@ describe('Caminho da prévia', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Continuar' }));
     await userEvent.click(screen.getByRole('button', { name: 'Experimentar uma situação' }));
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
-    await userEvent.click(screen.getByRole('button', { name: 'Confirmar alternativa' }));
-    await userEvent.click(await screen.findByRole('button', { name: 'Concluir esta prévia' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
     expect(screen.getByText('Você percorreu o primeiro caminho. Os próximos caminhos estão em produção.')).toBeTruthy();
-    expect(screen.getByText(/A aula completa não foi concluída/)).toBeTruthy();
+    expect(screen.getByText(/A aula completa ainda não foi concluída/)).toBeTruthy();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(screen.getByRole('link', { name: 'Voltar ao módulo' }).getAttribute('href'))
       .toBe('/modules/major-arcana');
@@ -166,12 +175,59 @@ describe('Caminho da prévia', () => {
     expect(screen.getByRole('heading', { name: 'Abertura' })).toBe(document.activeElement);
     expect(screen.queryByRole('heading', { name: 'Prévia concluída' })).toBeNull();
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
-    expect(screen.getByRole('button', { name: 'Continuar' })).toHaveProperty('disabled', true);
+    expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
+    expect(screen.getByRole('button', { name: 'Prefiro continuar observando' })).toHaveProperty('disabled', false);
     expect(screen.getByRole('radio', { name: 'Cachorro' })).toHaveProperty('checked', false);
     expect(fetch).toHaveBeenCalledTimes(1);
   });
+  it('avança sem seleção, sem resposta fictícia ou avaliação, e alinha identidade', async () => {
+    const fetch = vi.fn();
+    vi.stubGlobal('fetch', fetch);
+    render(<LessonPlayer lesson={lesson} />);
+    expect(screen.getByText('Prévia · 4 etapas')).toBeTruthy();
+    expect(screen.getByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeTruthy();
+    expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src'))
+      .toBe('/assets/preview/lume-welcome.png');
+    expect(screen.getByText('Baralho autoral do Luna, inspirado no Waite–Smith.')).toBeTruthy();
+    expect(screen.queryByText(/Pamela Colman Smith/)).toBeNull();
+    await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Prefiro continuar observando' }));
+    expect(screen.getByRole('heading', { name: 'Núcleo' })).toBeTruthy();
+    await userEvent.click(screen.getByRole('button', { name: 'Etapa anterior' }));
+    expect(screen.getByRole('radio', { name: 'Cachorro' })).toHaveProperty('checked', false);
+    expect(screen.getByRole('status').textContent).toBe('');
+    expect(fetch).not.toHaveBeenCalled();
+  });
+  it('resolve variantes existentes e preserva ampliação e foco', async () => {
+      render(<CardViewer cardId="major-00-fool" alt="Carta autoral de O Louco" />);
+    const element = document.querySelector('dialog')!;
+    const showModal = vi.fn(() => { element.setAttribute('open', ''); });
+    const close = vi.fn(() => {
+      element.removeAttribute('open');
+      element.dispatchEvent(new Event('close'));
+    });
+    element.showModal = showModal;
+    element.close = close;
+          const thumbnail = screen.getByRole('img');
+    expect(thumbnail.getAttribute('src')).toBe('/assets/tarot/optimized/major-00-fool-320.webp');
+    expect(thumbnail.getAttribute('srcset')).toContain('major-00-fool-640.webp 640w');
+    expect(thumbnail.getAttribute('srcset')).toContain('major-00-fool-777.webp 777w');
+    expect(thumbnail.getAttribute('sizes')).toBeTruthy();
+    expect(thumbnail.getAttribute('width')).toBe('777');
+    expect(thumbnail.getAttribute('height')).toBe('1360');
+    expect(screen.getAllByRole('img')).toHaveLength(1);
+    const trigger = screen.getByRole('button', { name: 'Ampliar carta' });
+    await userEvent.click(trigger);
+    expect(showModal).toHaveBeenCalledTimes(1);
+    const dialog = screen.getByRole('dialog');
+    expect(dialog.querySelector('img')?.getAttribute('src')).toBe('/assets/tarot/optimized/major-00-fool-777.webp');
+    await userEvent.click(screen.getByRole('button', { name: 'Fechar ampliação' }));
+    expect(close).toHaveBeenCalledTimes(1);
+    expect(document.activeElement).toBe(trigger);
+    expect(dialog.querySelector('img')).toBeNull();
+      });
   it('oferece baralho físico quando a carta está ausente', async () => {
-    render(<CardViewer src="/assets/tarot/waite-smith/fool.jpg" alt="Uma figura e um cachorro." />);
+    render(<CardViewer cardId="major-00-fool" alt="Uma figura e um cachorro." />);
     const image = screen.getByRole('img');
     image.dispatchEvent(new Event('error'));
     expect(await screen.findByText(/Você pode continuar com seu baralho físico/)).toBeTruthy();

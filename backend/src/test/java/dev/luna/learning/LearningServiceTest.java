@@ -16,7 +16,7 @@ class LearningServiceTest {
     @Test
     void loadsOnlyFourPreviewStepsAndStableIds() {
         var lesson = service.lesson("fool-first-step");
-        assertEquals(1, lesson.contentVersion());
+        assertEquals(2, lesson.contentVersion());
         assertEquals("PREVIEW", lesson.status());
         assertEquals(java.util.List.of("01-opening", "02-observation", "03-core", "04-context"),
                 lesson.steps().stream().map(Lesson.Step::id).toList());
@@ -42,7 +42,7 @@ class LearningServiceTest {
         var assessment = content.document().assessments().get("04-context");
         assertEquals(4, new java.util.HashSet<>(assessment.feedback().values()).size());
         for (var entry : assessment.feedback().entrySet()) {
-            var result = service.evaluate("fool-first-step", "04-context", 1, entry.getKey());
+            var result = service.evaluate("fool-first-step", "04-context", 2, entry.getKey());
             assertEquals(entry.getKey().equals("small-experiment"), result.correct());
             assertEquals(entry.getValue(), result.selectedOptionFeedback());
             assertEquals("small-experiment", result.expectedOptionId());
@@ -55,8 +55,8 @@ class LearningServiceTest {
         assertError(404, "LESSON_NOT_FOUND", () -> service.lesson("other"));
         assertError(404, "STEP_NOT_FOUND", () -> service.evaluate("fool-first-step", "other", 1, "dog"));
         assertError(400, "STEP_NOT_EVALUABLE", () -> service.evaluate("fool-first-step", "02-observation", 1, "dog"));
-        assertError(400, "INVALID_OPTION", () -> service.evaluate("fool-first-step", "04-context", 1, "dog"));
-        assertError(409, "CONTENT_VERSION_MISMATCH", () -> service.evaluate("fool-first-step", "04-context", 2, "small-experiment"));
+        assertError(400, "INVALID_OPTION", () -> service.evaluate("fool-first-step", "04-context", 2, "dog"));
+        assertError(409, "CONTENT_VERSION_MISMATCH", () -> service.evaluate("fool-first-step", "04-context", 1, "small-experiment"));
         assertError(400, "INVALID_REQUEST", () -> service.evaluate("fool-first-step", "04-context", null, null));
     }
 

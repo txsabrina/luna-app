@@ -1,6 +1,6 @@
 {
   "lesson": {
-    "id": "fool-first-step", "contentVersion": 1,
+    "id": "fool-first-step", "contentVersion": 2,
     "title": "O Louco — o primeiro passo", "status": "PREVIEW",
     "objectives": ["Explorar abertura, começo e espontaneidade como núcleo introdutório.", "Observar a imagem antes de construir interpretações.", "Aplicar o núcleo a uma situação, sem tratar a carta como ordem."],
     "steps": [
@@ -13,8 +13,8 @@
       {
         "id": "02-observation", "type": "observation", "title": "O que chamou sua atenção?",
         "lume": {"mood": "curious", "message": "Observe sem precisar acertar. Sua escolha é um ponto de partida, não uma avaliação."},
-        "imagePath": "/assets/tarot/waite-smith/fool.jpg",
-        "imageAlt": "O Louco no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco, baralho autoral do Luna inspirado no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
         "options": [
           {"id": "dog", "label": "Cachorro", "feedback": "Ele acompanha a figura perto dos pés. Guarde essa pista."},
           {"id": "cliff", "label": "Penhasco", "feedback": "Existe uma borda no caminho. Vamos observar essa tensão."},

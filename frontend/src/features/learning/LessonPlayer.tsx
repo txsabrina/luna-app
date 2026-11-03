@@ -7,7 +7,7 @@ import { SingleChoiceStep } from './SingleChoiceStep';
 function ObservationStep({ step, onNext }: { step: Observation; onNext: () => void }) {
   const [selected, setSelected] = useState('');
   return <>
-    <CardViewer src={step.imagePath} alt={step.imageAlt} />
+    <CardViewer cardId={step.cardId} alt={step.imageAlt} />
     <fieldset className="answer-options">
       <legend>Escolha o detalhe que chamou sua atenção. Não há resposta correta.</legend>
       {step.options.map(option => <label key={option.id}>
@@ -18,7 +18,8 @@ function ObservationStep({ step, onNext }: { step: Observation; onNext: () => vo
     <div role="status" aria-live="polite" aria-atomic="true">
       {selected && <p className="lesson-feedback">{step.options.find(option => option.id === selected)?.feedback}</p>}
     </div>
-    <button type="button" disabled={!selected} onClick={onNext}>Continuar</button>
+    {selected && <button type="button" onClick={onNext}>Continuar</button>}
+    <button type="button" onClick={onNext}>Prefiro continuar observando</button>
   </>;
 }
 
@@ -35,10 +36,11 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     heading.current?.focus();
   }
   return <article className="lesson-surface">
-    <p className="lesson-badge">Prévia: primeiro caminho</p>
+    <p className="lesson-badge">Prévia · 4 etapas</p>
     <h1>{lesson.title}</h1>
     <details><summary>Objetivos desta prévia</summary><ul>{lesson.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></details>
-    <nav aria-label="Caminho da prévia">
+    <nav aria-label="Caminho 1 — Conhecer">
+      <h2>Caminho 1 — Conhecer</h2>
       <ol className="lesson-progress">{lesson.steps.map((item, position) => <li key={item.id}
         aria-current={!complete && item.id === stepId ? 'step' : undefined}>
         <span>{String(position + 1).padStart(2, '0')}</span> {item.title}
@@ -47,7 +49,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     <h2 ref={heading} tabIndex={-1}>{complete ? 'Prévia concluída' : step.title}</h2>
     {complete ? <section>
       <p>Você percorreu o primeiro caminho. Os próximos caminhos estão em produção.</p>
-      <p>Este registro é apenas desta sessão. A aula completa não foi concluída; não há XP ou progresso salvo.</p>
+      <p>Este registro vale apenas para esta sessão. A aula completa ainda não foi concluída. Não há XP ou progresso salvo.</p>
       <div className="lesson-actions">
         <button type="button" onClick={() => { setComplete(false); heading.current?.focus(); }}>Rever etapa 04</button>
         <button type="button" onClick={() => {
@@ -58,7 +60,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         <a href="/modules/major-arcana">Voltar ao módulo</a>
       </div>
     </section> : <>
-      <LumeGuide guide={step.lume} />
+      <LumeGuide guide={step.lume} imageSrc="/assets/preview/lume-welcome.png" />
       <div key={step.id}>
         {step.type === 'explanation' && <>
           {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -74,9 +76,9 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
       </div>
     </>}
     <aside className="lesson-editorial">
-      <p><strong>Referência visual:</strong> Waite–Smith, ilustrado por Pamela Colman Smith, com Arthur Edward Waite (1909).</p>
+      <p><strong>Imagem:</strong> Baralho autoral do Luna, inspirado no Waite–Smith.</p>
       <p>Observar descreve a imagem. Abertura, começo e espontaneidade são o recorte interpretativo desta aula, não um significado universal, diagnóstico ou previsão.</p>
-      <p>A origem, edição e licença da reprodução digital ainda precisam ser registradas antes de adicionar a imagem. Não usamos imagens dos prints Astra.</p>
+      <p>A procedência detalhada, autoria nominal e condições de uso da arte autoral ainda precisam ser documentadas. Não usamos imagens dos prints Astra.</p>
     </aside>
   </article>;
 }

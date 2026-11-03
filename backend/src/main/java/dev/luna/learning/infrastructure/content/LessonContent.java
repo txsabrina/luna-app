@@ -28,7 +28,7 @@ public class LessonContent {
         if (document == null || document.lesson() == null || document.assessments() == null)
             throw new IllegalStateException("Missing document fields");
         var lesson = document.lesson();
-        if (!"fool-first-step".equals(lesson.id()) || lesson.contentVersion() != 1
+        if (!"fool-first-step".equals(lesson.id()) || lesson.contentVersion() != 2
                 || !"PREVIEW".equals(lesson.status()) || lesson.title() == null
                 || lesson.objectives() == null || lesson.objectives().isEmpty()
                 || lesson.steps() == null || lesson.steps().size() != 4)
@@ -44,7 +44,7 @@ public class LessonContent {
                     throw new IllegalStateException("Invalid explanation");
             } else if (step instanceof Lesson.Observation observation) {
                 var options = new HashSet<String>();
-                if (observation.imagePath() == null || observation.imageAlt() == null
+                if (!"major-00-fool".equals(observation.cardId()) || observation.imageAlt() == null
                         || observation.options() == null || observation.options().isEmpty())
                     throw new IllegalStateException("Invalid observation");
                 for (var option : observation.options())

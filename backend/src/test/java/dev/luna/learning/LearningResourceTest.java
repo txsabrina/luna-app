@@ -43,6 +43,9 @@ class LearningResourceTest {
         assertEquals(200, lesson.statusCode());
         assertEquals("PREVIEW", json(lesson).get("status").asText());
         assertEquals(4, json(lesson).get("steps").size());
+        assertEquals(2, json(lesson).get("contentVersion").asInt());
+        assertEquals("major-00-fool", json(lesson).get("steps").get(1).get("cardId").asText());
+        assertFalse(json(lesson).get("steps").get(1).has("imagePath"));
         assertFalse(lesson.body().contains("expectedOptionId"));
         assertFalse(lesson.body().contains("assessments"));
         assertFalse(json(lesson).get("steps").get(3).has("feedback"));
@@ -51,16 +54,16 @@ class LearningResourceTest {
     @Test
     void statelessEvaluationAndConsistentErrors() throws Exception {
         for (String option : java.util.List.of("reference-first", "small-experiment", "strict-routine", "complete-confidence")) {
-            var response = evaluate("{\"contentVersion\":1,\"selectedOptionId\":\"" + option + "\"}");
+            var response = evaluate("{\"contentVersion\":2,\"selectedOptionId\":\"" + option + "\"}");
             assertEquals(200, response.statusCode());
             assertEquals(option.equals("small-experiment"), json(response).get("correct").asBoolean());
             assertFalse(json(response).get("selectedOptionFeedback").asText().isBlank());
             assertEquals("small-experiment", json(response).get("expectedOptionId").asText());
         }
-        var invalid = evaluate("{\"contentVersion\":1,\"selectedOptionId\":\"invalid\"}");
+        var invalid = evaluate("{\"contentVersion\":2,\"selectedOptionId\":\"invalid\"}");
         assertEquals(400, invalid.statusCode());
         assertEquals("INVALID_OPTION", json(invalid).get("code").asText());
-        var outdated = evaluate("{\"contentVersion\":2,\"selectedOptionId\":\"small-experiment\"}");
+        var outdated = evaluate("{\"contentVersion\":1,\"selectedOptionId\":\"small-experiment\"}");
         assertEquals(409, outdated.statusCode());
         assertEquals("CONTENT_VERSION_MISMATCH", json(outdated).get("code").asText());
         var missing = get("/api/v1/lessons/missing");

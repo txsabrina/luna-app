@@ -25,7 +25,7 @@ public record Lesson(String id, int contentVersion, String title, String status,
     public record Explanation(String id, String title, Lume lume,
                               List<String> paragraphs, String cta) implements Step {}
     public record Observation(String id, String title, Lume lume,
-                              String imagePath, String imageAlt,
+                              String cardId, String imageAlt,
                               List<ObservationOption> options) implements Step {}
     public record SingleChoice(String id, String title, Lume lume,
                                String question, List<Option> options) implements Step {}
