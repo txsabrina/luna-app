@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { LearningPage } from './LearningPage';
@@ -6,6 +6,7 @@ import { LessonPlayer } from './LessonPlayer';
 import { SingleChoiceStep } from './SingleChoiceStep';
 import { CardViewer } from '../../components/CardViewer/CardViewer';
 import { isLesson } from './contracts';
+import lessonDocument from '../../../../backend/src/main/resources/content/tarot/fool-first-step.v1.json';
 import type { Lesson, SingleChoice } from './contracts';
 
 const quiz: SingleChoice = {
@@ -20,13 +21,14 @@ const quiz: SingleChoice = {
   ],
 };
 const lesson: Lesson = {
-  id: 'fool-first-step', contentVersion: 2, title: 'O Louco — o primeiro passo', status: 'PREVIEW',
+  id: 'fool-first-step', contentVersion: 3, title: 'O Louco — o primeiro passo', status: 'PREVIEW',
   objectives: ['Observar antes de interpretar.'],
   steps: [
     { id: '01-opening', type: 'explanation', title: 'Abertura', lume: { mood: 'welcoming', message: 'Vamos observar.' }, paragraphs: ['Começar sem ter o mapa inteiro.'], cta: 'Vamos investigar' },
     { id: '02-observation', type: 'observation', title: 'Observação livre', lume: { mood: 'curious', message: 'Sem resposta correta.' }, cardId: 'major-00-fool', imageAlt: 'Figura próxima de uma borda.', options: [{ id: 'dog', label: 'Cachorro', feedback: 'Ele acompanha a figura perto dos pés. Guarde essa pista.' }] },
     { id: '03-core', type: 'explanation', title: 'Núcleo', lume: { mood: 'explaining', message: 'Abertura, começo e espontaneidade.' }, paragraphs: ['Isso não significa abandonar o planejamento.'], cta: 'Experimentar uma situação' },
     quiz,
+    ...(lessonDocument.lesson.steps.slice(4) as Lesson['steps']),
   ],
 };
 function response(data: unknown, status = 200) {
@@ -34,6 +36,11 @@ function response(data: unknown, status = 200) {
 }
 const result = { correct: false, selectedOptionFeedback: 'Preparação pode ajudar, mas prolongar a espera não é o foco.', expectedOptionId: 'small-experiment', explanation: 'Experimente sem exigir domínio antecipado.' };
 
+beforeEach(() => {
+  // jsdom has no layout/scrolling; verify the requested behavior in navigation tests.
+  vi.stubGlobal('HTMLElement', HTMLElement);
+  Object.defineProperty(HTMLElement.prototype, 'scrollIntoView', { configurable: true, value: vi.fn() });
+});
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
 
 describe('Carregamento e contrato', () => {
@@ -56,7 +63,7 @@ describe('Carregamento e contrato', () => {
   it('rejeita conteúdo inválido e chave de avaliação no payload', () => {
     expect(isLesson(lesson)).toBe(true);
     expect(isLesson({ ...lesson, assessments: {} })).toBe(false);
-    expect(isLesson({ ...lesson, steps: [...lesson.steps.slice(0, 3), { ...quiz, expectedOptionId: 'small-experiment' }] })).toBe(false);
+    expect(isLesson({ ...lesson, steps: lesson.steps.map(step => step.id === quiz.id ? { ...quiz, expectedOptionId: 'small-experiment' } : step) })).toBe(false);
     expect(isLesson({ ...lesson, steps: [] })).toBe(false);
     expect(isLesson({ ...lesson, contentVersion: 1 })).toBe(false);
     expect(isLesson({ ...lesson, steps: lesson.steps.map(step => step.type === 'observation'
@@ -98,7 +105,7 @@ describe('Escolha contextual', () => {
     const fetch = vi.fn().mockResolvedValue(response(result));
     const next = vi.fn();
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={next} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={next} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     expect(fetch).not.toHaveBeenCalled();
             expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
@@ -106,7 +113,7 @@ describe('Escolha contextual', () => {
     expect(await screen.findByText(result.selectedOptionFeedback)).toBeTruthy();
     expect(screen.getByText('Resposta esperada:')).toBeTruthy();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 2, selectedOptionId: 'reference-first' });
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 3, selectedOptionId: 'reference-first' });
     await userEvent.click(screen.getByRole('button', { name: 'Tentar novamente' }));
     expect(screen.getByRole('radio', { name: 'Reunir referências.' })).toHaveProperty('disabled', false);
     expect(screen.queryByText(result.selectedOptionFeedback)).toBeNull();
@@ -116,7 +123,7 @@ describe('Escolha contextual', () => {
   it('preserva seleção quando a avaliação falha', async () => {
     const fetch = vi.fn().mockRejectedValueOnce(new Error('Falha de rede')).mockResolvedValueOnce(response({ ...result, correct: true }));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Experimentar um desenho simples.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(await screen.findByText(/Sua seleção foi preservada/)).toBeTruthy();
@@ -129,7 +136,7 @@ describe('Escolha contextual', () => {
   it('não permite confirmações duplicadas durante a requisição', async () => {
     const fetch = vi.fn(() => new Promise<Response>(() => {}));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={2} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(screen.getByRole('button', { name: 'Avaliando…' })).toHaveProperty('disabled', true);
@@ -147,7 +154,10 @@ describe('Escolha contextual', () => {
 
 describe('Caminho da prévia', () => {
   it('observação sem avaliação, anterior/próxima e conclusão apenas da prévia', async () => {
-    const fetch = vi.fn().mockResolvedValue(response(result));
+        const fetch = vi.fn().mockImplementation(async (url: string) => response(url.endsWith('/classify')
+      ? { correct: false, items: lessonDocument.lesson.steps[8].items!.map(item => ({ itemId: item.id,
+        selectedCategoryId: 'observation', expectedCategoryId: 'interpretation', correct: false, feedback: 'Compare a relação de sentido.' })) }
+      : url.includes('10-connection') ? { ...result, expectedOptionId: 'motion-edge' } : result));
     vi.stubGlobal('fetch', fetch);
     render(<LessonPlayer lesson={lesson} />);
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
@@ -165,9 +175,17 @@ describe('Caminho da prévia', () => {
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
-    expect(screen.getByText('Você percorreu o primeiro caminho. Os próximos caminhos estão em produção.')).toBeTruthy();
+    for (let i = 0; i < 4; i++) await userEvent.click(screen.getByRole('button', { name: 'Continuar investigando' }));
+    expect(screen.getByRole('button', { name: 'Conferir' })).toHaveProperty('disabled', true);
+    for (const radio of screen.getAllByRole('radio', { name: 'Observação' })) await userEvent.click(radio);
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
+    await userEvent.click(screen.getByRole('radio', { name: 'Rosa + trouxa.' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
+    expect(screen.getByText('Você percorreu Conhecer e Investigar. Os próximos caminhos estão em produção.')).toBeTruthy();
     expect(screen.getByText(/A aula completa ainda não foi concluída/)).toBeTruthy();
-    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(3));
     expect(screen.getByRole('link', { name: 'Voltar ao módulo' }).getAttribute('href'))
       .toBe('/modules/major-arcana');
     await userEvent.click(screen.getByRole('button', { name: 'Revisitar a prévia' }));
@@ -178,14 +196,17 @@ describe('Caminho da prévia', () => {
     expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
     expect(screen.getByRole('button', { name: 'Prefiro continuar observando' })).toHaveProperty('disabled', false);
     expect(screen.getByRole('radio', { name: 'Cachorro' })).toHaveProperty('checked', false);
-    expect(fetch).toHaveBeenCalledTimes(1);
+        expect(fetch).toHaveBeenCalledTimes(3);
   });
   it('avança sem seleção, sem resposta fictícia ou avaliação, e alinha identidade', async () => {
     const fetch = vi.fn();
     vi.stubGlobal('fetch', fetch);
     render(<LessonPlayer lesson={lesson} />);
-    expect(screen.getByText('Prévia · 4 etapas')).toBeTruthy();
+    expect(screen.getByText('Prévia · 10 etapas')).toBeTruthy();
+    expect(screen.queryByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeNull();
+    await userEvent.click(screen.getByRole('button', { name: 'Abrir mapa das etapas' }));
     expect(screen.getByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeTruthy();
+    expect(screen.getByRole('navigation', { name: 'Caminho 2 — Investigar' })).toBeTruthy();
     expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src'))
       .toBe('/assets/preview/lume-welcome.png');
     expect(screen.getByText('Baralho autoral do Luna, inspirado no Waite–Smith.')).toBeTruthy();

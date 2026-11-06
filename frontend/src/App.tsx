@@ -3,6 +3,8 @@ import './App.css';
 import { LearningPage } from './features/learning/LearningPage';
 import { PreviewPage, type PreviewPath } from './features/preview/PreviewPage';
 
+import { remotePreview } from './features/preview/data';
+
 type Status = 'PLANNED' | 'IN_PROGRESS' | 'AVAILABLE';
 
 type Trail = {
@@ -173,7 +175,7 @@ export default function App() {
                   <p>{trail.description}</p>
                   <footer>{trail.plannedCourseCount} cursos planejados</footer>
                   {trail.id === 'tarot' ? <div className="preview-entry">
-                    <p id="fool-preview-description" className="preview-description">Prévia disponível · 4 etapas</p>
+                    <p id="fool-preview-description" className="preview-description">{remotePreview.description}</p>
                     <a className="primary-action" href="/lessons/fool-first-step"
                       aria-describedby="fool-preview-description">Conhecer O Louco</a>
                   </div> : <p className="preparation-note">Cursos em preparação</p>}
@@ -196,7 +198,7 @@ export default function App() {
         </label>
 
         <p className="scope-note">
-          Catálogo em planejamento e prévia de O Louco com quatro etapas.
+          Catálogo em planejamento. {remotePreview.description}: Conhecer e Investigar.
           A aula completa, progresso salvo e conquistas ainda não estão disponíveis.
         </p>
       </main>

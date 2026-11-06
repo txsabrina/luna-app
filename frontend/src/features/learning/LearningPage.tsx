@@ -3,6 +3,7 @@ import { request } from './api';
 import { isLesson, isNavigation } from './contracts';
 import type { Lesson, Navigation } from './contracts';
 import { LessonPlayer } from './LessonPlayer';
+import { remotePreview } from '../preview/data';
 import './learning.css';
 
 type State = { kind: 'loading' } | { kind: 'error'; message: string }
@@ -51,18 +52,18 @@ export function LearningPage({ path }: { path: string }) {
     {isTrail ? <article className="lesson-surface">
       <h1>Tarô</h1><p>Investigue imagens e tradições simbólicas com interpretações contextualizadas.</p>
       <p>Quatro cursos planejados. Somente a prévia abaixo foi preparada neste incremento.</p>
-      <ul className="navigation-list"><li><a href="/courses/tarot-cards-foundations">Cartas e fundamentos</a><p>Prévia: primeiro caminho de O Louco.</p></li></ul>
+      <ul className="navigation-list"><li><a href="/courses/tarot-cards-foundations">Cartas e fundamentos</a><p>{remotePreview.description} — Conhecer e Investigar.</p></li></ul>
     </article> : <>
       {state.kind === 'loading' && <p className="notice" role="status">Carregando conteúdo…</p>}
       {state.kind === 'error' && <div className="notice" role="alert"><h1>Conteúdo não acessível</h1>
         <p>{state.message}</p><button type="button" onClick={() => setRetry(value => value + 1)}>Tentar novamente</button>
       </div>}
       {state.kind === 'navigation' && <article className="lesson-surface">
-        <p className="lesson-badge">Prévia: primeiro caminho</p><h1>{state.navigation.title}</h1>
+        <p className="lesson-badge">{remotePreview.description}</p><h1>{state.navigation.title}</h1>
         <p>O restante do conteúdo está em produção.</p>
         <ul className="navigation-list">{state.navigation.children.map(child => <li key={child.id}>
           <a href={`/${section === 'courses' ? 'modules' : 'lessons'}/${encodeURIComponent(child.id)}`}>{child.title}</a>
-          <p>Prévia: primeiro caminho</p>
+          <p>{remotePreview.description}</p>
         </li>)}</ul>
       </article>}
       {state.kind === 'lesson' && <LessonPlayer key={`${state.lesson.id}-${state.lesson.contentVersion}`} lesson={state.lesson} />}

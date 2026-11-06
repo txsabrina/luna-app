@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import App from '../../App';
+import userEvent from '@testing-library/user-event';
 
 function open(path: string) {
   window.history.replaceState({}, '', path);
@@ -17,29 +18,42 @@ describe('Preview local isolada', () => {
     const fetch = vi.fn();
     vi.stubGlobal('fetch', fetch);
     open(path);
-    expect(screen.getByText('Prévia visual')).toBeTruthy();
+    expect(screen.getByRole('main')).toBeTruthy();
     expect(fetch).not.toHaveBeenCalled();
     expect(screen.queryByText('Carregando as trilhas…')).toBeNull();
-    expect(screen.getByRole('link', { name: 'Explorar a prévia' }).getAttribute('href'))
+    expect(screen.getByRole('link', { name: path === '/preview' ? 'Conhecer O Louco' : 'Explorar a prévia' }).getAttribute('href'))
       .toBe('/lessons/fool-first-step');
     expect(screen.getByText('A prévia da aula precisa da API em execução.')).toBeTruthy();
   });
 
-  it('home usa os quatro assets e mostra quatro etapas sem progresso fictício', () => {
+  it('home segue a tela 04 com os assets aprovados e estados verdadeiros', () => {
     const { container } = open('/preview');
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Uma descoberta de cada vez.');
-    expect(screen.getByText('Prévia disponível · 4 etapas')).toBeTruthy();
+    expect(screen.getByText('Prévia disponível')).toBeTruthy();
     const sources = Array.from(container.querySelectorAll('img')).map(image => image.getAttribute('src'));
-    expect(sources).toEqual([
-      '/assets/preview/lume-welcome.png', '/assets/preview/tarot-medallion.png',
-      '/assets/preview/numerology-medallion.png', '/assets/preview/patterns-medallion.png',
-    ]);
-    expect(screen.queryByText('Retomar')).toBeNull();
+    expect(sources[0]).toBe('/assets/preview/lume-welcome.png');
+    expect(sources[1]).toBe('/assets/tarot/optimized/major-00-fool-320.webp');
+    for (const name of ['tarot', 'numerology', 'patterns']) {
+      expect(sources.filter(src => src === `/assets/preview/${name}-medallion.png`)).toHaveLength(2);
+    }
+    expect(screen.queryByText(/Retomar|Exemplo|conquistas/i)).toBeNull();
     expect(screen.getByRole('link', { name: 'Tarô' }).getAttribute('href')).toBe('/preview/taro');
     expect(screen.getByRole('link', { name: 'Padrões' }).getAttribute('href'))
       .toBe('/preview/trilhas#patterns');
     expect(screen.queryByText('Lume, sua companheira de estudos.')).toBeNull();
-    expect(screen.getByText('Vamos observar antes de decorar?')).toBeTruthy();
+    const main = screen.getByRole('main');
+    const greeting = screen.getByRole('region', { name: 'Mensagem da Lume' });
+    const activity = screen.getByRole('region', { name: 'Prévia de O Louco' });
+    const trails = screen.getByRole('navigation', { name: 'Trilhas de conhecimento' });
+    const destinations = screen.getByRole('region', { name: 'Destinações' });
+    expect([...main.children]).toEqual([greeting, activity, trails, destinations]);
+    expect(within(destinations).getAllByText('Planejamento')).toHaveLength(3);
+    for (const count of [4, 6, 14]) expect(within(destinations).getByText(`${count} cursos`)).toBeTruthy();
+    expect(within(destinations).getAllByRole('link')).toHaveLength(1);
+    expect(within(destinations).getByRole('group', { name: /Numerologia: 6 cursos planejados, em preparação/ })).toBeTruthy();
+    expect(within(destinations).getByRole('group', { name: /Padrões: 14 cursos planejados, em preparação/ })).toBeTruthy();
+    expect(within(destinations).getByRole('link', { name: /Tarô: 4 cursos planejados/ }).getAttribute('href')).toBe('/preview/taro');
+    expect(screen.queryByRole('button', { name: /notifica/i })).toBeNull();
   });
 
   it('trilhas distinguem planejamento e disponibilidade somente da prévia', () => {
@@ -64,7 +78,7 @@ describe('Preview local isolada', () => {
     home.unmount();
     open(destination!);
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Nossas trilhas de conhecimento');
-    const nextNav = screen.getByRole('navigation');
+    const nextNav = screen.getByRole('navigation', { name: 'Navegação da prévia visual' });
     expect(within(nextNav).getByRole('link', { name: 'Trilhas' }).getAttribute('aria-current')).toBe('page');
     expect(within(nextNav).getByRole('link', { name: 'Início' }).getAttribute('href')).toBe('/preview');
     expect(within(nextNav).queryByRole('link', { name: /Biblioteca|Meu espaço/ })).toBeNull();
@@ -73,10 +87,39 @@ describe('Preview local isolada', () => {
 
   it('falha de ilustração mantém fallback e ações', () => {
     const { container } = open('/preview');
-    fireEvent.error(container.querySelector('img')!);
-    expect(screen.getByRole('status').textContent).toBe('Ilustração de Lume indisponível.');
-    expect(screen.getByRole('link', { name: 'Explorar a prévia' })).toBeTruthy();
+    for (const image of container.querySelectorAll('img')) fireEvent.error(image);
+    expect(screen.getByText('Ilustração de Lume indisponível.')).toBeTruthy();
+    expect(screen.getByText('Imagem de O Louco indisponível.')).toBeTruthy();
+    expect(screen.getAllByRole('status')).toHaveLength(8);
+    expect(screen.getByRole('link', { name: 'Conhecer O Louco' }).getAttribute('href')).toBe('/lessons/fool-first-step');
+    expect(screen.getByRole('heading', { name: 'Destinações' })).toBeTruthy();
   });
+
+  it('oferece acesso por teclado e navegação sem ações vazias', async () => {
+    open('/preview');
+    await userEvent.tab();
+    expect(document.activeElement).toBe(screen.getByRole('link', { name: 'Ir para o conteúdo' }));
+    await userEvent.tab();
+    expect(document.activeElement).toBe(screen.getByRole('link', { name: 'Luna — Início' }));
+    await userEvent.tab();
+    expect(document.activeElement).toBe(screen.getByRole('link', { name: 'Conhecer O Louco' }));
+    expect(document.activeElement?.getAttribute('aria-describedby')).toBe('home-api-note');
+    const nav = screen.getByRole('navigation', { name: 'Navegação da prévia visual' });
+    expect(within(nav).getAllByRole('link')).toHaveLength(2);
+    expect(within(nav).getAllByText('Em preparação')).toHaveLength(2);
+    expect(nav.querySelectorAll('[aria-disabled="true"]')).toHaveLength(2);
+    expect(nav.querySelectorAll('svg[aria-hidden="true"]')).toHaveLength(4);
+    expect(nav.querySelectorAll('[aria-current="page"]')).toHaveLength(1);
+  });
+
+  it.each(['/preview/trilhas', '/preview/taro', '/preview/taro/cartas-e-fundamentos',
+    '/preview/taro/cartas-e-fundamentos/modulos/major-arcana', '/preview/taro/cartas/major-00-fool'])(
+    'mantém o shell anterior em %s', path => {
+      const { container } = open(path);
+      expect(container.querySelector('.board-home')).toBeNull();
+      expect(screen.getByText('Prévia visual')).toBeTruthy();
+      expect(screen.getByRole('navigation', { name: 'Navegação da prévia visual' })).toBeTruthy();
+    });
 
   it('acesso remoto continua usando API e mostra erro sem simulação', async () => {
     const fetch = vi.fn().mockRejectedValue(new Error('API indisponível'));

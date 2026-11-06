@@ -9,7 +9,14 @@
 .lesson-surface button, .lesson-surface .lesson-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; max-width: 100%; padding: 12px 18px; border: 1px solid #76548e; border-radius: 12px; background: #e8ddf1; color: #35263f; white-space: normal; }
 .lesson-surface button:disabled { cursor: default; background: #ede8ef; color: #6f6274; border-color: #bdb2c5; }
 .lesson-surface :is(button, a, input, summary):focus-visible { outline: 3px solid #62407b; outline-offset: 3px; }
-.lesson-surface h2:focus { outline: none; }
+.lesson-content-title { scroll-margin-block-start: 24px; }
+.lesson-surface .lesson-content-title:focus { outline: 2px solid #76548e; outline-offset: 6px; border-radius: 4px; }
+.lesson-navigation-summary { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-block: 20px; }
+.lesson-position { margin: 0; color: #685026; font-weight: 600; }
+.lesson-map { padding: 16px; border: 1px solid #bdb2c5; border-radius: 12px; margin-bottom: 24px; }
+.lesson-map[hidden] { display: none; }
+.lesson-map h2 { font-size: 20px; }
+.lesson-progress .lesson-current-label { display: block; margin-top: 4px; color: #62407b; font-size: 12px; }
 .lesson-badge { display: inline-block; border: 1px solid #9d8043; padding: 6px 12px; border-radius: 20px; color: #685026; }
 .lesson-progress { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin-block: 24px; }
 .lesson-progress li { padding: 12px; border: 1px solid #bdb2c5; border-radius: 12px; font-size: 14px; }
@@ -45,3 +52,29 @@
   .learning-page *, .learning-page *::before, .learning-page *::after { animation: none; transition: none; scroll-behavior: auto; }
 }
 .quiet .learning-page * { animation: none; transition: none; scroll-behavior: auto; }
+.lesson-progress li {
+  padding: 0;
+}
+
+.lesson-progress .lesson-step-button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lesson-progress .lesson-step-button:hover {
+  background: rgba(117, 81, 149, 0.08);
+}
+
+.lesson-progress .lesson-step-button:focus-visible {
+  outline: 3px solid #755195;
+  outline-offset: 3px;
+}

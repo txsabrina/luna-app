@@ -41,6 +41,16 @@ public class LearningResource {
         return service.evaluate(lessonId, stepId, request.contentVersion(), request.selectedOptionId());
     }
 
+    public record ClassificationRequest(Integer contentVersion, List<LearningService.Assignment> assignments) {}
+
+    @POST @Path("/lessons/{lessonId}/steps/{stepId}/classify")
+    public LearningService.ClassificationEvaluation classify(@PathParam("lessonId") String lessonId,
+                                                             @PathParam("stepId") String stepId,
+                                                             ClassificationRequest request) {
+        if (request == null) throw new LearningService.LearningError(400, "INVALID_REQUEST", "Informe os itens e a versão.");
+        return service.classify(lessonId, stepId, request.contentVersion(), request.assignments());
+    }
+
     private LearningService.LearningError missing() {
         return new LearningService.LearningError(404, "CONTENT_NOT_FOUND", "O conteúdo não foi encontrado.");
     }

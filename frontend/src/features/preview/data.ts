@@ -14,7 +14,7 @@ export type PreviewTrail = {
 export const remotePreview = {
   href: '/lessons/fool-first-step',
   title: 'Conhecer O Louco',
-  description: 'Prévia disponível · 4 etapas',
+  description: 'Prévia disponível · 10 etapas',
   apiNotice: 'A prévia da aula precisa da API em execução.',
 };
 

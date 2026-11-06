@@ -6,14 +6,14 @@ import type { Evaluation, SingleChoice } from './contracts';
 type State = { kind: 'idle' } | { kind: 'loading' } | { kind: 'error'; message: string }
   | { kind: 'success'; result: Evaluation };
 
-export function SingleChoiceStep({ lessonId, version, step, onNext }: {
-  lessonId: string; version: number; step: SingleChoice; onNext: () => void;
+export function SingleChoiceStep({ lessonId, version, step, onNext, active = true }: {
+  lessonId: string; version: number; step: SingleChoice; onNext: () => void; active?: boolean;
 }) {
   const [selected, setSelected] = useState('');
   const [state, setState] = useState<State>({ kind: 'idle' });
   const pending = useRef<AbortController | null>(null);
   const firstOption = useRef<HTMLInputElement>(null);
-  useEffect(() => () => { pending.current?.abort(); }, []);
+  useEffect(() => () => { pending.current?.abort(); }, [active]);
 
   async function confirm() {
     if (!selected || pending.current) return;
@@ -32,6 +32,7 @@ export function SingleChoiceStep({ lessonId, version, step, onNext }: {
       if (!controller.signal.aborted) setState({ kind: 'error', message: error instanceof Error
         ? error.message : 'Não foi possível avaliar. Tente novamente.' });
     } finally {
+      if (controller.signal.aborted) setState({ kind: 'idle' });
       if (pending.current === controller) pending.current = null;
     }
   }
