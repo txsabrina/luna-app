@@ -114,10 +114,10 @@ describe('Preview local isolada', () => {
 
   it.each(['/preview/trilhas', '/preview/taro', '/preview/taro/cartas-e-fundamentos',
     '/preview/taro/cartas-e-fundamentos/modulos/major-arcana', '/preview/taro/cartas/major-00-fool'])(
-    'mantém o shell anterior em %s', path => {
+    'usa o shell compartilhado em %s', path => {
       const { container } = open(path);
       expect(container.querySelector('.board-home')).toBeNull();
-      expect(screen.getByText('Prévia visual')).toBeTruthy();
+      expect(container.querySelector('.content-shell')).toBeTruthy();
       expect(screen.getByRole('navigation', { name: 'Navegação da prévia visual' })).toBeTruthy();
     });
 
@@ -129,5 +129,35 @@ describe('Preview local isolada', () => {
     expect(fetch).toHaveBeenCalledWith('/api/v1/lessons/fool-first-step', expect.anything());
     expect(screen.getByRole('button', { name: 'Tentar novamente' })).toBeTruthy();
     expect(screen.queryByText('Prévia visual')).toBeNull();
+  });
+});
+
+
+describe('Navegação remota no shell compartilhado', () => {
+  it.each([
+    ['courses', 'tarot-cards-foundations', 'Cartas e fundamentos', 'major-arcana', 'Arcanos Maiores', 'modules'],
+    ['modules', 'major-arcana', 'Arcanos Maiores', 'fool-first-step', 'O Louco', 'lessons'],
+  ])('preserva dados e destino de %s', async (section, id, title, childId, childTitle, next) => {
+    const fetch = vi.fn().mockResolvedValue({ok:true, json:async()=>({id,title,status:'PREVIEW',parentId:'tarot',children:[{id:childId,title:childTitle,status:'PREVIEW'}]})});
+    vi.stubGlobal('fetch',fetch);
+    const {container}=open('/'+section+'/'+id);
+    expect(screen.getByRole('status').textContent).toContain('Carregando');
+    expect(await screen.findByRole('heading',{name:title,level:1})).toBeTruthy();
+    expect(screen.getByRole('link',{name:childTitle}).getAttribute('href')).toBe('/'+next+'/'+childId);
+    expect(fetch).toHaveBeenCalledWith('/api/v1/'+section+'/'+id,expect.objectContaining({method:'GET'}));
+    expect(container.querySelector('.content-shell')).toBeTruthy();
+    expect(container.querySelector('.content-navigation')).toBeNull();
+    const quiet=screen.getByRole('checkbox');
+    await userEvent.click(quiet);
+    expect(quiet).toHaveProperty('checked',true);
+  });
+  it('mantém erro e recuperação remotos sem dados simulados',async()=>{
+    const fetch=vi.fn().mockRejectedValue(new Error('API indisponível'));
+    vi.stubGlobal('fetch',fetch);
+    const {container}=open('/courses/tarot-cards-foundations');
+    expect((await screen.findByRole('alert')).textContent).toContain('API indisponível');
+    await userEvent.click(screen.getByRole('button',{name:'Tentar novamente'}));
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(container.querySelector('.content-shell')).toBeTruthy();
   });
 });

@@ -3,6 +3,7 @@ import './App.css';
 import { LearningPage } from './features/learning/LearningPage';
 import { PreviewPage, type PreviewPath } from './features/preview/PreviewPage';
 
+import { ContentShell } from './components/ContentShell/ContentShell';
 import { remotePreview } from './features/preview/data';
 
 type Status = 'PLANNED' | 'IN_PROGRESS' | 'AVAILABLE';
@@ -103,6 +104,14 @@ export default function App() {
       path === '/preview/taro' || path === '/preview/taro/cartas-e-fundamentos' ||
       path.startsWith('/preview/taro/cartas-e-fundamentos/modulos/') || path.startsWith('/preview/taro/cartas/')) {
     return <PreviewPage path={path as PreviewPath} />;
+  }
+
+  if (path === '/trails/tarot' || path.startsWith('/courses/') || path.startsWith('/modules/')) {
+    return <ContentShell><div className={quiet ? 'quiet' : ''}><LearningPage path={path} />
+      <label className="content-motion"><input type="checkbox" checked={quiet} onChange={event => setQuiet(event.target.checked)} />
+        <span>Modo tranquilo: sem animações<small>{quiet ? 'Ativado nesta sessão' : 'Desativado · respeita a preferência do dispositivo'}</small></span>
+      </label>
+    </div></ContentShell>;
   }
 
   return (

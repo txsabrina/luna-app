@@ -14,6 +14,7 @@ export function LearningPage({ path }: { path: string }) {
   const [retry, setRetry] = useState(0);
   const [, section, id] = path.split('/');
   const isTrail = section === 'trails' && id === 'tarot';
+  const isContentNavigation = isTrail || section === 'courses' || section === 'modules';
   useEffect(() => {
     if (isTrail) return;
     const controller = new AbortController();
@@ -38,6 +39,9 @@ export function LearningPage({ path }: { path: string }) {
   }, [section, id, retry, isTrail]);
 
   return <section className="learning-page">
+    {isContentNavigation && <a className="lp-back" href={isTrail ? '/' : section === 'courses' ? '/trails/tarot' : '/courses/tarot-cards-foundations'}>
+      {isTrail ? 'Voltar às trilhas' : section === 'courses' ? 'Voltar à trilha de Tarô' : 'Voltar ao curso'}
+    </a>}
     <nav className="lesson-breadcrumb" aria-label="Hierarquia de estudos">
       <a href="/">Trilhas</a><span aria-hidden="true"> / </span>
       <a href="/trails/tarot">Tarô</a>

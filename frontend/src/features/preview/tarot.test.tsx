@@ -20,7 +20,7 @@ describe('Cursos e módulos locais de Tarô', () => {
     vi.stubGlobal('fetch', fetch);
     open(path);
     expect(fetch).not.toHaveBeenCalled();
-    expect(screen.getByText('Prévia visual')).toBeTruthy();
+    expect(screen.getByRole('link', { name: 'Luna — Início' }).getAttribute('href')).toBe('/preview');
     const nav = screen.getByRole('navigation');
     expect(within(nav).getByRole('link', { name: 'Trilhas' }).getAttribute('aria-current')).toBe('page');
     expect(within(nav).getByRole('link', { name: 'Início' }).getAttribute('aria-current')).toBeNull();
@@ -86,11 +86,15 @@ describe('Cursos e módulos locais de Tarô', () => {
     const user = userEvent.setup();
     const { container } = open('/preview/taro');
     const images = container.querySelectorAll('img');
-    expect(Array.from(images).map(image => image.getAttribute('src'))).toEqual([
-      '/assets/preview/lume-welcome.png', '/assets/preview/tarot-medallion.png',
-    ]);
+    expect(images[0].getAttribute('src')).toBe('/assets/preview/tarot-medallion.png');
+    expect(images).toHaveLength(7);
+    for (const image of Array.from(images).slice(1)) {
+      expect(image.getAttribute('src')).toMatch(/\.webp$/);
+      expect(image.getAttribute('srcset')).toBeTruthy();
+    }
+    expect(container.querySelector('.content-thumbnail--1')).toBeTruthy();
     fireEvent.error(images[0]);
-    expect(screen.getByRole('status').textContent).toContain('Lume indisponível');
+    expect(screen.getByRole('status').textContent).toContain('Tarô indisponível');
     await user.tab();
     expect(document.activeElement).toBe(screen.getByRole('link', { name: 'Ir para o conteúdo' }));
     await user.tab();

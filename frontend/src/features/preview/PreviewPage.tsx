@@ -1,6 +1,7 @@
 import { PreviewImage, RemotePreviewLink } from './PreviewElements';
 import { CardCatalogPage, CardPresentationPage } from './CardCatalogPage';
 import { TarotPages } from './TarotPages';
+import { ContentShell } from '../../components/ContentShell/ContentShell';
 import { BoardHome } from './BoardHome';
 import { previewTrails } from './data';
 import './preview.css';
@@ -14,13 +15,8 @@ export function PreviewPage({ path }: { path: PreviewPath }) {
   const cardPrefix = '/preview/taro/cartas/';
   const catalogPage = path.startsWith(catalogPrefix);
   const cardPage = path.startsWith(cardPrefix);
-  return <div className="local-preview">
-    <a className="lp-skip" href="#preview-content">Ir para o conteúdo</a>
-    <header className="lp-header">
-      <a className="lp-brand" href="/preview">Luna<span>Conhecimento em fases. No seu ritmo.</span></a>
-      <span className="lp-label">Prévia visual</span>
-    </header>
-    <main className="lp-main" id="preview-content">
+  return <ContentShell preview>
+
       {catalogPage ? <CardCatalogPage key={path} groupId={path.slice(catalogPrefix.length)} /> :
         cardPage ? <CardPresentationPage key={path} cardId={path.slice(cardPrefix.length)} /> : tarotPage ? <TarotPages modulesPage={path === '/preview/taro/cartas-e-fundamentos'} /> : <>
         <header className="lp-intro">
@@ -43,12 +39,5 @@ export function PreviewPage({ path }: { path: PreviewPath }) {
         </div>
       </>}
       <p className="lp-disclaimer">Interface com dados locais em revisão. Cursos planejados não representam conteúdo concluído.</p>
-    </main>
-    <nav className="lp-navigation" aria-label="Navegação da prévia visual">
-      <a href="/preview">Início</a>
-      <a href="/preview/trilhas" aria-current="page">Trilhas</a>
-      <span>Biblioteca<small>Em preparação</small></span>
-      <span>Meu espaço<small>Em preparação</small></span>
-    </nav>
-  </div>;
+  </ContentShell>;
 }
