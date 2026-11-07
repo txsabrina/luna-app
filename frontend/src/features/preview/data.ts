@@ -4,6 +4,7 @@ export type PreviewTrail = {
   homeLabel: string;
   description: string;
   asset: string;
+  destinationAsset: string;
   imageSize: number;
   plannedCourseCount: number;
   status: 'Cursos em preparação' | 'Em preparação';
@@ -22,20 +23,20 @@ export const previewTrails: readonly PreviewTrail[] = [
   {
     id: 'tarot', name: 'Tarô', homeLabel: 'Tarô',
     description: 'Observe cartas, conecte símbolos e construa interpretações.',
-    asset: '/assets/preview/tarot-medallion.png', imageSize: 1024,
+    asset: '/assets/preview/tarot-medallion.png', destinationAsset: '/assets/destinations/tarot-approved.png', imageSize: 1024,
     plannedCourseCount: 4, status: 'Cursos em preparação', previewAvailable: true,
     coursesHref: '/preview/taro',
   },
   {
     id: 'numerology', name: 'Numerologia', homeLabel: 'Numerologia',
     description: 'Explore números e métodos simbólicos passo a passo.',
-    asset: '/assets/preview/numerology-medallion.png', imageSize: 1024,
+    asset: '/assets/preview/numerology-medallion.png', destinationAsset: '/assets/destinations/numerology-approved.png', imageSize: 1024,
     plannedCourseCount: 6, status: 'Em preparação', previewAvailable: false,
   },
   {
     id: 'patterns', name: 'Padrões e autoconhecimento', homeLabel: 'Padrões',
     description: 'Investigue hábitos e interpretações em atividades educativas.',
-    asset: '/assets/preview/patterns-medallion.png', imageSize: 768,
+    asset: '/assets/preview/patterns-medallion.png', destinationAsset: '/assets/destinations/patterns-approved.png', imageSize: 768,
     plannedCourseCount: 14, status: 'Em preparação', previewAvailable: false,
   },
 ];

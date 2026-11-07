@@ -67,7 +67,7 @@ export function BoardHome() {
           <h2 id="destinations-title">Destinações</h2>
           <ul>{previewTrails.map(trail => {
             const content = <>
-              <PreviewImage src={trail.asset} size={trail.imageSize} label={trail.name} className={`bh-destination-art bh-art-${trail.id}`} />
+              <PreviewImage src={trail.destinationAsset} size={1024} label={trail.name} className="bh-destination-art" />
               <span className="bh-course-count">{trail.plannedCourseCount} cursos</span>
               <span className="bh-badge">Planejamento</span>
             </>;

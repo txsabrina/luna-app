@@ -34,7 +34,9 @@ describe('Preview local isolada', () => {
     expect(sources[0]).toBe('/assets/lume/lume-home-approved.png');
     expect(sources[1]).toBe('/assets/tarot/optimized/major-00-fool-320.webp');
     for (const name of ['tarot', 'numerology', 'patterns']) {
-      expect(sources.filter(src => src === `/assets/preview/${name}-medallion.png`)).toHaveLength(2);
+      expect(sources.filter(src => src === `/assets/preview/${name}-medallion.png`)).toHaveLength(1);
+      expect(container.querySelector(`.bh-destinations img[src="/assets/destinations/${name}-approved.png"]`)).toBeTruthy();
+      expect(container.querySelector(`.bh-trails img[src="/assets/preview/${name}-medallion.png"]`)).toBeTruthy();
     }
     expect(screen.queryByText(/Retomar|Exemplo|conquistas/i)).toBeNull();
     expect(screen.getByRole('link', { name: 'Tarô' }).getAttribute('href')).toBe('/preview/taro');
