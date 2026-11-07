@@ -55,8 +55,8 @@ export function LearningPage({ path }: { path: string }) {
     </nav>}
     {isTrail ? <article className="lesson-surface">
       <h1>Tarô</h1><p>Investigue imagens e tradições simbólicas com interpretações contextualizadas.</p>
-      <p>Quatro cursos planejados. Somente a prévia abaixo foi preparada neste incremento.</p>
-      <ul className="navigation-list"><li><a href="/courses/tarot-cards-foundations">Cartas e fundamentos</a><p>{remotePreview.description} — Conhecer e Investigar.</p></li></ul>
+      <p>Quatro cursos planejados. A aula de O Louco está disponível.</p>
+      <ul className="navigation-list"><li><a href="/courses/tarot-cards-foundations">Cartas e fundamentos</a><p>{remotePreview.description} — quatro caminhos.</p></li></ul>
     </article> : <>
       {state.kind === 'loading' && <p className="notice" role="status">Carregando conteúdo…</p>}
       {state.kind === 'error' && <div className="notice" role="alert"><h1>Conteúdo não acessível</h1>

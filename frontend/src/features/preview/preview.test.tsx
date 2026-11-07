@@ -21,15 +21,15 @@ describe('Preview local isolada', () => {
     expect(screen.getByRole('main')).toBeTruthy();
     expect(fetch).not.toHaveBeenCalled();
     expect(screen.queryByText('Carregando as trilhas…')).toBeNull();
-    expect(screen.getByRole('link', { name: path === '/preview' ? 'Conhecer O Louco' : 'Explorar a prévia' }).getAttribute('href'))
+    expect(screen.getByRole('link', { name: path === '/preview' ? 'Conhecer O Louco' : 'Explorar a aula' }).getAttribute('href'))
       .toBe('/lessons/fool-first-step');
-    expect(screen.getByText('A prévia da aula precisa da API em execução.')).toBeTruthy();
+    expect(screen.getByText('A aula precisa da API em execução.')).toBeTruthy();
   });
 
   it('home segue a tela 04 com os assets aprovados e estados verdadeiros', () => {
     const { container } = open('/preview');
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Uma descoberta de cada vez.');
-    expect(screen.getByText('Prévia disponível')).toBeTruthy();
+    expect(screen.getByText('Aula disponível')).toBeTruthy();
     const sources = Array.from(container.querySelectorAll('img')).map(image => image.getAttribute('src'));
     expect(sources[0]).toBe('/assets/lume/lume-home-approved.png');
     expect(sources[1]).toBe('/assets/tarot/optimized/major-00-fool-320.webp');
@@ -45,7 +45,7 @@ describe('Preview local isolada', () => {
     expect(screen.queryByText('Lume, sua companheira de estudos.')).toBeNull();
     const main = screen.getByRole('main');
     const greeting = screen.getByRole('region', { name: 'Mensagem da Lume' });
-    const activity = screen.getByRole('region', { name: 'Prévia de O Louco' });
+    const activity = screen.getByRole('region', { name: 'Aula de O Louco' });
     const trails = screen.getByRole('navigation', { name: 'Trilhas de conhecimento' });
     const destinations = screen.getByRole('region', { name: 'Destinações' });
     expect([...main.children]).toEqual([greeting, activity, trails, destinations]);
@@ -65,7 +65,7 @@ describe('Preview local isolada', () => {
     expect(within(cards[2]).getByRole('heading', { name: 'Padrões e autoconhecimento' })).toBeTruthy();
     for (const count of [4, 6, 14]) expect(screen.getByText(`${count} cursos planejados`)).toBeTruthy();
     expect(within(cards[0]).getByText('Cursos em preparação')).toBeTruthy();
-    expect(within(cards[0]).getByText('Prévia de O Louco disponível')).toBeTruthy();
+    expect(within(cards[0]).getByText('Aula de O Louco disponível')).toBeTruthy();
     for (const card of cards.slice(1)) {
       expect(within(card).getByText('Em preparação')).toBeTruthy();
       expect(within(card).queryByRole('link')).toBeNull();

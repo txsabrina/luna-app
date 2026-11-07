@@ -60,10 +60,10 @@ describe('Catálogo local', () => {
     expect(fetch).not.toHaveBeenCalled();
     expect(screen.getByText('Baralho autoral do Luna, inspirado no Waite–Smith.')).toBeTruthy();
     if (id === 'major-00-fool') {
-      expect(screen.getByRole('link', { name: 'Abrir prévia da aula' }).getAttribute('href')).toBe('/lessons/fool-first-step');
-      expect(screen.getByText('A prévia da aula precisa da API em execução.')).toBeTruthy();
+      expect(screen.getByRole('link', { name: 'Abrir aula' }).getAttribute('href')).toBe('/lessons/fool-first-step');
+      expect(screen.getByText('A aula precisa da API em execução.')).toBeTruthy();
     } else {
-      expect(screen.queryByRole('link', { name: 'Abrir prévia da aula' })).toBeNull();
+      expect(screen.queryByRole('link', { name: 'Abrir aula' })).toBeNull();
       expect(screen.getByText(/A aula desta carta está em preparação/)).toBeTruthy();
     }
   });

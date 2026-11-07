@@ -27,7 +27,7 @@ public class LearningResource {
     public Navigation module(@PathParam("id") String id) {
         if (!"major-arcana".equals(id)) throw missing();
         return new Navigation(id, "Arcanos Maiores", "PREVIEW", "tarot-cards-foundations",
-                List.of(new Link("fool-first-step", "O Louco — o primeiro passo", "PREVIEW")));
+                List.of(new Link("fool-first-step", "O Louco — o primeiro passo", "AVAILABLE")));
     }
 
     @GET @Path("/lessons/{id}")

@@ -1,4 +1,6 @@
 /* The approved study composition is isolated from the 018/019 routes. */
+.study-shell .lesson-reading .study-text { white-space: pre-line; }
+.study-shell .study-support { margin-block: 12px; }
 .content-shell.content-api.study-shell .content-app { width: min(100%, 680px); }
 .study-shell .content-header { gap: 12px; }
 .study-shell .study-back { display: flex; align-items: center; min-height: 44px; font-size: 14px; }

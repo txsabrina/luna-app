@@ -8,6 +8,7 @@ import java.util.Map;
 
 @ApplicationScoped
 public class LessonContent {
+    public static final int CONTENT_VERSION = 4;
     public record ItemAssessment(String expectedCategoryId, Map<String, String> feedback) {}
     public record Assessment(String expectedOptionId, String explanation, Map<String, String> feedback,
                              Map<String, ItemAssessment> items) {}
@@ -40,10 +41,10 @@ public class LessonContent {
         if (document == null || document.lesson() == null || document.assessments() == null)
             throw new IllegalStateException("Missing document fields");
         var lesson = document.lesson();
-        if (!"fool-first-step".equals(lesson.id()) || lesson.contentVersion() != 3
-                || !"PREVIEW".equals(lesson.status()) || lesson.title() == null
+        if (!"fool-first-step".equals(lesson.id()) || lesson.contentVersion() != CONTENT_VERSION
+                || !"AVAILABLE".equals(lesson.status()) || lesson.title() == null
                 || lesson.objectives() == null || lesson.objectives().isEmpty()
-                || lesson.steps() == null || lesson.steps().size() != 10)
+                || lesson.steps() == null || lesson.steps().size() != 20)
             throw new IllegalStateException("Invalid lesson metadata");
         var ids = new HashSet<String>();
         var assessed = new HashSet<String>();
@@ -72,6 +73,17 @@ public class LessonContent {
                     if (symbol == null || symbol.id() == null || symbol.id().isBlank() || !symbols.add(symbol.id())
                             || symbol.label() == null || symbol.observation() == null || symbol.interpretation() == null)
                         throw new IllegalStateException("Invalid symbol");
+            } else if (step instanceof Lesson.Study study) {
+                if (study.paragraphs() == null || study.blocks() == null || study.cta() == null
+                        || study.cta().isBlank() || study.cardMode() == null
+                        || !java.util.Set.of("none", "visible", "reveal", "rotate").contains(study.cardMode())
+                        || (!study.cardMode().equals("none") && (!"major-00-fool".equals(study.cardId()) || study.imageAlt() == null))
+                        || (study.cardMode().equals("reveal") && (study.afterReveal() == null || study.afterReveal().isEmpty())))
+                    throw new IllegalStateException("Invalid study activity");
+                for (var block : study.blocks())
+                    if (block == null || block.label() == null || block.label().isBlank()
+                            || block.paragraphs() == null || block.paragraphs().isEmpty())
+                        throw new IllegalStateException("Invalid study block");
             } else if (step instanceof Lesson.Classification classification) {
                 var items = optionIds(classification.items());
                 var categories = optionIds(classification.categories());
@@ -103,5 +115,15 @@ public class LessonContent {
             }
         }
         if (!assessed.equals(document.assessments().keySet())) throw new IllegalStateException("Orphan assessment");
+        if (lesson.paths() == null || lesson.paths().size() != 4)
+            throw new IllegalStateException("Invalid learning paths");
+        var pathIds = new HashSet<String>();
+        for (var path : lesson.paths())
+            if (path == null || path.id() == null || !pathIds.add(path.id()) || path.title() == null
+                    || path.title().isBlank() || path.stepIds() == null || path.stepIds().isEmpty())
+                throw new IllegalStateException("Invalid learning path");
+        if (!lesson.paths().stream().flatMap(path -> path.stepIds().stream()).toList()
+                .equals(lesson.steps().stream().map(step -> step.id()).toList()))
+            throw new IllegalStateException("Paths must partition the ordered steps");
     }
 }

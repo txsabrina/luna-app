@@ -32,7 +32,7 @@ class LearningResourceTest {
     }
     @Test
     void classificationHttpContract() throws Exception {
-        var incomplete = classify("{\"contentVersion\":3,\"assignments\":[]}");
+        var incomplete = classify("{\"contentVersion\":4,\"assignments\":[]}");
         assertEquals(400, incomplete.statusCode());
         assertEquals("INCOMPLETE_CLASSIFICATION", json(incomplete).get("code").asText());
         var assignments = java.util.List.of(
@@ -40,12 +40,12 @@ class LearningResourceTest {
                 new dev.luna.learning.application.LearningService.Assignment("rose-meaning", "interpretation"),
                 new dev.luna.learning.application.LearningService.Assignment("dog-contact", "observation"),
                 new dev.luna.learning.application.LearningService.Assignment("dog-attention", "interpretation"));
-        var body = mapper.writeValueAsString(java.util.Map.of("contentVersion", 3, "assignments", assignments));
+        var body = mapper.writeValueAsString(java.util.Map.of("contentVersion", 4, "assignments", assignments));
         var correct = classify(body);
         assertEquals(200, correct.statusCode());
         assertTrue(json(correct).get("correct").asBoolean());
         assertEquals(4, json(correct).get("items").size());
-        assertEquals(409, classify(body.replace("\"contentVersion\":3", "\"contentVersion\":2")).statusCode());
+        assertEquals(409, classify(body.replace("\"contentVersion\":4", "\"contentVersion\":2")).statusCode());
         var incorrect = classify(body.replace("interpretation", "observation"));
         assertEquals(200, incorrect.statusCode());
         assertFalse(json(incorrect).get("correct").asBoolean());
@@ -66,9 +66,9 @@ class LearningResourceTest {
         assertEquals("fool-first-step", json(module).get("children").get(0).get("id").asText());
         var lesson = get("/api/v1/lessons/fool-first-step");
         assertEquals(200, lesson.statusCode());
-        assertEquals("PREVIEW", json(lesson).get("status").asText());
-        assertEquals(10, json(lesson).get("steps").size());
-        assertEquals(3, json(lesson).get("contentVersion").asInt());
+        assertEquals("AVAILABLE", json(lesson).get("status").asText());
+        assertEquals(20, json(lesson).get("steps").size());
+        assertEquals(4, json(lesson).get("contentVersion").asInt());
         assertEquals("major-00-fool", json(lesson).get("steps").get(1).get("cardId").asText());
         assertFalse(json(lesson).get("steps").get(1).has("imagePath"));
         assertFalse(lesson.body().contains("expectedOptionId"));
@@ -80,13 +80,13 @@ class LearningResourceTest {
     @Test
     void statelessEvaluationAndConsistentErrors() throws Exception {
         for (String option : java.util.List.of("reference-first", "small-experiment", "strict-routine", "complete-confidence")) {
-            var response = evaluate("{\"contentVersion\":3,\"selectedOptionId\":\"" + option + "\"}");
+            var response = evaluate("{\"contentVersion\":4,\"selectedOptionId\":\"" + option + "\"}");
             assertEquals(200, response.statusCode());
             assertEquals(option.equals("small-experiment"), json(response).get("correct").asBoolean());
             assertFalse(json(response).get("selectedOptionFeedback").asText().isBlank());
             assertEquals("small-experiment", json(response).get("expectedOptionId").asText());
         }
-        var invalid = evaluate("{\"contentVersion\":3,\"selectedOptionId\":\"invalid\"}");
+        var invalid = evaluate("{\"contentVersion\":4,\"selectedOptionId\":\"invalid\"}");
         assertEquals(400, invalid.statusCode());
         assertEquals("INVALID_OPTION", json(invalid).get("code").asText());
         var outdated = evaluate("{\"contentVersion\":1,\"selectedOptionId\":\"small-experiment\"}");

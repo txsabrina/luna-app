@@ -31,7 +31,7 @@ it('não foca nem rola na montagem inicial, mesmo em StrictMode; mapa começa fe
   expect(focus).not.toHaveBeenCalled();
   expect(scroll).not.toHaveBeenCalled();
   focus.mockRestore();
-  expect(screen.getByText('Etapa 1 de 10 · Conhecer')).toBeTruthy();
+  expect(screen.getByText('Etapa 1 de 20 · Conhecer')).toBeTruthy();
   const toggle = screen.getByRole('button', { name: 'Abrir mapa das etapas' });
   expect(toggle.getAttribute('aria-expanded')).toBe('false');
   expect(screen.queryByRole('navigation')).toBeNull();
@@ -40,7 +40,7 @@ it('não foca nem rola na montagem inicial, mesmo em StrictMode; mapa começa fe
   expect(toggle.getAttribute('aria-expanded')).toBe('true');
   const map = document.getElementById(toggle.getAttribute('aria-controls')!)!;
   expect(map.hidden).toBe(false);
-  expect(within(map).getAllByRole('button')).toHaveLength(10);
+  expect(within(map).getAllByRole('button')).toHaveLength(20);
   expect(within(map).getAllByRole('button')[0].getAttribute('aria-current')).toBe('step');
   expect(screen.getByText('Etapa atual')).toBeTruthy();
   await userEvent.keyboard(' ');
@@ -54,7 +54,7 @@ it('salta livremente, fecha mapa e foca/rola o título atualizado; repetir etapa
   await selectStep(7);
   const title = screen.getByRole('heading', { name: lesson.steps[7].title });
   expect(document.activeElement).toBe(title);
-  expect(screen.getByText('Etapa 8 de 10 · Investigar')).toBeTruthy();
+  expect(screen.getByText('Etapa 8 de 20 · Investigar')).toBeTruthy();
   expect(screen.getByRole('button', { name: 'Abrir mapa das etapas' }).getAttribute('aria-expanded')).toBe('false');
   expect(screen.queryByRole('navigation')).toBeNull();
   expect(scroll).toHaveBeenLastCalledWith({ behavior: 'instant', block: 'start' });
@@ -69,11 +69,11 @@ it('salta livremente, fecha mapa e foca/rola o título atualizado; repetir etapa
   expect(scroll).toHaveBeenCalledTimes(calls + 1);
   expect(document.activeElement).toBe(title);
   await selectStep(3);
-  expect(screen.getByText('Etapa 4 de 10 · Conhecer')).toBeTruthy();
+  expect(screen.getByText('Etapa 4 de 20 · Conhecer')).toBeTruthy();
   expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
   expect(fetch).not.toHaveBeenCalled();
   await selectStep(0);
-  expect(screen.queryByRole('heading', { name: 'Prévia concluída' })).toBeNull();
+  expect(screen.queryByRole('heading', { name: 'Encerramento da aula' })).toBeNull();
 });
 it('preserva escolhas e cancela avaliação ao sair pelo mapa sem aplicar resposta obsoleta', async () => {
   let resolve!: (value: Response) => void;

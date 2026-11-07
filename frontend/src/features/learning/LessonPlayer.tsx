@@ -4,6 +4,7 @@ import { CardViewer } from '../../components/CardViewer/CardViewer';
 import type { Lesson, Observation } from './contracts';
 import { SingleChoiceStep } from './SingleChoiceStep';
 import { ClassificationStep } from './ClassificationStep';
+import { StudyStep } from './StudyStep';
 
 function ObservationStep({ step, onNext, active }: { step: Observation; onNext: () => void; active: boolean }) {
   const [selected, setSelected] = useState('');
@@ -31,8 +32,13 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
   const mapId = useId();
   const [mapOpen, setMapOpen] = useState(false);
   const [navigationRequest, setNavigationRequest] = useState(0);
+  const [traversed, setTraversed] = useState<Set<string>>(() => new Set());
   const index = lesson.steps.findIndex(step => step.id === stepId);
   const step = lesson.steps[index];
+  const pathIndex = lesson.paths.findIndex(path => path.stepIds.includes(stepId));
+  const path = lesson.paths[pathIndex];
+  const nextPath = path.stepIds.at(-1) === stepId ? lesson.paths[pathIndex + 1] : undefined;
+  const continueLabel = nextPath ? `Continuar para ${nextPath.title}` : undefined;
     useEffect(() => {
     // Only explicit navigation moves focus, including a repeat selection of the same step.
     if (navigationRequest === 0) return;
@@ -46,16 +52,17 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     setNavigationRequest(previous => previous + 1);
   }
   function move(direction: number) {
+    if (direction > 0) setTraversed(previous => new Set([...previous, stepId]));
     const next = lesson.steps[index + direction];
     if (next) navigate(next.id);
     else if (direction > 0) navigate(stepId, true);
   }
   return <article className="lesson-surface">
-    <p className="lesson-badge">Prévia · {lesson.steps.length} etapas</p>
+    <p className="lesson-badge">Aula disponível · {lesson.steps.length} etapas</p>
     <h1>{lesson.title}</h1>
-    <details className="lesson-objectives"><summary>Objetivos desta prévia</summary><ul>{lesson.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></details>
+    <details className="lesson-objectives"><summary>Objetivos da aula</summary><ul>{lesson.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></details>
     <div className="lesson-navigation-summary">
-      <p className="lesson-position">Etapa {index + 1} de {lesson.steps.length} · {index < 4 ? 'Conhecer' : 'Investigar'}</p>
+      <p className="lesson-position">Etapa {index + 1} de {lesson.steps.length} · {path.title}</p>
       <button type="button" aria-expanded={mapOpen} aria-controls={mapId}
         onClick={() => setMapOpen(previous => !previous)}>
         {mapOpen ? 'Fechar mapa das etapas' : 'Abrir mapa das etapas'}
@@ -63,10 +70,10 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
     </div>
     <div id={mapId} className="lesson-map" hidden={!mapOpen}>
       <p>Navegue livremente. Visitar uma etapa não conclui as etapas ignoradas.</p>
-      {['Conhecer', 'Investigar'].map((path, pathIndex) => <nav key={path} aria-label={`Caminho ${pathIndex + 1} — ${path}`}>
-      <h2>Caminho {pathIndex + 1} — {path}</h2>
+      {lesson.paths.map((path, pathIndex) => <nav key={path.id} aria-label={`Caminho ${pathIndex + 1} — ${path.title}`}>
+      <h2>Caminho {pathIndex + 1} — {path.title}</h2>
       <ol className="lesson-progress">{lesson.steps.map((item, position) =>
-        (pathIndex === 0 ? position < 4 : position >= 4) && <li key={item.id}
+        path.stepIds.includes(item.id) && <li key={item.id}
           aria-current={!complete && item.id === stepId ? 'step' : undefined}>
           <button
             type="button"
@@ -84,23 +91,28 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         </li>)}</ol>
           </nav>)}
     </div>
-    <h2 className="lesson-content-title" ref={heading} tabIndex={-1}>{complete ? 'Prévia concluída' : step.title}</h2>
+    <h2 className="lesson-content-title" ref={heading} tabIndex={-1}>{complete ? 'Encerramento da aula' : step.title}</h2>
     {complete ? <section>
-      <p>Você percorreu Conhecer e Investigar. Os próximos caminhos estão em produção.</p>
-      <p>Este registro vale apenas para esta sessão. A aula completa ainda não foi concluída. Não há XP ou progresso salvo.</p>
+      <p>{lesson.steps.every(item => traversed.has(item.id)) ? 'Você percorreu os quatro caminhos de O Louco.' : 'Você chegou ao encerramento. Ainda há etapas que você pode explorar pelo mapa.'}</p>
+      <p>Este registro vale apenas para esta sessão. Retomada e progresso salvo ainda não estão disponíveis.</p>
       <div className="lesson-actions">
-        <button type="button" onClick={() => navigate(stepId)}>Rever etapa 10</button>
-        <button type="button" onClick={() => navigate(lesson.steps[0].id)}>Revisitar a prévia</button>
+        <button type="button" onClick={() => navigate(lesson.steps.at(-1)!.id)}>Voltar à ficha</button>
+        <button type="button" onClick={() => { setTraversed(new Set()); navigate(lesson.steps[0].id); }}>Revisitar a aula</button>
         <a href="/modules/major-arcana">Voltar ao módulo</a>
       </div>
     </section> : <>
       <LumeGuide guide={step.lume} />
+      {(step.type === 'single-choice' || step.type === 'classification') && <div className="lesson-reading">
+        {step.paragraphs?.map((text, index) => <p key={index}>{text}</p>)}
+        {step.type === 'classification' && step.note && <p>{step.note}</p>}
+      </div>}
       {lesson.steps.map(item => <div key={item.id} hidden={item.id !== stepId}>
         {item.type === 'observation' && <ObservationStep step={item} active={item.id === stepId} onNext={() => move(1)} />}
         {item.type === 'single-choice' && <SingleChoiceStep step={item} lessonId={lesson.id}
-          active={item.id === stepId} version={lesson.contentVersion} onNext={() => move(1)} />}
+          active={item.id === stepId} version={lesson.contentVersion} onNext={() => move(1)} continueLabel={item.id === stepId ? continueLabel : undefined} />}
         {item.type === 'classification' && <ClassificationStep step={item} lessonId={lesson.id}
           active={item.id === stepId} version={lesson.contentVersion} onNext={() => move(1)} />}
+        {item.type === 'study' && <StudyStep step={item} active={item.id === stepId} onNext={() => move(1)} continueLabel={item.id === stepId ? continueLabel : undefined} />}
       </div>)}
       <div key={step.id} className="lesson-reading">
         {step.type === 'explanation' && <>

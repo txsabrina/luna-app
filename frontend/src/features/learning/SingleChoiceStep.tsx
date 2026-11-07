@@ -6,8 +6,8 @@ import type { Evaluation, SingleChoice } from './contracts';
 type State = { kind: 'idle' } | { kind: 'loading' } | { kind: 'error'; message: string }
   | { kind: 'success'; result: Evaluation };
 
-export function SingleChoiceStep({ lessonId, version, step, onNext, active = true }: {
-  lessonId: string; version: number; step: SingleChoice; onNext: () => void; active?: boolean;
+export function SingleChoiceStep({ lessonId, version, step, onNext, active = true, continueLabel = 'Continuar' }: {
+  lessonId: string; version: number; step: SingleChoice; onNext: () => void; active?: boolean; continueLabel?: string;
 }) {
   const [selected, setSelected] = useState('');
   const [state, setState] = useState<State>({ kind: 'idle' });
@@ -65,7 +65,7 @@ export function SingleChoiceStep({ lessonId, version, step, onNext, active = tru
       <button type="button" onClick={() => {
               setState({ kind: 'idle' }); firstOption.current?.focus();
             }}>Tentar novamente</button>
-      <button type="button" onClick={onNext}>Continuar</button>
+      <button type="button" onClick={onNext}>{continueLabel}</button>
     </div>}
   </>;
 }

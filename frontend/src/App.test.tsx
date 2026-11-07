@@ -20,7 +20,7 @@ describe('Home como entrada de aprendizagem', () => {
     const action = await screen.findByRole('link', { name: 'Conhecer O Louco' });
     expect(action.getAttribute('href')).toBe('/lessons/fool-first-step');
     expect(action.getAttribute('aria-describedby')).toBe('fool-preview-description');
-    expect(screen.getByText('Prévia disponível · 10 etapas')).toBeTruthy();
+    expect(screen.getByText('Aula disponível · 20 etapas')).toBeTruthy();
     expect(screen.getAllByText('Em planejamento')).toHaveLength(3);
     expect(screen.queryByText('Disponível', { exact: true })).toBeNull();
     const cards = screen.getAllByRole('article');

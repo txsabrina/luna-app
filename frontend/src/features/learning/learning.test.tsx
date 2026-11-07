@@ -22,7 +22,8 @@ const quiz: SingleChoice = {
   ],
 };
 const lesson: Lesson = {
-  id: 'fool-first-step', contentVersion: 3, title: 'O Louco — o primeiro passo', status: 'PREVIEW',
+  id: 'fool-first-step', contentVersion: 4, title: 'O Louco — o primeiro passo', status: 'AVAILABLE',
+  paths: lessonDocument.lesson.paths,
   objectives: ['Observar antes de interpretar.'],
   steps: [
     { id: '01-opening', type: 'explanation', title: 'Abertura', lume: { mood: 'welcoming', message: 'Vamos observar.' }, paragraphs: ['Começar sem ter o mapa inteiro.'], cta: 'Vamos investigar' },
@@ -65,7 +66,7 @@ describe('Shell de estudo aprovado', () => {
     const editorial = container.querySelector<HTMLDetailsElement>('.lesson-editorial')!;
     expect(objectives.open).toBe(false);
     expect(editorial.open).toBe(false);
-    await userEvent.click(screen.getByText('Objetivos desta prévia'));
+    await userEvent.click(screen.getByText('Objetivos da aula'));
     for (const objective of lesson.objectives) expect(screen.getByText(objective)).toBeTruthy();
     await userEvent.click(screen.getByText('Sobre a carta e esta aula'));
     expect(editorial.open).toBe(true);
@@ -153,7 +154,7 @@ describe('Escolha contextual', () => {
     const fetch = vi.fn().mockResolvedValue(response(result));
     const next = vi.fn();
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={next} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={4} step={quiz} onNext={next} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     expect(fetch).not.toHaveBeenCalled();
             expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
@@ -161,7 +162,7 @@ describe('Escolha contextual', () => {
     expect(await screen.findByText(result.selectedOptionFeedback)).toBeTruthy();
     expect(screen.getByText('Resposta esperada:')).toBeTruthy();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 3, selectedOptionId: 'reference-first' });
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ contentVersion: 4, selectedOptionId: 'reference-first' });
     await userEvent.click(screen.getByRole('button', { name: 'Tentar novamente' }));
     expect(screen.getByRole('radio', { name: 'Reunir referências.' })).toHaveProperty('disabled', false);
     expect(screen.queryByText(result.selectedOptionFeedback)).toBeNull();
@@ -171,7 +172,7 @@ describe('Escolha contextual', () => {
   it('preserva seleção quando a avaliação falha', async () => {
     const fetch = vi.fn().mockRejectedValueOnce(new Error('Falha de rede')).mockResolvedValueOnce(response({ ...result, correct: true }));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={4} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Experimentar um desenho simples.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(await screen.findByText(/Sua seleção foi preservada/)).toBeTruthy();
@@ -184,7 +185,7 @@ describe('Escolha contextual', () => {
   it('não permite confirmações duplicadas durante a requisição', async () => {
     const fetch = vi.fn(() => new Promise<Response>(() => {}));
     vi.stubGlobal('fetch', fetch);
-    render(<SingleChoiceStep lessonId={lesson.id} version={3} step={quiz} onNext={() => {}} />);
+    render(<SingleChoiceStep lessonId={lesson.id} version={4} step={quiz} onNext={() => {}} />);
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     expect(screen.getByRole('button', { name: 'Avaliando…' })).toHaveProperty('disabled', true);
@@ -201,7 +202,7 @@ describe('Escolha contextual', () => {
 });
 
 describe('Caminho da prévia', () => {
-  it('observação sem avaliação, anterior/próxima e conclusão apenas da prévia', async () => {
+  it('preserva o fluxo antigo, pausa entre caminhos e não conclui etapas saltadas', async () => {
         const fetch = vi.fn().mockImplementation(async (url: string) => response(url.endsWith('/classify')
       ? { correct: false, items: lessonDocument.lesson.steps[8].items!.map(item => ({ itemId: item.id,
         selectedCategoryId: 'observation', expectedCategoryId: 'interpretation', correct: false, feedback: 'Compare a relação de sentido.' })) }
@@ -222,7 +223,7 @@ describe('Caminho da prévia', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Experimentar uma situação' }));
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
-    await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar para Investigar' }));
     for (let i = 0; i < 4; i++) await userEvent.click(screen.getByRole('button', { name: 'Continuar investigando' }));
     expect(screen.getByRole('button', { name: 'Conferir' })).toHaveProperty('disabled', true);
     for (const radio of screen.getAllByRole('radio', { name: 'Observação' })) await userEvent.click(radio);
@@ -230,16 +231,20 @@ describe('Caminho da prévia', () => {
     await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
     await userEvent.click(screen.getByRole('radio', { name: 'Rosa + trouxa.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
-    await userEvent.click(await screen.findByRole('button', { name: 'Continuar' }));
-    expect(screen.getByText('Você percorreu Conhecer e Investigar. Os próximos caminhos estão em produção.')).toBeTruthy();
-    expect(screen.getByText(/A aula completa ainda não foi concluída/)).toBeTruthy();
+    await userEvent.click(await screen.findByRole('button', { name: 'Continuar para Interpretar' }));
+    expect(screen.getByRole('heading', { name: 'O zero e o começo aberto' })).toBeTruthy();
+    await userEvent.click(screen.getByRole('button', { name: 'Abrir mapa das etapas' }));
+    await userEvent.click(document.querySelectorAll<HTMLButtonElement>('.lesson-step-button')[19]);
+    await userEvent.click(screen.getByRole('button', { name: 'Encerrar a aula' }));
+    expect(screen.getByText('Você chegou ao encerramento. Ainda há etapas que você pode explorar pelo mapa.')).toBeTruthy();
+    expect(screen.getByText(/Retomada e progresso salvo ainda não estão disponíveis/)).toBeTruthy();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(3));
     expect(screen.getByRole('link', { name: 'Voltar ao módulo' }).getAttribute('href'))
       .toBe('/modules/major-arcana');
-    await userEvent.click(screen.getByRole('button', { name: 'Revisitar a prévia' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Revisitar a aula' }));
     expect(screen.getByRole('heading', { name: 'Abertura' })).toBeTruthy();
     expect(screen.getByRole('heading', { name: 'Abertura' })).toBe(document.activeElement);
-    expect(screen.queryByRole('heading', { name: 'Prévia concluída' })).toBeNull();
+    expect(screen.queryByRole('heading', { name: 'Encerramento da aula' })).toBeNull();
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
     expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
     expect(screen.getByRole('button', { name: 'Prefiro continuar observando' })).toHaveProperty('disabled', false);
@@ -250,7 +255,7 @@ describe('Caminho da prévia', () => {
     const fetch = vi.fn();
     vi.stubGlobal('fetch', fetch);
     render(<LessonPlayer lesson={lesson} />);
-    expect(screen.getByText('Prévia · 10 etapas')).toBeTruthy();
+    expect(screen.getByText('Aula disponível · 20 etapas')).toBeTruthy();
     expect(screen.queryByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeNull();
     await userEvent.click(screen.getByRole('button', { name: 'Abrir mapa das etapas' }));
     expect(screen.getByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeTruthy();

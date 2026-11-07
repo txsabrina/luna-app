@@ -32,7 +32,7 @@ export function PreviewPage({ path }: { path: PreviewPath }) {
             <p className="lp-status">{trail.status}</p>
             {trail.coursesHref && <a className="lp-action lp-catalog-action" href={trail.coursesHref}>Explorar os cursos</a>}
             {trail.previewAvailable && <>
-              <p className="lp-availability">Prévia de O Louco disponível</p>
+              <p className="lp-availability">Aula de O Louco disponível</p>
               <RemotePreviewLink />
             </>}
           </article>)}

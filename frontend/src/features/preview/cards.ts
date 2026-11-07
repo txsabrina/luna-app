@@ -13,7 +13,7 @@ export type CatalogCard = {
   masterFilename: string;
   image: CardImageMetadata;
   deckId: 'luna-authorial-waite-smith-inspired';
-} & ({ lessonAvailability: 'preview'; lessonHref: string } | { lessonAvailability: 'planned'; lessonHref?: never });
+} & ({ lessonAvailability: 'available'; lessonHref: string } | { lessonAvailability: 'planned'; lessonHref?: never });
 
 type CardEntry = readonly [id: string, pt: string, en: string, group: CardGroupId, numberOrRank: string, filename: string];
 
@@ -107,7 +107,7 @@ export const catalogCards: readonly CatalogCard[] = entries.map(([id, displayNam
     masterFilename: filename,
     image,
     deckId: 'luna-authorial-waite-smith-inspired',
-    ...(id === 'major-00-fool' ? { lessonAvailability: 'preview', lessonHref: remotePreview.href } :
+    ...(id === 'major-00-fool' ? { lessonAvailability: 'available', lessonHref: remotePreview.href } :
       { lessonAvailability: 'planned' }),
   };
 });

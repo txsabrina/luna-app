@@ -18,7 +18,7 @@ it('exige tentativa completa, preserva seleção em falha, permite retry e avan�
   const fetch = vi.fn().mockRejectedValueOnce(new Error('Sem conexão')).mockResolvedValueOnce(response(result));
   const next = vi.fn();
   vi.stubGlobal('fetch', fetch);
-  render(<ClassificationStep step={step} lessonId="fool-first-step" version={3} onNext={next} />);
+  render(<ClassificationStep step={step} lessonId="fool-first-step" version={4} onNext={next} />);
   expect(screen.getByRole('button', { name: 'Conferir' })).toHaveProperty('disabled', true);
   await selectAll();
   expect(fetch).not.toHaveBeenCalled();
@@ -29,7 +29,7 @@ it('exige tentativa completa, preserva seleção em falha, permite retry e avan�
   await userEvent.click(screen.getByRole('button', { name: 'Tentar avaliação novamente' }));
   expect(await screen.findByRole('heading', { name: 'Vamos comparar as classificações' })).toBeTruthy();
   expect(screen.getAllByText(/Categoria esperada:/)).toHaveLength(4);
-  expect(JSON.parse(fetch.mock.calls[1][1].body)).toEqual({ contentVersion: 3,
+  expect(JSON.parse(fetch.mock.calls[1][1].body)).toEqual({ contentVersion: 4,
     assignments: step.items.map(item => ({ itemId: item.id, categoryId: 'observation' })) });
   await userEvent.click(screen.getByRole('button', { name: 'Continuar' }));
   expect(next).toHaveBeenCalledTimes(1);
@@ -41,12 +41,12 @@ it('bloqueia envio duplicado e ignora resposta depois de sair da etapa', async (
   let resolve!: (value: Response) => void;
   const fetch = vi.fn(() => new Promise<Response>(done => { resolve = done; }));
   vi.stubGlobal('fetch', fetch);
-  const view = render(<ClassificationStep step={step} lessonId="fool-first-step" version={3} onNext={() => {}} />);
+  const view = render(<ClassificationStep step={step} lessonId="fool-first-step" version={4} onNext={() => {}} />);
   await selectAll();
   await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
   await userEvent.click(screen.getByRole('button', { name: 'Avaliando…' }));
   expect(fetch).toHaveBeenCalledTimes(1);
-  view.rerender(<ClassificationStep active={false} step={step} lessonId="fool-first-step" version={3} onNext={() => {}} />);
+  view.rerender(<ClassificationStep active={false} step={step} lessonId="fool-first-step" version={4} onNext={() => {}} />);
   expect((fetch.mock.calls[0] as unknown as [string, RequestInit])[1].signal?.aborted).toBe(true);
   resolve(response(result));
   expect(await screen.findByRole('button', { name: 'Conferir' })).toBeTruthy();

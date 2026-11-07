@@ -1,105 +1,663 @@
 {
   "lesson": {
-    "id": "fool-first-step", "contentVersion": 3,
-    "title": "O Louco — o primeiro passo", "status": "PREVIEW",
-    "objectives": ["Explorar abertura, começo e espontaneidade como núcleo introdutório.", "Observar a imagem antes de construir interpretações.", "Aplicar o núcleo a uma situação, sem tratar a carta como ordem."],
+    "id": "fool-first-step",
+    "contentVersion": 4,
+    "title": "O Louco — o primeiro passo",
+    "status": "AVAILABLE",
+    "objectives": [
+      "Explorar abertura, começo e espontaneidade como núcleo introdutório.",
+      "Observar a imagem antes de construir interpretações.",
+      "Aplicar o núcleo a uma situação, sem tratar a carta como ordem.",
+      "Relacionar símbolos a interpretações contextualizadas.",
+      "Explorar abertura, espontaneidade e risco com nuance.",
+      "Adaptar uma leitura à pergunta.",
+      "Construir uma interpretação breve apoiada na carta.",
+      "Reconhecer limites de uma leitura."
+    ],
     "steps": [
       {
-        "id": "01-opening", "type": "explanation", "title": "Começar sem ter o mapa inteiro.",
-        "lume": {"mood": "welcoming", "message": "Você precisa conhecer o caminho inteiro para dar o primeiro passo? O Louco mora nessa pergunta. Mas calma: ele não veio mandar você se jogar de um penhasco."},
-        "paragraphs": ["Vamos observar a imagem, experimentar interpretações e descobrir o que sustenta cada leitura."],
+        "id": "01-opening",
+        "type": "explanation",
+        "title": "Começar sem ter o mapa inteiro.",
+        "lume": {
+          "mood": "welcoming",
+          "message": "Você precisa conhecer o caminho inteiro para dar o primeiro passo? O Louco mora nessa pergunta. Mas calma: ele não veio mandar você se jogar de um penhasco."
+        },
+        "paragraphs": [
+          "Vamos observar a imagem, experimentar interpretações e descobrir o que sustenta cada leitura."
+        ],
         "cta": "Vamos investigar"
       },
       {
-        "id": "02-observation", "type": "observation", "title": "O que chamou sua atenção?",
-        "lume": {"mood": "curious", "message": "Observe sem precisar acertar. Sua escolha é um ponto de partida, não uma avaliação."},
+        "id": "02-observation",
+        "type": "observation",
+        "title": "O que chamou sua atenção?",
+        "lume": {
+          "mood": "curious",
+          "message": "Observe sem precisar acertar. Sua escolha é um ponto de partida, não uma avaliação."
+        },
         "cardId": "major-00-fool",
         "imageAlt": "O Louco, baralho autoral do Luna inspirado no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
         "options": [
-          {"id": "dog", "label": "Cachorro", "feedback": "Ele acompanha a figura perto dos pés. Guarde essa pista."},
-          {"id": "cliff", "label": "Penhasco", "feedback": "Existe uma borda no caminho. Vamos observar essa tensão."},
-          {"id": "flower", "label": "Flor", "feedback": "A figura carrega uma flor branca. Voltaremos a esse detalhe."},
-          {"id": "baggage", "label": "Bagagem", "feedback": "A trouxa é pequena. O que a figura parece levar consigo?"},
-          {"id": "other", "label": "Outro detalhe", "feedback": "Sua observação também importa. Continue olhando a imagem."}
+          {
+            "id": "dog",
+            "label": "Cachorro",
+            "feedback": "Ele acompanha a figura perto dos pés. Guarde essa pista."
+          },
+          {
+            "id": "cliff",
+            "label": "Penhasco",
+            "feedback": "Existe uma borda no caminho. Vamos observar essa tensão."
+          },
+          {
+            "id": "flower",
+            "label": "Flor",
+            "feedback": "A figura carrega uma flor branca. Voltaremos a esse detalhe."
+          },
+          {
+            "id": "baggage",
+            "label": "Bagagem",
+            "feedback": "A trouxa é pequena. O que a figura parece levar consigo?"
+          },
+          {
+            "id": "other",
+            "label": "Outro detalhe",
+            "feedback": "Sua observação também importa. Continue olhando a imagem."
+          }
         ]
       },
       {
-        "id": "03-core", "type": "explanation", "title": "Três palavras, muitas possibilidades.",
-        "lume": {"mood": "explaining", "message": "Nosso ponto de partida é abertura, começo e espontaneidade."},
-        "paragraphs": ["Pense em experimentar algo sem exigir que o resultado esteja pronto antes da primeira tentativa.", "Isso não significa abandonar todo planejamento. A carta permite explorar disponibilidade para começar e atenção ao terreno."],
+        "id": "03-core",
+        "type": "explanation",
+        "title": "Três palavras, muitas possibilidades.",
+        "lume": {
+          "mood": "explaining",
+          "message": "Nosso ponto de partida é abertura, começo e espontaneidade."
+        },
+        "paragraphs": [
+          "Pense em experimentar algo sem exigir que o resultado esteja pronto antes da primeira tentativa.",
+          "Isso não significa abandonar todo planejamento. A carta permite explorar disponibilidade para começar e atenção ao terreno."
+        ],
         "cta": "Experimentar uma situação"
       },
       {
-        "id": "04-context", "type": "single-choice", "title": "Aplicação contextual",
-        "lume": {"mood": "curious", "message": "Compare as possibilidades dentro deste cenário. A carta não determina o que alguém deve fazer."},
+        "id": "04-context",
+        "type": "single-choice",
+        "title": "Aplicação contextual",
+        "lume": {
+          "mood": "curious",
+          "message": "Compare as possibilidades dentro deste cenário. A carta não determina o que alguém deve fazer."
+        },
         "question": "Uma pessoa quer aprender desenho, mas espera ter habilidade antes de experimentar. Qual reflexão se conecta melhor ao núcleo estudado?",
         "options": [
-          {"id": "reference-first", "label": "Reunir mais referências antes de qualquer tentativa."},
-          {"id": "small-experiment", "label": "Experimentar um desenho simples e observar o que aprende."},
-          {"id": "strict-routine", "label": "Definir uma rotina rigorosa antes de permitir improvisação."},
-          {"id": "complete-confidence", "label": "Esperar sentir confiança completa para começar."}
+          {
+            "id": "reference-first",
+            "label": "Reunir mais referências antes de qualquer tentativa."
+          },
+          {
+            "id": "small-experiment",
+            "label": "Experimentar um desenho simples e observar o que aprende."
+          },
+          {
+            "id": "strict-routine",
+            "label": "Definir uma rotina rigorosa antes de permitir improvisação."
+          },
+          {
+            "id": "complete-confidence",
+            "label": "Esperar sentir confiança completa para começar."
+          }
         ]
-            },
+      },
       {
-        "id": "05-edge", "type": "exploration", "title": "Na borda do conhecido",
-        "lume": {"mood": "curious", "message": "O penhasco não é um aviso automático de desastre. Ele cria uma tensão: existe movimento, mas também uma borda."},
-        "cardId": "major-00-fool", "imageAlt": "O Louco autoral: figura próxima de uma borda, com rosa, trouxa e cachorro junto à perna.",
-        "paragraphs": ["Uma borda desenhada não confirma um desastre futuro."],
-        "symbols": [{"id": "edge", "label": "Penhasco", "observation": "A figura está próxima de uma borda.", "interpretation": "Podemos explorar um limiar entre o conhecido e o desconhecido."}],
+        "id": "05-edge",
+        "type": "exploration",
+        "title": "Na borda do conhecido",
+        "lume": {
+          "mood": "curious",
+          "message": "O penhasco não é um aviso automático de desastre. Ele cria uma tensão: existe movimento, mas também uma borda."
+        },
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco autoral: figura próxima de uma borda, com rosa, trouxa e cachorro junto à perna.",
+        "paragraphs": [
+          "Uma borda desenhada não confirma um desastre futuro."
+        ],
+        "symbols": [
+          {
+            "id": "edge",
+            "label": "Penhasco",
+            "observation": "A figura está próxima de uma borda.",
+            "interpretation": "Podemos explorar um limiar entre o conhecido e o desconhecido."
+          }
+        ],
         "reflection": "Que diferença existe entre perceber um risco e deixar que todo risco impeça um começo?"
       },
       {
-        "id": "06-dog", "type": "exploration", "title": "Companhia, instinto ou alerta?",
-        "lume": {"mood": "curious", "message": "O cachorro acompanha a figura junto à perna. Essas são possibilidades, não um significado obrigatório."},
-        "cardId": "major-00-fool", "imageAlt": "O Louco autoral com cachorro branco e marrom junto à perna.",
-        "paragraphs": ["Explore as associações em qualquer ordem. Não é preciso abrir todas para continuar."],
+        "id": "06-dog",
+        "type": "exploration",
+        "title": "Companhia, instinto ou alerta?",
+        "lume": {
+          "mood": "curious",
+          "message": "O cachorro acompanha a figura junto à perna. Essas são possibilidades, não um significado obrigatório."
+        },
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco autoral com cachorro branco e marrom junto à perna.",
+        "paragraphs": [
+          "Explore as associações em qualquer ordem. Não é preciso abrir todas para continuar."
+        ],
         "symbols": [
-          {"id": "company", "label": "Companhia", "observation": "O cachorro acompanha a figura.", "interpretation": "A proximidade pode sugerir apoio e acompanhamento."},
-          {"id": "instinct", "label": "Instinto", "observation": "Há um animal junto à figura.", "interpretation": "Podemos explorar uma percepção que não depende só de planejamento."},
-          {"id": "alert", "label": "Alerta", "observation": "A figura e o cachorro estão próximos da borda.", "interpretation": "Essa relação permite perguntar sobre atenção ao terreno."}
+          {
+            "id": "company",
+            "label": "Companhia",
+            "observation": "O cachorro acompanha a figura.",
+            "interpretation": "A proximidade pode sugerir apoio e acompanhamento."
+          },
+          {
+            "id": "instinct",
+            "label": "Instinto",
+            "observation": "Há um animal junto à figura.",
+            "interpretation": "Podemos explorar uma percepção que não depende só de planejamento."
+          },
+          {
+            "id": "alert",
+            "label": "Alerta",
+            "observation": "A figura e o cachorro estão próximos da borda.",
+            "interpretation": "Essa relação permite perguntar sobre atenção ao terreno."
+          }
         ]
       },
       {
-        "id": "07-resources", "type": "exploration", "title": "O que acompanha a jornada?",
-        "lume": {"mood": "explaining", "message": "Começar não significa necessariamente não saber nada."},
-        "cardId": "major-00-fool", "imageAlt": "O Louco autoral carrega rosa branca e pequena trouxa num bastão.",
-        "paragraphs": ["Algo acompanha o começo. As associações abaixo são possibilidades desta aula, não atribuições históricas verificadas."],
+        "id": "07-resources",
+        "type": "exploration",
+        "title": "O que acompanha a jornada?",
+        "lume": {
+          "mood": "explaining",
+          "message": "Começar não significa necessariamente não saber nada."
+        },
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco autoral carrega rosa branca e pequena trouxa num bastão.",
+        "paragraphs": [
+          "Algo acompanha o começo. As associações abaixo são possibilidades desta aula, não atribuições históricas verificadas."
+        ],
         "symbols": [
-          {"id": "rose", "label": "Rosa branca", "observation": "Uma flor branca está visível na mão da figura.", "interpretation": "A inocência é uma possibilidade interpretativa desta aula. A fonte específica da associação permanece pendente."},
-          {"id": "bundle", "label": "Trouxa", "observation": "A bagagem é pequena e acompanha a figura num bastão.", "interpretation": "Podemos explorar recursos, experiências e leveza. O tamanho não prova ausência de preparo."}
+          {
+            "id": "rose",
+            "label": "Rosa branca",
+            "observation": "Uma flor branca está visível na mão da figura.",
+            "interpretation": "A inocência é uma possibilidade interpretativa desta aula. A fonte específica da associação permanece pendente."
+          },
+          {
+            "id": "bundle",
+            "label": "Trouxa",
+            "observation": "A bagagem é pequena e acompanha a figura num bastão.",
+            "interpretation": "Podemos explorar recursos, experiências e leveza. O tamanho não prova ausência de preparo."
+          }
         ]
       },
       {
-        "id": "08-landscape", "type": "exploration", "title": "Olhar, sol e montanhas",
-        "lume": {"mood": "explaining", "message": "Nenhum detalhe decide a leitura sozinho. A conexão entre as pistas é que sustenta a interpretação."},
-        "cardId": "major-00-fool", "imageAlt": "O Louco autoral olha para cima; há sol à esquerda, céu azul e montanhas.",
-        "paragraphs": ["Separe o que está desenhado das relações que você propõe."],
+        "id": "08-landscape",
+        "type": "exploration",
+        "title": "Olhar, sol e montanhas",
+        "lume": {
+          "mood": "explaining",
+          "message": "Nenhum detalhe decide a leitura sozinho. A conexão entre as pistas é que sustenta a interpretação."
+        },
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco autoral olha para cima; há sol à esquerda, céu azul e montanhas.",
+        "paragraphs": [
+          "Separe o que está desenhado das relações que você propõe."
+        ],
         "symbols": [
-          {"id": "gaze", "label": "Olhar para cima", "observation": "O rosto se volta para cima.", "interpretation": "Pode sugerir abertura ou atenção distante do terreno."},
-          {"id": "sun", "label": "Sol", "observation": "Há um sol à esquerda da cena.", "interpretation": "Luz e vitalidade são leituras possíveis, sem garantia de resultado."},
-          {"id": "mountains", "label": "Montanhas", "observation": "Há montanhas ao fundo.", "interpretation": "Podem ajudar a explorar distância e desafios, sem prever dificuldades reais."}
+          {
+            "id": "gaze",
+            "label": "Olhar para cima",
+            "observation": "O rosto se volta para cima.",
+            "interpretation": "Pode sugerir abertura ou atenção distante do terreno."
+          },
+          {
+            "id": "sun",
+            "label": "Sol",
+            "observation": "Há um sol à esquerda da cena.",
+            "interpretation": "Luz e vitalidade são leituras possíveis, sem garantia de resultado."
+          },
+          {
+            "id": "mountains",
+            "label": "Montanhas",
+            "observation": "Há montanhas ao fundo.",
+            "interpretation": "Podem ajudar a explorar distância e desafios, sem prever dificuldades reais."
+          }
         ]
       },
       {
-        "id": "09-observe-interpret", "type": "classification", "title": "Vejo ou interpreto?",
-        "lume": {"mood": "curious", "message": "Observar descreve. Interpretar propõe uma relação de sentido."},
+        "id": "09-observe-interpret",
+        "type": "classification",
+        "title": "Vejo ou interpreto?",
+        "lume": {
+          "mood": "curious",
+          "message": "Observar descreve. Interpretar propõe uma relação de sentido."
+        },
         "instruction": "Classifique cada frase antes de conferir. Interpretar não é errar: é outro nível de afirmação.",
-        "categories": [{"id": "observation", "label": "Observação"}, {"id": "interpretation", "label": "Interpretação"}],
+        "categories": [
+          {
+            "id": "observation",
+            "label": "Observação"
+          },
+          {
+            "id": "interpretation",
+            "label": "Interpretação"
+          }
+        ],
         "items": [
-          {"id": "rose-visible", "label": "A figura carrega uma rosa branca."},
-          {"id": "rose-meaning", "label": "A rosa pode evocar inocência."},
-          {"id": "dog-contact", "label": "O cachorro toca a perna da figura."},
-          {"id": "dog-attention", "label": "O cachorro pode sugerir alerta."}
+          {
+            "id": "rose-visible",
+            "label": "A figura carrega uma rosa branca."
+          },
+          {
+            "id": "rose-meaning",
+            "label": "A rosa pode evocar inocência."
+          },
+          {
+            "id": "dog-contact",
+            "label": "O cachorro toca a perna da figura."
+          },
+          {
+            "id": "dog-attention",
+            "label": "O cachorro pode sugerir alerta."
+          }
         ]
       },
       {
-        "id": "10-connection", "type": "single-choice", "title": "Reconstrua uma conexão",
-        "lume": {"mood": "curious", "message": "Os outros pares não são inúteis. Eles sustentam outra ênfase."},
+        "id": "10-connection",
+        "type": "single-choice",
+        "title": "Reconstrua uma conexão",
+        "lume": {
+          "mood": "curious",
+          "message": "Os outros pares não são inúteis. Eles sustentam outra ênfase."
+        },
         "question": "Qual par melhor sustenta, neste exercício, a leitura de experimentar percebendo os riscos?",
         "options": [
-          {"id": "motion-edge", "label": "Movimento da figura + penhasco."},
-          {"id": "rose-bundle", "label": "Rosa + trouxa."},
-          {"id": "sun-mountains", "label": "Sol + montanhas."}
+          {
+            "id": "motion-edge",
+            "label": "Movimento da figura + penhasco."
+          },
+          {
+            "id": "rose-bundle",
+            "label": "Rosa + trouxa."
+          },
+          {
+            "id": "sun-mountains",
+            "label": "Sol + montanhas."
+          }
+        ]
+      },
+      {
+        "id": "11-zero",
+        "type": "single-choice",
+        "title": "O zero e o começo aberto",
+        "lume": {
+          "mood": "explaining",
+          "message": "Um começo não precisa vir com tudo resolvido. Mas o zero também não significa que nada existe."
+        },
+        "paragraphs": [
+          "Na tradição Waite–Smith, O Louco é identificado pelo número 0.",
+          "Podemos usar esse número como uma porta de entrada para pensar possibilidade, disponibilidade e um lugar ainda não definido.",
+          "Isso não significa que o zero tenha uma interpretação única em todas as tradições do tarô.",
+          "Aqui, ele nos ajuda a reconhecer uma experiência: entrar em algo sem conhecer todas as regras ou resultados.",
+          "Começar não é o mesmo que estar vazio. A figura leva uma trouxa: algo da experiência já a acompanha."
+        ],
+        "question": "Qual leitura aproveita melhor essa tensão entre começo e bagagem?",
+        "options": [
+          {
+            "id": "erase-experience",
+            "label": "Para começar de verdade, é preciso esquecer tudo o que já se viveu."
+          },
+          {
+            "id": "new-with-experience",
+            "label": "É possível entrar no novo levando experiência, sem exigir um roteiro completo."
+          },
+          {
+            "id": "capacity-claim",
+            "label": "O zero indica que a pessoa não tem capacidade para começar."
+          }
+        ]
+      },
+      {
+        "id": "12-attention",
+        "type": "classification",
+        "title": "Abertura não é imprudência",
+        "lume": {
+          "mood": "explaining",
+          "message": "A borda não apaga o entusiasmo. Ela acrescenta uma pergunta: o que você ainda precisa perceber?"
+        },
+        "paragraphs": [
+          "O Louco reúne movimento e vulnerabilidade.",
+          "Seu olhar parece dirigido para cima, enquanto a borda permanece próxima dos pés. Podemos interpretar essa combinação como entusiasmo acompanhado de atenção incompleta.",
+          "A carta não é uma ordem para abandonar o cuidado. Também não significa que todo começo terminará mal.",
+          "A leitura ganha profundidade quando sustenta as duas coisas: há uma possibilidade de avançar e há condições a observar."
+        ],
+        "instruction": "Compare as atitudes e escolha a categoria mais adequada.",
+        "items": [
+          {
+            "id": "small-trial",
+            "label": "Fazer uma pequena experiência e observar o resultado antes de ampliar o próximo passo."
+          },
+          {
+            "id": "ignore-limit",
+            "label": "Ignorar uma limitação conhecida porque o entusiasmo parece suficiente para resolver tudo."
+          },
+          {
+            "id": "wait-certainty",
+            "label": "Adiar toda tentativa até que não reste nenhuma incerteza."
+          }
+        ],
+        "categories": [
+          {
+            "id": "attentive-opening",
+            "label": "Abertura com atenção."
+          },
+          {
+            "id": "unconsidered-impulse",
+            "label": "Impulso sem consideração suficiente."
+          },
+          {
+            "id": "blocking-wait",
+            "label": "Espera que impede qualquer experiência."
+          }
+        ],
+        "note": "As categorias avaliam os cenários apresentados, não a personalidade de quem responde."
+      },
+      {
+        "id": "13-question-context",
+        "type": "study",
+        "title": "A pergunta muda a leitura",
+        "lume": {
+          "mood": "explaining",
+          "message": "Não vamos trocar o significado da carta a cada pergunta. Vamos escolher qual parte dela conversa com o contexto."
+        },
+        "paragraphs": [
+          "Uma interpretação não nasce apenas do nome da carta.",
+          "Ela relaciona:\n- A pergunta.\n- As pistas da imagem.\n- As associações simbólicas pertinentes.",
+          "O núcleo de O Louco permanece reconhecível. O destaque pode mudar."
+        ],
+        "blocks": [
+          {
+            "label": "Como posso começar um projeto criativo?",
+            "paragraphs": [
+              "Experimentação, curiosidade e disposição para aprender fazendo podem ser o foco dessa leitura."
+            ],
+            "collapsible": true
+          },
+          {
+            "label": "O que preciso observar antes de dar um próximo passo?",
+            "paragraphs": [
+              "A relação entre entusiasmo, borda e atenção ao caminho pode ganhar destaque."
+            ],
+            "collapsible": true
+          },
+          {
+            "label": "Como me aproximar de um ambiente novo?",
+            "paragraphs": [
+              "Disponibilidade para conhecer sem exigir domínio imediato, levando os recursos que já se possui."
+            ],
+            "collapsible": true
+          }
+        ],
+        "cardMode": "none",
+        "cta": "Continuar",
+        "reflection": "Qual dessas perguntas faz você olhar para um detalhe diferente da mesma imagem?"
+      },
+      {
+        "id": "14-limits",
+        "type": "single-choice",
+        "title": "Quando a interpretação vai longe demais",
+        "lume": {
+          "mood": "explaining",
+          "message": "Uma boa leitura não precisa transformar uma possibilidade em uma certeza."
+        },
+        "paragraphs": [
+          "Uma pessoa pergunta: ‘O que posso observar ao começar um curso novo?’"
+        ],
+        "question": "Qual resposta é mais cuidadosa e apoiada em O Louco?",
+        "options": [
+          {
+            "id": "assumed-insufficiency",
+            "label": "Você provavelmente começará sem experiência suficiente; por isso, a melhor decisão é esperar."
+          },
+          {
+            "id": "contextual-reading",
+            "label": "A carta pode convidar a experimentar sem exigir domínio antecipado, observando também os recursos e limites do começo."
+          },
+          {
+            "id": "guaranteed-result",
+            "label": "O curso terá um resultado positivo, porque O Louco confirma que você está no caminho certo."
+          }
+        ]
+      },
+      {
+        "id": "15-three-supports",
+        "type": "study",
+        "title": "Construa uma leitura com três apoios",
+        "lume": {
+          "mood": "explaining",
+          "message": "Vamos sair das palavras soltas. Uma interpretação fica mais clara quando mostra de onde veio."
+        },
+        "paragraphs": [
+          "1. O que observo.\n2. O que isso pode sugerir.\n3. Como isso conversa com a pergunta.",
+          "Como começar a aprender algo que ainda não domino?",
+          "Observação: A figura avança levando uma trouxa, perto de uma borda.",
+          "Associação: Posso pensar em disponibilidade para entrar no novo, levando recursos, mas sem conhecer todo o terreno.",
+          "Conexão: Uma leitura possível é começar por uma experiência pequena, usando o que já sei e observando o que ainda preciso aprender.",
+          "Escolha outro detalhe: rosa, cachorro, olhar ou montanhas.",
+          "Complete mentalmente ou em uma anotação sua: ‘Eu observo…’ ‘Isso pode sugerir…’ ‘Nesta pergunta, essa associação me ajuda a pensar em…’"
+        ],
+        "blocks": [
+          {
+            "label": "Ver um exemplo",
+            "paragraphs": [
+              "O cachorro acompanha a figura perto da borda. Posso associá-lo a companhia ou alerta. Ao começar algo novo, essa imagem pode me lembrar de ouvir apoios e sinais sem abandonar toda iniciativa."
+            ],
+            "collapsible": true
+          }
+        ],
+        "cardMode": "none",
+        "cta": "Continuar"
+      },
+      {
+        "id": "16-recall",
+        "type": "study",
+        "title": "Lembrar antes de consultar",
+        "lume": {
+          "mood": "explaining",
+          "message": "Agora esconda a carta por um instante. Vamos buscar uma pista na memória, não exigir uma lista perfeita."
+        },
+        "paragraphs": [
+          "Sem olhar a imagem, tente lembrar:\n- Dois detalhes visuais.\n- Uma tensão da carta.\n- Uma pergunta que ela pode abrir."
+        ],
+        "blocks": [],
+        "cardMode": "reveal",
+        "cta": "Continuar",
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco, baralho autoral do Luna inspirado no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
+        "afterReveal": [
+          "Qual detalhe você lembrou primeiro?",
+          "O que só reapareceu quando você voltou a olhar?",
+          "Qual pista ajuda você a lembrar de abertura com atenção?",
+          "A recuperação não precisa ser completa. Reconhecer o que faltou também ajuda a orientar a próxima revisão."
+        ]
+      },
+      {
+        "id": "17-two-readings",
+        "type": "single-choice",
+        "title": "A mesma carta, duas possibilidades",
+        "lume": {
+          "mood": "explaining",
+          "message": "Nuance não é dizer qualquer coisa. É sustentar possibilidades que continuam ligadas à imagem."
+        },
+        "paragraphs": [
+          "Estou começando uma atividade e ainda não conheço bem o ambiente.",
+          "Leitura 1: O Louco pode apoiar a disponibilidade para experimentar sem exigir confiança completa antes da primeira tentativa.",
+          "Leitura 2: O Louco pode chamar atenção para o que ainda não foi observado, especialmente quando o entusiasmo ocupa todo o olhar."
+        ],
+        "question": "Essas leituras precisam se excluir?",
+        "options": [
+          {
+            "id": "single-phrase",
+            "label": "Sim. Cada carta só permite uma frase correta."
+          },
+          {
+            "id": "contextual-nuance",
+            "label": "Não. Elas destacam aspectos diferentes da mesma tensão, e o contexto ajuda a escolher o foco."
+          },
+          {
+            "id": "anything-goes",
+            "label": "Não. Qualquer interpretação serve se a pessoa gostar dela."
+          }
+        ]
+      },
+      {
+        "id": "18-orientation",
+        "type": "study",
+        "title": "Uma carta invertida não resolve tudo",
+        "lume": {
+          "mood": "explaining",
+          "message": "Antes de virar a carta, precisamos escolher um método. A orientação não vem com uma regra universal."
+        },
+        "paragraphs": [
+          "Algumas pessoas leem cartas invertidas. Outras não utilizam inversões.",
+          "Quando utilizadas, podem ser lidas por métodos diferentes: bloqueio, excesso, interiorização ou mudança de expressão, entre outras possibilidades.",
+          "Nesta aula, não vamos adotar uma regra fixa de inversão.",
+          "O importante é reconhecer que:\n- ‘Invertida’ não significa automaticamente ‘ruim’.\n- O lado difícil de uma carta pode aparecer mesmo quando ela está na posição normal.\n- O método precisa ser claro e consistente."
+        ],
+        "blocks": [],
+        "cardMode": "rotate",
+        "cta": "Continuar",
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco, baralho autoral do Luna inspirado no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
+        "reflection": "A posição da carta não substitui contexto nem método."
+      },
+      {
+        "id": "19-physical-deck",
+        "type": "study",
+        "title": "Prática com seu baralho",
+        "lume": {
+          "mood": "explaining",
+          "message": "Agora deixe a tela ser uma ponte para o seu baralho. Você não precisa fazer uma previsão para praticar uma leitura."
+        },
+        "paragraphs": [
+          "1. Pegue O Louco no seu baralho Waite–Smith.\n2. Compare com a carta autoral do Luna.\n3. Encontre uma semelhança e uma diferença visual.\n4. Escolha uma pergunta:\n   - “Como posso me aproximar de algo novo?”\n   - “O que merece atenção em um começo?”\n   - “Que recurso já me acompanha?”\n5. Construa duas ou três frases usando:    observação → associação → conexão.",
+          "Se não estiver com o baralho, a carta do aplicativo é suficiente para esta prática."
+        ],
+        "blocks": [],
+        "cardMode": "visible",
+        "cta": "Continuar",
+        "cardId": "major-00-fool",
+        "imageAlt": "O Louco, baralho autoral do Luna inspirado no Waite–Smith: uma figura próxima de uma borda, acompanhada por um cachorro, carrega uma flor branca e uma pequena trouxa. O rosto se volta para cima; há montanhas ao fundo.",
+        "reflection": "Qual parte da sua interpretação veio da imagem e qual veio do contexto da pergunta?"
+      },
+      {
+        "id": "20-summary",
+        "type": "study",
+        "title": "Sua ficha de O Louco",
+        "lume": {
+          "mood": "explaining",
+          "message": "Você não precisa decorar um discurso. Leve algumas pistas que ajudem a reconstruir a leitura."
+        },
+        "paragraphs": [],
+        "blocks": [
+          {
+            "label": "Núcleo",
+            "paragraphs": [
+              "Abertura, começo, espontaneidade e disposição para experimentar."
+            ],
+            "collapsible": false
+          },
+          {
+            "label": "Tensão",
+            "paragraphs": [
+              "Movimento e possibilidade convivem com incerteza, vulnerabilidade e atenção ao caminho."
+            ],
+            "collapsible": false
+          },
+          {
+            "label": "Pistas",
+            "paragraphs": [
+              "- Borda: “Limite, terreno desconhecido ou condição a observar.”",
+              "- Trouxa: “Recursos, experiência ou bagagem.”",
+              "- Rosa: “Possibilidade de delicadeza, intenção ou abertura.”",
+              "- Cachorro: “Companhia, instinto ou alerta, conforme o contexto.”",
+              "- Olhar e paisagem: “Direção da atenção e relação com o percurso.”"
+            ],
+            "collapsible": false
+          },
+          {
+            "label": "Nota",
+            "paragraphs": [
+              "Essas associações são possibilidades contextualizadas, não um significado obrigatório de cada objeto."
+            ],
+            "collapsible": false
+          },
+          {
+            "label": "Perguntas úteis",
+            "paragraphs": [
+              "- “O que está começando?”\n- “O que ainda não foi observado?”\n- “Que recursos acompanham esse passo?”\n- “Como experimentar sem exigir certeza total?”"
+            ],
+            "collapsible": false
+          },
+          {
+            "label": "Evitar",
+            "paragraphs": [
+              "- “O Louco manda agir sem pensar.”\n- “O Louco garante sucesso.”\n- “O Louco prova imaturidade.”\n- “O Louco tem um único significado em qualquer pergunta.”"
+            ],
+            "collapsible": false
+          }
+        ],
+        "cardMode": "none",
+        "cta": "Encerrar a aula",
+        "reflection": "Escolha uma frase para levar:\n- Posso começar sem conhecer tudo.\n- Entusiasmo e atenção podem caminhar juntos.\n- Uma leitura precisa mostrar de onde veio."
+      }
+    ],
+    "paths": [
+      {
+        "id": "know",
+        "title": "Conhecer",
+        "stepIds": [
+          "01-opening",
+          "02-observation",
+          "03-core",
+          "04-context"
+        ]
+      },
+      {
+        "id": "investigate",
+        "title": "Investigar",
+        "stepIds": [
+          "05-edge",
+          "06-dog",
+          "07-resources",
+          "08-landscape",
+          "09-observe-interpret",
+          "10-connection"
+        ]
+      },
+      {
+        "id": "interpret",
+        "title": "Interpretar",
+        "stepIds": [
+          "11-zero",
+          "12-attention",
+          "13-question-context",
+          "14-limits",
+          "15-three-supports"
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "Praticar e consolidar",
+        "stepIds": [
+          "16-recall",
+          "17-two-readings",
+          "18-orientation",
+          "19-physical-deck",
+          "20-summary"
         ]
       }
     ]
@@ -107,15 +665,44 @@
   "assessments": {
     "09-observe-interpret": {
       "items": {
-        "rose-visible": {"expectedCategoryId": "observation", "feedback": {"observation": "Observação: descreve o objeto e sua cor visível.", "interpretation": "A frase descreve a flor visível, sem atribuir significado. É observação."}},
-        "rose-meaning": {"expectedCategoryId": "interpretation", "feedback": {"observation": "Inocência não é um objeto visível: a frase propõe uma relação de sentido. É interpretação.", "interpretation": "Interpretação: propõe um sentido possível para a rosa."}},
-        "dog-contact": {"expectedCategoryId": "observation", "feedback": {"observation": "Observação: o contato com a perna descreve o visível na carta autoral.", "interpretation": "Tocar descreve posição e contato visíveis; não atribui intenção. É observação."}},
-        "dog-attention": {"expectedCategoryId": "interpretation", "feedback": {"observation": "Alerta é uma função simbólica proposta, não algo comprovado pela imagem. É interpretação.", "interpretation": "Interpretação: sugere uma relação de sentido, sem torná-la obrigatória."}}
+        "rose-visible": {
+          "expectedCategoryId": "observation",
+          "feedback": {
+            "observation": "Observação: descreve o objeto e sua cor visível.",
+            "interpretation": "A frase descreve a flor visível, sem atribuir significado. É observação."
+          }
+        },
+        "rose-meaning": {
+          "expectedCategoryId": "interpretation",
+          "feedback": {
+            "observation": "Inocência não é um objeto visível: a frase propõe uma relação de sentido. É interpretação.",
+            "interpretation": "Interpretação: propõe um sentido possível para a rosa."
+          }
+        },
+        "dog-contact": {
+          "expectedCategoryId": "observation",
+          "feedback": {
+            "observation": "Observação: o contato com a perna descreve o visível na carta autoral.",
+            "interpretation": "Tocar descreve posição e contato visíveis; não atribui intenção. É observação."
+          }
+        },
+        "dog-attention": {
+          "expectedCategoryId": "interpretation",
+          "feedback": {
+            "observation": "Alerta é uma função simbólica proposta, não algo comprovado pela imagem. É interpretação.",
+            "interpretation": "Interpretação: sugere uma relação de sentido, sem torná-la obrigatória."
+          }
+        }
       }
     },
     "10-connection": {
-      "expectedOptionId": "motion-edge", "explanation": "Esperada neste exercício, não uma associação exclusiva universal.",
-      "feedback": {"motion-edge": "Conecta avanço e percepção de limite.", "rose-bundle": "Pode destacar intenção e recursos: outra ênfase.", "sun-mountains": "Pode destacar vitalidade e horizonte: outra ênfase."}
+      "expectedOptionId": "motion-edge",
+      "explanation": "Esperada neste exercício, não uma associação exclusiva universal.",
+      "feedback": {
+        "motion-edge": "Conecta avanço e percepção de limite.",
+        "rose-bundle": "Pode destacar intenção e recursos: outra ênfase.",
+        "sun-mountains": "Pode destacar vitalidade e horizonte: outra ênfase."
+      }
     },
     "04-context": {
       "expectedOptionId": "small-experiment",
@@ -125,6 +712,61 @@
         "small-experiment": "A abertura ganha uma forma concreta: experimentar sem exigir domínio antecipado. Isso não significa abandonar todo cuidado.",
         "strict-routine": "Estrutura pode apoiar o aprendizado. Aqui, a alternativa prioriza controle e organização, não a disponibilidade para experimentar.",
         "complete-confidence": "A espera por confiança absoluta pode manter o primeiro passo suspenso. Podemos começar com alguma incerteza."
+      }
+    },
+    "11-zero": {
+      "expectedOptionId": "new-with-experience",
+      "explanation": "Começo aberto não é ausência de recursos.",
+      "feedback": {
+        "erase-experience": "A carta não exige apagar a experiência. A trouxa permite pensar no que acompanha a figura, mesmo em uma jornada nova.",
+        "new-with-experience": "Essa leitura reúne abertura e bagagem. Há espaço para experimentar, sem imaginar que a pessoa começa sem história.",
+        "capacity-claim": "Um número na carta não mede capacidade. Aqui, o zero oferece uma associação simbólica, não uma avaliação da pessoa."
+      }
+    },
+    "12-attention": {
+      "items": {
+        "small-trial": {
+          "expectedCategoryId": "attentive-opening",
+          "feedback": {
+            "attentive-opening": "Existe movimento, mas também observação e ajuste.",
+            "unconsidered-impulse": "Existe movimento, mas também observação e ajuste.",
+            "blocking-wait": "Existe movimento, mas também observação e ajuste."
+          }
+        },
+        "ignore-limit": {
+          "expectedCategoryId": "unconsidered-impulse",
+          "feedback": {
+            "attentive-opening": "O entusiasmo é tratado como substituto da atenção.",
+            "unconsidered-impulse": "O entusiasmo é tratado como substituto da atenção.",
+            "blocking-wait": "O entusiasmo é tratado como substituto da atenção."
+          }
+        },
+        "wait-certainty": {
+          "expectedCategoryId": "blocking-wait",
+          "feedback": {
+            "attentive-opening": "A exigência de certeza total pode eliminar a chance de aprender pela experiência.",
+            "unconsidered-impulse": "A exigência de certeza total pode eliminar a chance de aprender pela experiência.",
+            "blocking-wait": "A exigência de certeza total pode eliminar a chance de aprender pela experiência."
+          }
+        }
+      }
+    },
+    "14-limits": {
+      "expectedOptionId": "contextual-reading",
+      "explanation": "Interpretar pode abrir perguntas. Não precisa encerrar a incerteza com uma previsão.",
+      "feedback": {
+        "assumed-insufficiency": "A leitura presume uma insuficiência que a carta não comprova e transforma a borda em uma proibição automática.",
+        "contextual-reading": "A interpretação oferece uma perspectiva útil sem prever o resultado nem decidir pela pessoa.",
+        "guaranteed-result": "A carta não confirma o resultado do curso. Uma associação favorável não se torna garantia."
+      }
+    },
+    "17-two-readings": {
+      "expectedOptionId": "contextual-nuance",
+      "explanation": "Leituras diferentes precisam continuar ligadas à imagem e à pergunta.",
+      "feedback": {
+        "single-phrase": "Reduzir a carta a uma única frase elimina relações importantes entre seus detalhes.",
+        "contextual-nuance": "As duas leituras mantêm vínculo com a imagem. A pergunta e a situação ajudam a definir o destaque.",
+        "anything-goes": "Flexibilidade não elimina critério. Uma interpretação precisa ser sustentada e pertinente, não apenas agradável."
       }
     }
   }

@@ -115,7 +115,7 @@ export default function App() {
           <span>Modo tranquilo: sem animações<small>{quiet ? 'Ativado nesta sessão' : 'Desativado · respeita a preferência do dispositivo'}</small></span>
         </label>
       </details>
-      <p className="study-session-note">A aula completa, progresso salvo e conquistas ainda não estão disponíveis.</p>
+      <p className="study-session-note">Retomada, progresso salvo e conquistas ainda não estão disponíveis.</p>
     </div></ContentShell>;
   }
 
@@ -220,8 +220,8 @@ export default function App() {
         </label>
 
         <p className="scope-note">
-          Catálogo em planejamento. {remotePreview.description}: Conhecer e Investigar.
-          A aula completa, progresso salvo e conquistas ainda não estão disponíveis.
+          Catálogo em planejamento. {remotePreview.description}: quatro caminhos.
+          Retomada, progresso salvo e conquistas ainda não estão disponíveis.
         </p>
       </main>
     </div>

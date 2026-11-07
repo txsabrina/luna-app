@@ -44,11 +44,11 @@ export function BoardHome() {
           <h1>Uma descoberta de cada vez.</h1>
         </section>
 
-        <section className="bh-activity" aria-label="Prévia de O Louco">
+        <section className="bh-activity" aria-label="Aula de O Louco">
           <a className="bh-activity-link" href={remotePreview.href} aria-labelledby="home-activity-title" aria-describedby="home-api-note">
             <div className="bh-fool"><CatalogCardImage card={fool} decorative sizes="48px" /></div>
             <div><span className="bh-activity-title" id="home-activity-title">Conhecer O Louco</span>
-              <span className="bh-badge">Prévia disponível</span>
+              <span className="bh-badge">Aula disponível</span>
             </div>
           </a>
           <p className="bh-api-note" id="home-api-note">{remotePreview.apiNotice}</p>

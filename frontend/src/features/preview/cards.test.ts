@@ -28,7 +28,7 @@ describe('Manifesto autoral', () => {
     for (const group of ['wands', 'cups', 'swords', 'pentacles']) {
       expect(catalogCards.filter(card => card.groupId === group).map(card => card.displayNumber)).toEqual(ranks);
     }
-    expect(catalogCards.filter(card => card.lessonAvailability === 'preview').map(card => card.id)).toEqual(['major-00-fool']);
+    expect(catalogCards.filter(card => card.lessonAvailability === 'available').map(card => card.id)).toEqual(['major-00-fool']);
   });
   it('busca apenas no grupo, em português e inglês sem caixa ou acentos', () => {
     expect(searchCards('major-arcana', 'FORCA')[0].displayNamePtBR).toBe('A Força');

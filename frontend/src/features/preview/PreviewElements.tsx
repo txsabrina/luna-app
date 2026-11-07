@@ -11,7 +11,7 @@ export function PreviewImage({ src, size, label, className = '' }: {
   </div>;
 }
 
-export function RemotePreviewLink({ label = 'Explorar a prévia' }: { label?: string }) {
+export function RemotePreviewLink({ label = 'Explorar a aula' }: { label?: string }) {
   return <div className="lp-remote">
     <a className="lp-action" href={remotePreview.href}>{label}</a>
     <p className="lp-note">{remotePreview.apiNotice}</p>

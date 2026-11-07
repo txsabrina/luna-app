@@ -31,8 +31,8 @@ export function TarotPages({ modulesPage }: { modulesPage: boolean }) {
         <p className="lp-status">{module.status}</p>
         {module.cardCount && <a className="lp-action lp-catalog-action" href={`${modulesHref}/modulos/${module.id}`}>Explorar cartas</a>}
         {module.previewAvailable && <>
-          <p className="lp-availability">Prévia de O Louco disponível</p>
-          <RemotePreviewLink label="Abrir prévia de O Louco" />
+          <p className="lp-availability">Aula de O Louco disponível</p>
+          <RemotePreviewLink label="Abrir aula de O Louco" />
         </>}
         </div>
       </article>) : tarotCourses.map((item, index) => <article className="lp-trail-card" key={item.id}>
@@ -43,7 +43,7 @@ export function TarotPages({ modulesPage }: { modulesPage: boolean }) {
         <div className="content-card-copy"><h2>{item.name}</h2>
         <p>{item.description}</p>
         <p className="lp-status">{item.status}</p>
-        {item.previewAvailable && <p className="lp-availability">Prévia de O Louco disponível</p>}
+        {item.previewAvailable && <p className="lp-availability">Aula de O Louco disponível</p>}
         {item.modulesHref && <a className="lp-action lp-catalog-action" href={item.modulesHref}>Ver módulos</a>}
         </div>
       </article>)}

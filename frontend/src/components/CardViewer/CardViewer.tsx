@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { cardImageMetadata } from '../../features/preview/cardImageMetadata';
 
-export function CardViewer({ cardId, alt }: { cardId: 'major-00-fool'; alt: string }) {
+export function CardViewer({ cardId, alt, inverted = false }: { cardId: 'major-00-fool'; alt: string; inverted?: boolean }) {
   const image = cardImageMetadata[cardId];
   const fallback = image.variants[0];
   const enlarged = image.variants[image.variants.length - 1];
@@ -18,14 +18,14 @@ export function CardViewer({ cardId, alt }: { cardId: 'major-00-fool'; alt: stri
         <p><strong>Descrição da imagem:</strong> {alt}</p>
       </div> : <>
         <img src={fallback.src} srcSet={srcSet} sizes="(max-width: 380px) 80vw, 280px"
-          width={image.width} height={image.height} alt={alt} onError={() => setMissing(true)} />
+          width={image.width} height={image.height} alt={alt} style={inverted ? { transform: 'rotate(180deg)' } : undefined} onError={() => setMissing(true)} />
         <button ref={trigger} type="button" onClick={() => { setOpen(true); dialog.current?.showModal(); }}>Ampliar carta</button>
         <dialog ref={dialog} aria-labelledby="card-dialog-title"
           onClose={() => { setOpen(false); trigger.current?.focus(); }}>
           <h2 id="card-dialog-title">O Louco — baralho autoral do Luna</h2>
           <button type="button" autoFocus onClick={() => dialog.current?.close()}>Fechar ampliação</button>
           {open && <img src={enlarged.src} srcSet={srcSet} sizes="(max-width: 640px) 80vw, 580px"
-            width={image.width} height={image.height} alt={alt}
+            width={image.width} height={image.height} alt={alt} style={inverted ? { transform: 'rotate(180deg)' } : undefined}
                         onError={() => {
               dialog.current?.close();
               setMissing(true);

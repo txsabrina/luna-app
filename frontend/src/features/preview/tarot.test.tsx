@@ -34,7 +34,7 @@ describe('Cursos e módulos locais de Tarô', () => {
       expect(screen.getByRole('heading', { name })).toBeTruthy();
     }
     expect(within(cards[0]).getByText('Estrutura em exploração')).toBeTruthy();
-    expect(within(cards[0]).getByText('Prévia de O Louco disponível')).toBeTruthy();
+    expect(within(cards[0]).getByText('Aula de O Louco disponível')).toBeTruthy();
     expect(within(cards[0]).getByRole('link', { name: 'Ver módulos' }).getAttribute('href'))
       .toBe('/preview/taro/cartas-e-fundamentos');
     for (const card of cards.slice(1)) {
@@ -54,9 +54,9 @@ describe('Cursos e módulos locais de Tarô', () => {
     expect(screen.getByText('22 cartas para explorar temas e experiências simbólicas.')).toBeTruthy();
     expect(screen.getAllByText(/^14 cartas:/)).toHaveLength(4);
     expect(within(cards[1]).getByText('Aulas em preparação')).toBeTruthy();
-    expect(screen.getByRole('link', { name: 'Abrir prévia de O Louco' }).getAttribute('href'))
+    expect(screen.getByRole('link', { name: 'Abrir aula de O Louco' }).getAttribute('href'))
       .toBe('/lessons/fool-first-step');
-    expect(screen.getByText('A prévia da aula precisa da API em execução.')).toBeTruthy();
+    expect(screen.getByText('A aula precisa da API em execução.')).toBeTruthy();
     for (const card of cards.filter((_, index) => index !== 1)) {
       expect(within(card).queryByRole('link', { name: /prévia/ })).toBeNull();
       expect(within(card).getByText('Conteúdo em preparação')).toBeTruthy();
@@ -71,7 +71,7 @@ describe('Cursos e módulos locais de Tarô', () => {
     let page = open('/preview/trilhas');
     const destination = screen.getByRole('link', { name: 'Explorar os cursos' }).getAttribute('href');
     expect(destination).toBe('/preview/taro');
-    expect(screen.getByRole('link', { name: 'Explorar a prévia' }).getAttribute('href'))
+    expect(screen.getByRole('link', { name: 'Explorar a aula' }).getAttribute('href'))
       .toBe('/lessons/fool-first-step');
     page.unmount();
     page = open(destination!);
