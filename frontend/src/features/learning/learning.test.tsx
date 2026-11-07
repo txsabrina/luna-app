@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { LearningPage } from './LearningPage';
 import { LessonPlayer } from './LessonPlayer';
@@ -208,7 +208,7 @@ describe('Caminho da prévia', () => {
         selectedCategoryId: 'observation', expectedCategoryId: 'interpretation', correct: false, feedback: 'Compare a relação de sentido.' })) }
       : url.includes('10-connection') ? { ...result, expectedOptionId: 'motion-edge' } : result));
     vi.stubGlobal('fetch', fetch);
-    render(<LessonPlayer lesson={lesson} />);
+    const { container } = render(<LessonPlayer lesson={lesson} />);
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
     expect(screen.queryByRole('button', { name: 'Continuar' })).toBeNull();
     expect(screen.getByRole('button', { name: 'Prefiro continuar observando' })).toHaveProperty('disabled', false);
@@ -224,7 +224,11 @@ describe('Caminho da prévia', () => {
     await userEvent.click(screen.getByRole('radio', { name: 'Reunir referências.' }));
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
     await userEvent.click(await screen.findByRole('button', { name: 'Continuar para Investigar' }));
-    for (let i = 0; i < 4; i++) await userEvent.click(screen.getByRole('button', { name: 'Continuar investigando' }));
+    // Scope exploration queries to the current reading, excluding the mounted inactive activities.
+    for (let i = 0; i < 4; i++) {
+      const reading = within(container.querySelector<HTMLElement>('.lesson-surface > .lesson-reading')!);
+      await userEvent.click(reading.getByRole('button', { name: 'Continuar investigando' }));
+    }
     expect(screen.getByRole('button', { name: 'Conferir' })).toHaveProperty('disabled', true);
     for (const radio of screen.getAllByRole('radio', { name: 'Observação' })) await userEvent.click(radio);
     await userEvent.click(screen.getByRole('button', { name: 'Conferir' }));
