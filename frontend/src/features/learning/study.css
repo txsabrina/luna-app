@@ -26,9 +26,9 @@
 .study-shell .lesson-surface .lesson-actions a { background: transparent; border-color: var(--lp-border); font-weight: 400; }
 .study-shell .lesson-guide { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; padding: 0; background: transparent; margin-block: 12px 20px; }
 .study-shell .lesson-guide img { width: 72px; height: auto; flex-shrink: 0; object-fit: contain; }
-.study-shell .lesson-guide > div { position: relative; flex: 1; padding: 12px; border-radius: var(--content-radius); background: #eae1d6; }
+.study-shell .lesson-guide > div { position: relative; flex: 1 1 0; min-width: 0; max-width: 100%; height: auto; padding: 12px; border-radius: var(--content-radius); background: #eae1d6; }
 .study-shell .lesson-guide > div::before { content: ''; position: absolute; left: -8px; top: 20px; border-block: 7px solid transparent; border-right: 9px solid #eae1d6; }
-.study-shell .lesson-guide p { margin: 0; }
+.study-shell .lesson-guide p { margin: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; word-break: normal; }
 .study-shell .guide-name { font-size: 12px; font-weight: 600; color: var(--lp-muted); margin-bottom: 4px !important; }
 .study-shell .lesson-reading > p { margin-block: 12px; }
 .study-shell .lesson-reading > button { margin-top: 4px; }
