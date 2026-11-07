@@ -1,0 +1,70 @@
+/* The approved study composition is isolated from the 018/019 routes. */
+.content-shell.content-api.study-shell .content-app { width: min(100%, 680px); }
+.study-shell .content-header { gap: 12px; }
+.study-shell .study-back { display: flex; align-items: center; min-height: 44px; font-size: 14px; }
+.study-shell .content-brand { margin-left: auto; }
+.study-shell .content-stars { display: none; }
+.study-shell .learning-page { padding-block: 8px 16px; }
+.study-shell .lesson-surface { max-width: none; }
+.study-shell .lesson-surface h1 { font: 400 26px/1.2 var(--font-editorial); margin-block: 8px 12px; }
+.study-shell .lesson-surface h2 { font: 400 25px/1.25 var(--font-editorial); }
+.study-shell .lesson-surface h3 { font: 600 17px/1.4 var(--font-body); margin-bottom: 8px; }
+.study-shell .lesson-surface :is(p, li) { line-height: 1.6; }
+.study-shell .lesson-surface .lesson-badge { margin: 0; font-size: 12px; }
+.study-shell .lesson-surface .lesson-content-title { margin-block: 16px; scroll-margin-block-start: 20px; }
+.study-shell .lesson-surface .lesson-content-title:focus { outline: 2px solid #70458b; outline-offset: 5px; }
+.study-shell .lesson-objectives { font-size: 14px; }
+.study-shell summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+.study-shell summary:focus-visible { outline: 3px solid #70458b; outline-offset: 3px; border-radius: 6px; }
+.study-shell .lesson-navigation-summary { margin-block: 12px; gap: 8px; align-items: center; }
+.study-shell .lesson-position { font-size: 14px; color: var(--lp-muted); }
+.study-shell .lesson-surface button,
+.study-shell .lesson-surface .lesson-actions a { min-height: 44px; padding: 10px 14px; border: 1px solid #997541; border-radius: var(--content-radius); background: var(--lp-gold); color: var(--lp-plum); font: 600 14px/1.4 var(--font-body); }
+.study-shell .lesson-surface button:disabled { background: #ede8ef; color: #6f6274; border-color: #bdb2c5; cursor: default; }
+.content-shell.study-shell .lesson-navigation-summary button,
+.study-shell .lesson-actions > :first-child:not(:last-child),
+.study-shell .lesson-surface .lesson-actions a { background: transparent; border-color: var(--lp-border); font-weight: 400; }
+.study-shell .lesson-guide { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; padding: 0; background: transparent; margin-block: 12px 20px; }
+.study-shell .lesson-guide img { width: 72px; height: auto; flex-shrink: 0; object-fit: contain; }
+.study-shell .lesson-guide > div { position: relative; flex: 1; padding: 12px; border-radius: var(--content-radius); background: #eae1d6; }
+.study-shell .lesson-guide > div::before { content: ''; position: absolute; left: -8px; top: 20px; border-block: 7px solid transparent; border-right: 9px solid #eae1d6; }
+.study-shell .lesson-guide p { margin: 0; }
+.study-shell .guide-name { font-size: 12px; font-weight: 600; color: var(--lp-muted); margin-bottom: 4px !important; }
+.study-shell .lesson-reading > p { margin-block: 12px; }
+.study-shell .lesson-reading > button { margin-top: 4px; }
+.study-shell .card-viewer { margin-block: 16px; gap: 10px; }
+.study-shell .card-viewer > img { width: min(100%, 220px); }
+.study-shell .card-viewer figcaption { font-size: 13px; color: var(--lp-muted); }
+.study-shell .answer-options { margin-block: 16px; }
+.study-shell .answer-options legend { font-weight: 600; padding: 0; margin-bottom: 12px; line-height: 1.5; }
+.study-shell .answer-options label { gap: 12px; padding: 12px; margin-bottom: 8px; border-color: var(--lp-border); background: #fffdf9; border-radius: var(--content-radius); line-height: 1.5; box-shadow: 0 2px 4px #30243708; }
+.study-shell .answer-options label:has(input:checked) { background: var(--lp-lavender); border-color: #70458b; }
+.study-shell .answer-options input { accent-color: #70458b; }
+.study-shell .lesson-feedback,
+.study-shell .asset-fallback { margin-block: 16px; padding: 16px; border: 1px solid var(--lp-border); border-left: 3px solid #997541; border-radius: var(--content-radius); background: #f2ebf7; }
+.study-shell .lesson-feedback p + p { margin-top: 8px; }
+.study-shell .lesson-feedback ul { padding-left: 20px; }
+.study-shell .lesson-feedback li + li { margin-top: 16px; }
+.study-shell .lesson-actions { gap: 8px; margin-top: 20px; }
+.study-shell .lesson-map { margin-block: 12px 20px; padding: 12px; border-color: var(--lp-border); border-radius: var(--content-radius); background: #fffdf9; }
+.study-shell .lesson-map > p { font-size: 13px; color: var(--lp-muted); }
+.study-shell .lesson-map h2 { font: 600 16px/1.4 var(--font-body); margin-top: 16px; }
+.study-shell .lesson-progress { grid-template-columns: minmax(0, 1fr); gap: 8px; margin-block: 12px; }
+.study-shell .lesson-progress li { border-color: var(--lp-border); }
+.study-shell .lesson-progress li[aria-current='step'] { border-color: #70458b; background: var(--lp-lavender); }
+.content-shell.study-shell .lesson-progress .lesson-step-button { background: transparent; border: 0; border-radius: inherit; color: inherit; padding: 12px; text-align: left; font: inherit; }
+.study-shell .lesson-symbols { list-style: none; padding: 0; margin-block: 16px; }
+.study-shell .lesson-symbols li { border: 1px solid var(--lp-border); border-radius: var(--content-radius); padding: 0 12px; margin-bottom: 8px; background: #fffdf9; }
+.study-shell .lesson-symbols p { margin-block: 8px 12px; }
+.study-shell .lesson-editorial { margin-top: 24px; padding-top: 8px; border-color: var(--lp-border); font-size: 13px; color: var(--lp-muted); }
+.study-shell .lesson-editorial p { margin-block: 8px; }
+.study-shell .study-preferences { border-top: 1px solid var(--lp-border); padding-top: 4px; font-size: 14px; }
+.study-shell .study-session-note { margin-top: 12px !important; font-size: 13px; color: var(--lp-muted); }
+.study-shell .card-viewer dialog { width: min(94vw, 560px); padding: 16px; border: 1px solid var(--lp-border); border-radius: var(--content-radius); background: var(--lp-ivory); color: var(--lp-plum); }
+.study-shell .card-viewer dialog h2 { font-size: 22px; margin-bottom: 12px; }
+.study-shell .card-viewer dialog img { max-height: 65dvh; }
+.study-shell .card-viewer dialog::backdrop { background: #20152fcc; }
+@media (max-width: 374px) {
+  .study-shell .lesson-guide img { width: 64px; }
+  .study-shell .lesson-surface h1 { font-size: 24px; }
+}

@@ -19,12 +19,13 @@ function Star({ small = false }: { small?: boolean }) {
 }
 
 
-export function ContentShell({ children, preview = false }: { children: ReactNode; preview?: boolean }) {
- return <div className={`content-shell ${preview ? 'local-preview' : 'content-api'}`}>
+export function ContentShell({ children, preview = false, study = false }: { children: ReactNode; preview?: boolean; study?: boolean }) {
+ return <div className={`content-shell ${preview ? 'local-preview' : 'content-api'}${study ? ' study-shell' : ''}`}>
  <div className="content-app">
  <a className="content-skip" href="#preview-content">Ir para o conteúdo</a>
        <header className="content-header">
-        <div className="content-stars"><Star small /><Star /></div>
+        {study ? <a className="study-back" href="/modules/major-arcana">Arcanos Maiores</a> :
+          <div className="content-stars"><Star small /><Star /></div>}
         <a className="content-brand" href={preview ? "/preview" : "/"} aria-label="Luna — Início">
           <svg className="content-moon" viewBox="0 0 48 56" aria-hidden="true" focusable="false">
             <path d="M38 3C4-7-9 46 26 53c9 2 17-2 21-9C9 57 8 7 38 3Z" fill="currentColor" />

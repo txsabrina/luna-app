@@ -5,6 +5,7 @@ import { PreviewPage, type PreviewPath } from './features/preview/PreviewPage';
 
 import { ContentShell } from './components/ContentShell/ContentShell';
 import { remotePreview } from './features/preview/data';
+import './features/learning/study.css';
 
 type Status = 'PLANNED' | 'IN_PROGRESS' | 'AVAILABLE';
 
@@ -104,6 +105,18 @@ export default function App() {
       path === '/preview/taro' || path === '/preview/taro/cartas-e-fundamentos' ||
       path.startsWith('/preview/taro/cartas-e-fundamentos/modulos/') || path.startsWith('/preview/taro/cartas/')) {
     return <PreviewPage path={path as PreviewPath} />;
+  }
+
+  if (path === '/lessons/fool-first-step') {
+    return <ContentShell study><div className={quiet ? 'quiet' : ''}>
+      <LearningPage path={path} />
+      <details className="study-preferences"><summary>Preferências da aula</summary>
+        <label className="content-motion"><input type="checkbox" checked={quiet} onChange={event => setQuiet(event.target.checked)} />
+          <span>Modo tranquilo: sem animações<small>{quiet ? 'Ativado nesta sessão' : 'Desativado · respeita a preferência do dispositivo'}</small></span>
+        </label>
+      </details>
+      <p className="study-session-note">A aula completa, progresso salvo e conquistas ainda não estão disponíveis.</p>
+    </div></ContentShell>;
   }
 
   if (path === '/trails/tarot' || path.startsWith('/courses/') || path.startsWith('/modules/')) {

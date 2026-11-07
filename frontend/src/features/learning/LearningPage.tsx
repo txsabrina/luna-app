@@ -42,7 +42,7 @@ export function LearningPage({ path }: { path: string }) {
     {isContentNavigation && <a className="lp-back" href={isTrail ? '/' : section === 'courses' ? '/trails/tarot' : '/courses/tarot-cards-foundations'}>
       {isTrail ? 'Voltar às trilhas' : section === 'courses' ? 'Voltar à trilha de Tarô' : 'Voltar ao curso'}
     </a>}
-    <nav className="lesson-breadcrumb" aria-label="Hierarquia de estudos">
+    {path !== '/lessons/fool-first-step' && <nav className="lesson-breadcrumb" aria-label="Hierarquia de estudos">
       <a href="/">Trilhas</a><span aria-hidden="true"> / </span>
       <a href="/trails/tarot">Tarô</a>
       {(section === 'courses' || section === 'modules' || section === 'lessons') && <>
@@ -52,7 +52,7 @@ export function LearningPage({ path }: { path: string }) {
         <span aria-hidden="true"> / </span><a href="/modules/major-arcana">Arcanos Maiores</a>
       </>}
       {section === 'lessons' && <><span aria-hidden="true"> / </span><span>O Louco</span></>}
-    </nav>
+    </nav>}
     {isTrail ? <article className="lesson-surface">
       <h1>Tarô</h1><p>Investigue imagens e tradições simbólicas com interpretações contextualizadas.</p>
       <p>Quatro cursos planejados. Somente a prévia abaixo foi preparada neste incremento.</p>

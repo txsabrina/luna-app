@@ -5,6 +5,7 @@ import { LearningPage } from './LearningPage';
 import { LessonPlayer } from './LessonPlayer';
 import { SingleChoiceStep } from './SingleChoiceStep';
 import { CardViewer } from '../../components/CardViewer/CardViewer';
+import App from '../../App';
 import { isLesson } from './contracts';
 import lessonDocument from '../../../../backend/src/main/resources/content/tarot/fool-first-step.v1.json';
 import type { Lesson, SingleChoice } from './contracts';
@@ -41,7 +42,54 @@ beforeEach(() => {
   vi.stubGlobal('HTMLElement', HTMLElement);
   Object.defineProperty(HTMLElement.prototype, 'scrollIntoView', { configurable: true, value: vi.fn() });
 });
-afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
+afterEach(() => { cleanup(); vi.unstubAllGlobals(); window.history.replaceState({}, '', '/'); });
+
+describe('Shell de estudo aprovado', () => {
+  it('apresenta loading e retorno ao módulo no shell marfim sem navegação global', () => {
+    vi.stubGlobal('fetch', vi.fn(() => new Promise<Response>(() => {})));
+    window.history.replaceState({}, '', '/lessons/fool-first-step');
+    const { container } = render(<App />);
+    expect(container.querySelector('.study-shell')).toBeTruthy();
+    expect(screen.getByRole('status').textContent).toContain('Carregando');
+    expect(screen.getByRole('link', { name: 'Arcanos Maiores' }).getAttribute('href')).toBe('/modules/major-arcana');
+    expect(screen.queryByRole('navigation')).toBeNull();
+    expect(container.querySelector('.universe')).toBeNull();
+  });
+
+  it('preserva objetivos e notas completos, fechados inicialmente, e modo tranquilo da sessão', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(response(lesson)));
+    window.history.replaceState({}, '', '/lessons/fool-first-step');
+    const { container } = render(<App />);
+    await screen.findByRole('heading', { name: lesson.title });
+    const objectives = container.querySelector<HTMLDetailsElement>('.lesson-objectives')!;
+    const editorial = container.querySelector<HTMLDetailsElement>('.lesson-editorial')!;
+    expect(objectives.open).toBe(false);
+    expect(editorial.open).toBe(false);
+    await userEvent.click(screen.getByText('Objetivos desta prévia'));
+    for (const objective of lesson.objectives) expect(screen.getByText(objective)).toBeTruthy();
+    await userEvent.click(screen.getByText('Sobre a carta e esta aula'));
+    expect(editorial.open).toBe(true);
+    expect(editorial.textContent).toContain('A procedência detalhada, autoria nominal e condições de uso');
+    await userEvent.click(screen.getByText('Preferências da aula'));
+    await userEvent.click(screen.getByRole('checkbox'));
+    expect(container.querySelector('.quiet')).toBeTruthy();
+    expect(screen.getByText('Ativado nesta sessão')).toBeTruthy();
+    expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src')).toBe('/assets/preview/lume-welcome.png');
+  });
+
+  it('mantém erro, retry e dados reais no mesmo shell, sem substituir conteúdo', async () => {
+    const fetch = vi.fn().mockRejectedValueOnce(new Error('Sem conexão')).mockResolvedValueOnce(response(lesson));
+    vi.stubGlobal('fetch', fetch);
+    window.history.replaceState({}, '', '/lessons/fool-first-step');
+    const { container } = render(<App />);
+    expect((await screen.findByRole('alert')).textContent).toContain('Sem conexão');
+    expect(container.querySelector('.study-shell')).toBeTruthy();
+    await userEvent.click(screen.getByRole('button', { name: 'Tentar novamente' }));
+    expect(await screen.findByRole('heading', { name: lesson.title })).toBeTruthy();
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(fetch).toHaveBeenLastCalledWith('/api/v1/lessons/fool-first-step', expect.objectContaining({ method: 'GET' }));
+  });
+});
 
 describe('Carregamento e contrato', () => {
   it('exibe loading e sucesso', async () => {

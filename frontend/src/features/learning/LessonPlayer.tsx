@@ -53,7 +53,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
   return <article className="lesson-surface">
     <p className="lesson-badge">Prévia · {lesson.steps.length} etapas</p>
     <h1>{lesson.title}</h1>
-    <details><summary>Objetivos desta prévia</summary><ul>{lesson.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></details>
+    <details className="lesson-objectives"><summary>Objetivos desta prévia</summary><ul>{lesson.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></details>
     <div className="lesson-navigation-summary">
       <p className="lesson-position">Etapa {index + 1} de {lesson.steps.length} · {index < 4 ? 'Conhecer' : 'Investigar'}</p>
       <button type="button" aria-expanded={mapOpen} aria-controls={mapId}
@@ -102,7 +102,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         {item.type === 'classification' && <ClassificationStep step={item} lessonId={lesson.id}
           active={item.id === stepId} version={lesson.contentVersion} onNext={() => move(1)} />}
       </div>)}
-      <div key={step.id}>
+      <div key={step.id} className="lesson-reading">
         {step.type === 'explanation' && <>
           {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
           <button type="button" onClick={() => move(1)}>{step.cta}</button>
@@ -110,7 +110,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
                 {step.type === 'exploration' && <>
           <CardViewer cardId={step.cardId} alt={step.imageAlt} />
           {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-          <ul>{step.symbols.map(symbol => <li key={symbol.id}><details>
+          <ul className="lesson-symbols">{step.symbols.map(symbol => <li key={symbol.id}><details>
             <summary>{symbol.label}</summary>
             <p><strong>Observação:</strong> {symbol.observation}</p>
             <p><strong>Interpretação possível:</strong> {symbol.interpretation}</p>
@@ -124,10 +124,10 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         <a href="/modules/major-arcana">Pausar e voltar ao módulo</a>
       </div>
     </>}
-    <aside className="lesson-editorial">
+    <details className="lesson-editorial"><summary>Sobre a carta e esta aula</summary>
       <p><strong>Imagem:</strong> Baralho autoral do Luna, inspirado no Waite–Smith.</p>
       <p>Observar descreve a imagem. Abertura, começo e espontaneidade são o recorte interpretativo desta aula, não um significado universal, diagnóstico ou previsão.</p>
       <p>A procedência detalhada, autoria nominal e condições de uso da arte autoral ainda precisam ser documentadas. Não usamos imagens dos prints Astra.</p>
-    </aside>
+    </details>
   </article>;
 }
