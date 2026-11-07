@@ -40,7 +40,7 @@ export function BoardHome() {
 
       <main className="bh-main" id="home-content" tabIndex={-1}>
         <section className="bh-greeting" aria-label="Mensagem da Lume">
-          <div className="bh-portrait"><PreviewImage src="/assets/preview/lume-welcome.png" size={768} label="Lume" /></div>
+          <div className="bh-portrait"><PreviewImage src="/assets/lume/lume-home-approved.png" size={768} label="Lume" /></div>
           <h1>Uma descoberta de cada vez.</h1>
         </section>
 

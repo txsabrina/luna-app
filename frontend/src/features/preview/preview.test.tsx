@@ -31,7 +31,7 @@ describe('Preview local isolada', () => {
     expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('Uma descoberta de cada vez.');
     expect(screen.getByText('Prévia disponível')).toBeTruthy();
     const sources = Array.from(container.querySelectorAll('img')).map(image => image.getAttribute('src'));
-    expect(sources[0]).toBe('/assets/preview/lume-welcome.png');
+    expect(sources[0]).toBe('/assets/lume/lume-home-approved.png');
     expect(sources[1]).toBe('/assets/tarot/optimized/major-00-fool-320.webp');
     for (const name of ['tarot', 'numerology', 'patterns']) {
       expect(sources.filter(src => src === `/assets/preview/${name}-medallion.png`)).toHaveLength(2);
