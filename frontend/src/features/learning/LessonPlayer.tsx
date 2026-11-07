@@ -94,7 +94,7 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         <a href="/modules/major-arcana">Voltar ao módulo</a>
       </div>
     </section> : <>
-      <LumeGuide guide={step.lume} imageSrc="/assets/preview/lume-welcome.png" />
+      <LumeGuide guide={step.lume} />
       {lesson.steps.map(item => <div key={item.id} hidden={item.id !== stepId}>
         {item.type === 'observation' && <ObservationStep step={item} active={item.id === stepId} onNext={() => move(1)} />}
         {item.type === 'single-choice' && <SingleChoiceStep step={item} lessonId={lesson.id}

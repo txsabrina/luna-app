@@ -74,7 +74,7 @@ describe('Shell de estudo aprovado', () => {
     await userEvent.click(screen.getByRole('checkbox'));
     expect(container.querySelector('.quiet')).toBeTruthy();
     expect(screen.getByText('Ativado nesta sessão')).toBeTruthy();
-    expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src')).toBe('/assets/preview/lume-welcome.png');
+    expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src')).toBe('/assets/lume/lume-guide-side.png');
   });
 
   it('mantém erro, retry e dados reais no mesmo shell, sem substituir conteúdo', async () => {
@@ -256,7 +256,7 @@ describe('Caminho da prévia', () => {
     expect(screen.getByRole('navigation', { name: 'Caminho 1 — Conhecer' })).toBeTruthy();
     expect(screen.getByRole('navigation', { name: 'Caminho 2 — Investigar' })).toBeTruthy();
     expect(screen.getByRole('img', { name: 'Lume, companheira de estudos' }).getAttribute('src'))
-      .toBe('/assets/preview/lume-welcome.png');
+      .toBe('/assets/lume/lume-guide-side.png');
     expect(screen.getByText('Baralho autoral do Luna, inspirado no Waite–Smith.')).toBeTruthy();
     expect(screen.queryByText(/Pamela Colman Smith/)).toBeNull();
     await userEvent.click(screen.getByRole('button', { name: 'Vamos investigar' }));
